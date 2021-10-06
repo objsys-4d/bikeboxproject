@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="126">
+	<com.4d>
+		<web>
+			<standalone_server>
+				<configuration allow_ssl="false" automatic_session_management="true" https_port_number="500" port_number="8080" publish_at_startup="false" reuse_context="true">
+					<hosts>
+						<host home_page="" html_root="./WebFolder/" id="0" name="default"/>
+					</hosts>
+				</configuration>
+				<misc/>
+				<options>
+					<text_conversion standard_set="UTF-8"/>
+					<cache cache_max_size="524288" use_4d_web_cache="false"/>
+					<keep_alive requests_number="100" with_keep_alive="true"/>
+					<web_processes max_concurrent="100"/>
+				</options>
+				<webservices>
+					<server allow_requests="false" name="A_WebService"/>
+				</webservices>
+			</standalone_server>
+			<remote>
+				<configuration automatic_session_management="true"/>
+				<misc/>
+				<options>
+					<cache use_4d_web_cache="false"/>
+				</options>
+			</remote>
+		</web>
+		<compiler>
+			<options compilation_path="1" error_file="true" fat_binary="true" initialize_local_variables="1" symbol_file="true"/>
+		</compiler>
+		<interface>
+			<developper display_toolbar="true"/>
+			<user display_toolbar="false"/>
+		</interface>
+		<database>
+			<misc standard_xpath="false"/>
+			<cache flush_buffer_delay="20s"/>
+		</database>
+		<server>
+			<network>
+				<options publication_name="Lightning Starter" use_legacy_network_layer="true"/>
+				<client_server use_encryption="false"/>
+			</network>
+		</server>
+		<sql>
+			<publication port_number="19812"/>
+		</sql>
+		<php ip_address="127.0.0.1"/>
+		<deployment>
+			<options/>
+		</deployment>
+	</com.4d>
+</preferences>

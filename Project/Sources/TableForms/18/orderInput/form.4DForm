@@ -1,0 +1,590 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"label_UUID": {
+					"type": "text",
+					"text": "UUID:",
+					"top": 8,
+					"left": 536,
+					"width": 100,
+					"height": 17,
+					"textAlign": "right"
+				},
+				"field_UUID": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.UUID",
+					"top": 8,
+					"left": 646,
+					"width": 250,
+					"height": 17,
+					"enterable": false
+				},
+				"label_orderID": {
+					"type": "text",
+					"text": "orderID:",
+					"top": 29,
+					"left": 536,
+					"width": 100,
+					"height": 17,
+					"textAlign": "right"
+				},
+				"field_orderID": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.orderID",
+					"top": 29,
+					"left": 646,
+					"width": 250,
+					"height": 17,
+					"enterable": false
+				},
+				"label_dateOrder": {
+					"type": "text",
+					"text": "Date Order :",
+					"top": 59,
+					"left": 10,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_dateOrder": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.dateOrder",
+					"top": 59,
+					"left": 140,
+					"width": 110,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "date",
+					"entryFilter": "!0&9##/##/####"
+				},
+				"label_personID": {
+					"type": "text",
+					"text": "Customer :",
+					"top": 96,
+					"left": 10,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_personID": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.personID",
+					"top": 96,
+					"left": 164,
+					"width": 50,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"focusable": false,
+					"fill": "#FFFFFF"
+				},
+				"label_address": {
+					"type": "text",
+					"text": "Address :",
+					"top": 125,
+					"left": 10,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_address": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.address",
+					"top": 125,
+					"left": 140,
+					"width": 550,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_city": {
+					"type": "text",
+					"text": "City :",
+					"top": 152,
+					"left": 10,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_city": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.city",
+					"top": 152,
+					"left": 140,
+					"width": 190,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_state": {
+					"type": "text",
+					"text": "State :",
+					"top": 152,
+					"left": 310,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_state": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.state",
+					"top": 152,
+					"left": 440,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_zip": {
+					"type": "text",
+					"text": "Postal Code :",
+					"top": 152,
+					"left": 692,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_zip": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.zip",
+					"top": 152,
+					"left": 819,
+					"width": 110,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_phone1": {
+					"type": "text",
+					"text": "Phone 1 :",
+					"top": 179,
+					"left": 10,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_phone1": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.phone1",
+					"top": 179,
+					"left": 140,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_phone2": {
+					"type": "text",
+					"text": "Phone 2 :",
+					"top": 207,
+					"left": 10,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_phone2": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.phone2",
+					"top": 207,
+					"left": 140,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_email": {
+					"type": "text",
+					"text": "Email :",
+					"top": 234,
+					"left": 10,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_email": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.email",
+					"top": 234,
+					"left": 140,
+					"width": 370,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_totalItems": {
+					"type": "text",
+					"text": "Total Items :",
+					"top": 551,
+					"left": 119,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_totalItems": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.totalItems",
+					"top": 551,
+					"left": 246,
+					"width": 70,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_totalAmount": {
+					"type": "text",
+					"text": "Total Amount :",
+					"top": 551,
+					"left": 374,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_totalAmount": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.totalAmount",
+					"top": 551,
+					"left": 501,
+					"width": 110,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"focusable": false,
+					"dataSourceTypeHint": "number",
+					"numberFormat": "$###,###,###,##0.00",
+					"fill": "#FFFFFF"
+				},
+				"label_estimateDeliverydate": {
+					"type": "text",
+					"text": "ETA :",
+					"top": 59,
+					"left": 712,
+					"width": 100,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_estimateDeliverydate": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.estimateDeliverydate",
+					"top": 59,
+					"left": 819,
+					"width": 110,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "date",
+					"entryFilter": "!0&9##/##/####"
+				},
+				"label_status": {
+					"type": "text",
+					"text": "Order Status :",
+					"top": 59,
+					"left": 293,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_status": {
+					"type": "input",
+					"dataSource": "Form:C1466.order.status",
+					"top": 59,
+					"left": 423,
+					"width": 130,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/Order Status"
+					},
+					"textAlign": "center"
+				},
+				"Text": {
+					"type": "text",
+					"text": "<vt_InputTitle>",
+					"top": 9,
+					"left": 10,
+					"width": 197,
+					"height": 21,
+					"fontTheme": "main"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Delivered",
+					"top": 59,
+					"left": 616,
+					"width": 136,
+					"height": 17,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "Form:C1466.order.delivered",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_personID1": {
+					"type": "input",
+					"dataSource": "vtCustomerName",
+					"top": 96,
+					"left": 219,
+					"width": 471,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"focusable": false,
+					"fill": "#FFFFFF"
+				},
+				"Button": {
+					"type": "button",
+					"text": "...",
+					"top": 93,
+					"left": 138,
+					"width": 23,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": true,
+					"shortcutControl": false,
+					"shortcutShift": true,
+					"shortcutAlt": false,
+					"shortcutKey": "1",
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"label_email2": {
+					"type": "text",
+					"text": "Order Items :",
+					"top": 267,
+					"left": 151,
+					"width": 120,
+					"height": 17,
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"orderItemslb": {
+					"type": "listbox",
+					"left": 151,
+					"top": 289,
+					"width": 460,
+					"height": 252,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"listboxType": "collection",
+					"selectionMode": "single",
+					"singleClickEdit": true,
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"dataSource": "Form:C1466.orderItemslb.data",
+					"right": 611,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"alternateFill": "#FFBE80",
+					"method": "ObjectMethods/orderItemslb.4dm",
+					"currentItemSource": "Form:C1466.orderItemslb.curItem",
+					"currentItemPositionSource": "Form:C1466.orderItemslb.curPos",
+					"selectedItemsSource": "Form:C1466.orderItemslb.curSel",
+					"columns": [
+						{
+							"header": {
+								"text": "Product",
+								"name": "Header1",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.orderItemName",
+							"width": 211,
+							"dataSourceTypeHint": "text",
+							"textAlign": "automatic"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Price",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 90,
+							"enterable": false,
+							"dataSource": "This:C1470.price",
+							"dataSourceTypeHint": "text"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Qty",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 50,
+							"enterable": true,
+							"dataSource": "This:C1470.qty",
+							"dataSourceTypeHint": "number",
+							"entryFilter": "&\"0-9;.;-\"",
+							"numberFormat": "###,###,###,##0",
+							"method": "ObjectMethods/Column4.4dm",
+							"events": [
+								"onDataChange"
+							]
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Amount Due",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 90,
+							"enterable": false,
+							"dataSource": "This:C1470.amount",
+							"dataSourceTypeHint": "number",
+							"entryFilter": "&\"0-9;.;-\"",
+							"numberFormat": "$###,###,###,##0.00",
+							"events": []
+						}
+					]
+				},
+				"bttnAdd_Item": {
+					"type": "pictureButton",
+					"left": 568,
+					"top": 268,
+					"width": 16,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_GreenPlus_a.png",
+					"borderStyle": "raised",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bttnAdd_Item.4dm"
+				},
+				"bttnDel_Item": {
+					"type": "pictureButton",
+					"left": 594,
+					"top": 268,
+					"width": 16,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_WinDelete_a.png",
+					"borderStyle": "raised",
+					"loopBackToFirstFrame": false,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bttnDel_Item.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 532,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

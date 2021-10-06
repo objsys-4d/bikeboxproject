@@ -1,0 +1,717 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"donationlbobj": {
+					"type": "listbox",
+					"left": 492,
+					"top": 262,
+					"width": 300,
+					"height": 233,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"listboxType": "collection",
+					"selectionMode": "single",
+					"singleClickEdit": true,
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"dataSource": "Form:C1466.donationlb",
+					"right": 792,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"alternateFill": "#FFBE80",
+					"method": "ObjectMethods/donationlbobj.4dm",
+					"currentItemSource": "curItem",
+					"currentItemPositionSource": "curPos",
+					"selectedItemsSource": "curSel",
+					"columns": [
+						{
+							"header": {
+								"text": "Date",
+								"name": "Header5",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.dateDonation",
+							"width": 139,
+							"dataSourceTypeHint": "date",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Amount",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"width": 20,
+							"enterable": false,
+							"dataSource": "This:C1470.amount",
+							"dataSourceTypeHint": "number",
+							"numberFormat": "$###,###,###,##0.00"
+						}
+					]
+				},
+				"Tab Control": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 9,
+					"left": 7,
+					"width": 375,
+					"height": 554,
+					"labels": {
+						"$ref": "/SOURCES/lists.json#/Donation Tab"
+					},
+					"dataSource": "tbDonationsTab",
+					"method": "ObjectMethods/Tab Control.4dm",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "arrayText",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"varTAmt": {
+					"type": "input",
+					"dataSource": "vrTotalAmt",
+					"top": 502,
+					"left": 664,
+					"width": 130,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "number",
+					"textAlign": "right",
+					"enterable": false,
+					"fill": "#FFFFFF",
+					"numberFormat": "$###,###,###,##0.00"
+				},
+				"label_Email2": {
+					"type": "text",
+					"text": "Total :",
+					"top": 502,
+					"left": 576,
+					"width": 80,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				}
+			}
+		},
+		{
+			"objects": {
+				"personOutput_lb": {
+					"type": "listbox",
+					"left": 14,
+					"top": 80,
+					"width": 358,
+					"height": 464,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"dataSource": "Form:C1466.personOutput_lb.data",
+					"listboxType": "collection",
+					"right": 372,
+					"currentItemSource": "Form:C1466.personOutput_lb.curItem",
+					"currentItemPositionSource": "Form:C1466.personOutput_lb.curPos",
+					"selectedItemsSource": "Form:C1466.personOutput_lb.curSel",
+					"method": "ObjectMethods/personOutput_lb.4dm",
+					"alternateFill": "#FFBE80",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header1",
+								"fontWeight": "bold"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 190,
+							"dataSource": "This:C1470.lastName+\", \"+This:C1470.firstName"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Phone",
+								"fontFamily": "Tahoma",
+								"fontWeight": "bold"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.phone",
+							"width": 150
+						}
+					]
+				},
+				"quickSearch": {
+					"type": "input",
+					"left": 98,
+					"top": 55,
+					"width": 230,
+					"height": 16,
+					"dataSource": "Form:C1466.personOutput_lb.text",
+					"method": "ObjectMethods/quickSearch.4dm",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke"
+					],
+					"fontTheme": "normal",
+					"fontSize": 14
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Name Search:",
+					"top": 58,
+					"left": 15,
+					"width": 89,
+					"height": 15,
+					"fontWeight": "bold"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "CLEAR",
+					"top": 53,
+					"left": 331,
+					"width": 44,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Del]"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "DONATIONS",
+					"top": 237,
+					"left": 491,
+					"width": 126,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"label_lastName": {
+					"type": "text",
+					"text": "Last Name :",
+					"top": 77,
+					"left": 371,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_lastName": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.lastName",
+					"top": 77,
+					"left": 495,
+					"width": 190,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_firstName": {
+					"type": "text",
+					"text": "First Name :",
+					"top": 102,
+					"left": 371,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_firstName": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.firstName",
+					"top": 102,
+					"left": 495,
+					"width": 190,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_dateBirth": {
+					"type": "text",
+					"text": "Date Birth :",
+					"top": 128,
+					"left": 371,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_dateBirth": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.dateBirth",
+					"top": 128,
+					"left": 495,
+					"width": 190,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_phone": {
+					"type": "text",
+					"text": "Phone :",
+					"top": 76,
+					"left": 651,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_phone": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.phone",
+					"top": 76,
+					"left": 774,
+					"width": 210,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_email": {
+					"type": "text",
+					"text": "Email :",
+					"top": 102,
+					"left": 651,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_email": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.email",
+					"top": 102,
+					"left": 774,
+					"width": 210,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_country": {
+					"type": "text",
+					"text": "Country :",
+					"top": 206,
+					"left": 651,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_country": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.country",
+					"top": 206,
+					"left": 774,
+					"width": 210,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_city": {
+					"type": "text",
+					"text": "City :",
+					"top": 154,
+					"left": 371,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_city": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.city",
+					"top": 154,
+					"left": 495,
+					"width": 190,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_state": {
+					"type": "text",
+					"text": "State :",
+					"top": 180,
+					"left": 371,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_state": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.state",
+					"top": 180,
+					"left": 495,
+					"width": 190,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_postalCode": {
+					"type": "text",
+					"text": "Postal Code :",
+					"top": 206,
+					"left": 371,
+					"width": 120,
+					"height": 17,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"field_postalCode": {
+					"type": "input",
+					"dataSource": "Form:C1466.person.postalCode",
+					"top": 206,
+					"left": 495,
+					"width": 190,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				}
+			}
+		},
+		{
+			"objects": {
+				"eventOutput_lb": {
+					"type": "listbox",
+					"left": 14,
+					"top": 80,
+					"width": 358,
+					"height": 192,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"dataSource": "Form:C1466.eventOutput_lb.data",
+					"listboxType": "collection",
+					"right": 372,
+					"currentItemSource": "Form:C1466.eventOutput_lb.curItem",
+					"currentItemPositionSource": "Form:C1466.eventOutput_lb.curPos",
+					"selectedItemsSource": "Form:C1466.eventOutput_lb.curSel",
+					"method": "ObjectMethods/eventOutput_lb.4dm",
+					"alternateFill": "#FFBE80",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Event",
+								"name": "Header2",
+								"fontWeight": "bold"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 190,
+							"dataSource": "This:C1470.eventName"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Date",
+								"fontFamily": "Tahoma",
+								"fontWeight": "bold"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.dateEvent",
+							"width": 150
+						}
+					]
+				},
+				"quickSearch1": {
+					"type": "input",
+					"left": 98,
+					"top": 55,
+					"width": 230,
+					"height": 16,
+					"dataSource": "Form:C1466.eventOutput_lb.text",
+					"method": "ObjectMethods/quickSearch1.4dm",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke"
+					],
+					"fontTheme": "normal",
+					"fontSize": 14
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Event Search:",
+					"top": 59,
+					"left": 15,
+					"width": 89,
+					"height": 15,
+					"fontWeight": "bold"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "CLEAR",
+					"top": 53,
+					"left": 331,
+					"width": 44,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Del]"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Participants",
+					"top": 312,
+					"left": 14,
+					"width": 106,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"label_LastName2": {
+					"type": "text",
+					"text": "Event :",
+					"top": 151,
+					"left": 492,
+					"width": 100,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_LastName1": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.eventName",
+					"top": 151,
+					"left": 599,
+					"width": 160,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"fill": "#FFFFFF"
+				},
+				"label_FirstName2": {
+					"type": "text",
+					"text": "Date :",
+					"top": 176,
+					"left": 492,
+					"width": 100,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_FirstName1": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.dateEvent",
+					"top": 176,
+					"left": 599,
+					"width": 160,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"fill": "#FFFFFF"
+				},
+				"label_Phone2": {
+					"type": "text",
+					"text": "Total Participants :",
+					"top": 201,
+					"left": 452,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_Phone1": {
+					"type": "input",
+					"dataSource": "vlPartCount",
+					"top": 201,
+					"left": 599,
+					"width": 160,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"fill": "#FFFFFF",
+					"dataSourceTypeHint": "number"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "DONATIONS",
+					"top": 110,
+					"left": 509,
+					"width": 126,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"participantlbobj": {
+					"type": "listbox",
+					"left": 13,
+					"top": 339,
+					"width": 360,
+					"height": 214,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"listboxType": "collection",
+					"selectionMode": "single",
+					"singleClickEdit": true,
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"dataSource": "Form:C1466.participantlb",
+					"right": 373,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"alternateFill": "#FFBE80",
+					"currentItemSource": "curItem",
+					"currentItemPositionSource": "curPos",
+					"selectedItemsSource": "curSel",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header7",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column7",
+							"footer": {
+								"name": "Footer7"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.Participant_Person.lastName+\", \"+This:C1470.Participant_Person.firstName",
+							"width": 199
+						},
+						{
+							"header": {
+								"text": "Company",
+								"name": "Header8",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column8",
+							"footer": {
+								"name": "Footer8"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.Participant_Company.companyName",
+							"width": 165
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 461,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

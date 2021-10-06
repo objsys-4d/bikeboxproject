@@ -1,0 +1,291 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"label_UUID": {
+					"type": "text",
+					"text": "UUID:",
+					"top": 7,
+					"left": 332,
+					"width": 100,
+					"height": 17,
+					"textAlign": "right"
+				},
+				"field_UUID": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.UUID",
+					"top": 7,
+					"left": 442,
+					"width": 250,
+					"height": 17,
+					"enterable": false
+				},
+				"label_eventID": {
+					"type": "text",
+					"text": "eventID:",
+					"top": 29,
+					"left": 332,
+					"width": 100,
+					"height": 17,
+					"textAlign": "right"
+				},
+				"field_eventID": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.eventID",
+					"top": 29,
+					"left": 442,
+					"width": 250,
+					"height": 17,
+					"enterable": false
+				},
+				"label_eventName": {
+					"type": "text",
+					"text": "Event Name :",
+					"top": 89,
+					"left": 57,
+					"width": 120,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_eventName": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.eventName",
+					"top": 89,
+					"left": 187,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_dateEvent": {
+					"type": "text",
+					"text": "Event Date :",
+					"top": 118,
+					"left": 57,
+					"width": 120,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_dateEvent": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.dateEvent",
+					"top": 118,
+					"left": 187,
+					"width": 130,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "date",
+					"entryFilter": "!0&9##/##/####"
+				},
+				"label_totalDonation": {
+					"type": "text",
+					"text": "Total Donation :",
+					"top": 505,
+					"left": 298,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_totalDonation": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.totalDonation",
+					"top": 505,
+					"left": 448,
+					"width": 150,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "number",
+					"entryFilter": "&\"0-9;.;-\"",
+					"numberFormat": "$###,###,###,##0.00",
+					"enterable": false,
+					"fill": "#FFFFFF",
+					"focusable": false
+				},
+				"Text": {
+					"type": "text",
+					"text": "<vt_InputTitle>",
+					"top": 9,
+					"left": 10,
+					"width": 197,
+					"height": 21,
+					"fontTheme": "main"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Participants",
+					"top": 155,
+					"left": 118,
+					"width": 126,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"participantlb": {
+					"type": "listbox",
+					"left": 118,
+					"top": 182,
+					"width": 480,
+					"height": 308,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"listboxType": "collection",
+					"selectionMode": "single",
+					"singleClickEdit": true,
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"dataSource": "Form:C1466.participantlb.data",
+					"right": 598,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"alternateFill": "#FFBE80",
+					"currentItemSource": "Form:C1466.participantlb.curItem",
+					"currentItemPositionSource": "Form:C1466.participantlb.curPos",
+					"selectedItemsSource": "Form:C1466.participantlb.curSel",
+					"method": "ObjectMethods/participantlb.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header2",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.Participant_Person.lastName+\", \"+This:C1470.Participant_Person.firstName",
+							"width": 199
+						},
+						{
+							"header": {
+								"text": "Company",
+								"name": "Header5",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.Participant_Company.companyName",
+							"width": 165
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Amount",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"width": 20,
+							"enterable": true,
+							"dataSource": "This:C1470.amountDonated",
+							"dataSourceTypeHint": "number",
+							"numberFormat": "$###,###,###,##0.00",
+							"events": [
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column6.4dm"
+						}
+					]
+				},
+				"bttnAdd_Part": {
+					"type": "pictureButton",
+					"left": 555,
+					"top": 160,
+					"width": 16,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_GreenPlus_a.png",
+					"borderStyle": "raised",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bttnAdd_Part.4dm"
+				},
+				"bttnDel_Part": {
+					"type": "pictureButton",
+					"left": 581,
+					"top": 160,
+					"width": 16,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_WinDelete_a.png",
+					"borderStyle": "raised",
+					"loopBackToFirstFrame": false,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bttnDel_Part.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 78,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

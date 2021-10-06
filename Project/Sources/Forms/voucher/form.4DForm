@@ -1,0 +1,153 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"learnerTabSubform": {
+					"type": "subform",
+					"left": 425,
+					"top": 25,
+					"width": 380,
+					"height": 160,
+					"dataSource": "Form:C1466.learnerTabSubform",
+					"visibility": "hidden",
+					"table": 2,
+					"detailForm": "courseSubform"
+				},
+				"voucherOutput_lb": {
+					"type": "listbox",
+					"left": 0,
+					"top": 0,
+					"width": 400,
+					"height": 600,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"dataSource": "Form:C1466.voucherOutput_lb.data",
+					"listboxType": "collection",
+					"right": 400,
+					"bottom": 600,
+					"currentItemSource": "Form:C1466.voucherOutput_lb.currentItem",
+					"currentItemPositionSource": "Form:C1466.voucherOutput_lb.currentPosition",
+					"selectedItemsSource": "Form:C1466.voucherOutput_lb.selectedItem",
+					"metaSource": "Form:C1466.voucherOutput_lb.metaData",
+					"method": "ObjectMethods/voucherOutput_lb.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "Voucher",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 100,
+							"dataSource": "This:C1470.voucherNumber"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Learner"
+							},
+							"name": "Column2",
+							"width": 100,
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.lastName"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Course"
+							},
+							"name": "Column3",
+							"width": 185,
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.emailAddress"
+						}
+					]
+				},
+				"learnerTabControl": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 0,
+					"left": 420,
+					"width": 391,
+					"height": 192,
+					"dataSource": "learnerTabControl",
+					"dataSourceTypeHint": "arrayText",
+					"method": "ObjectMethods/learnerTabControl.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"courseSubform": {
+					"type": "subform",
+					"left": 422,
+					"top": 26,
+					"width": 410,
+					"height": 170,
+					"table": 2,
+					"detailForm": "courseSubform",
+					"borderStyle": "sunken",
+					"visibility": "hidden"
+				},
+				"voucherSubform": {
+					"type": "subform",
+					"left": 422,
+					"top": 26,
+					"width": 410,
+					"height": 170,
+					"table": 3,
+					"detailForm": "voucherSubform",
+					"borderStyle": "sunken",
+					"visibility": "hidden",
+					"scrollbarVertical": "hidden"
+				}
+			}
+		}
+	],
+	"geometryStamp": 213,
+	"method": "method.4dm"
+}

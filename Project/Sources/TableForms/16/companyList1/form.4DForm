@@ -1,0 +1,251 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"companyList": {
+					"type": "listbox",
+					"left": 13,
+					"top": 61,
+					"width": 650,
+					"height": 310,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"dataSource": "Form:C1466.companyList",
+					"selectionMode": "single",
+					"resizingMode": "legacy",
+					"scrollbarVertical": "visible",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"currentItemSource": "Form:C1466.curItem",
+					"currentItemPositionSource": "Form:C1466.curPos",
+					"selectedItemsSource": "Form:C1466.curSel",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"headerHeight": "26px",
+					"alternateFill": "#FFBE80",
+					"method": "ObjectMethods/companyList.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "Company",
+								"name": "Header1",
+								"fontWeight": "bold"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"enterable": false,
+							"width": 200,
+							"dataSource": "This:C1470.companyName"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Phone",
+								"fontWeight": "bold"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.phone1"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Email",
+								"fontWeight": "bold"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"enterable": false,
+							"width": 150,
+							"dataSource": "This:C1470.email"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "City, State",
+								"fontWeight": "bold"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"enterable": false,
+							"width": 154,
+							"dataSource": "bbobj_CityState"
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "<vt_InputTitle>",
+					"top": 9,
+					"left": 13,
+					"width": 266,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Select",
+					"top": 378,
+					"left": 462,
+					"width": 96,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"fontWeight": "bold",
+					"fontSize": 14,
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Enter]",
+					"method": "ObjectMethods/Button.4dm",
+					"action": "accept",
+					"fontFamily": "Tahoma"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 378,
+					"left": 567,
+					"width": 96,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"fontWeight": "normal",
+					"fontSize": 14,
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Esc]",
+					"action": "cancel",
+					"fontFamily": "Tahoma"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Select CR",
+					"top": 426,
+					"left": 462,
+					"width": 96,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"fontWeight": "bold",
+					"fontSize": 14,
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Return]",
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"companySearch": {
+					"type": "input",
+					"left": 126,
+					"top": 38,
+					"width": 333,
+					"height": 16,
+					"dataSource": "Form:C1466.companySearch",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke"
+					],
+					"method": "ObjectMethods/companySearch.4dm",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Company Name :",
+					"top": 39,
+					"left": 17,
+					"width": 118,
+					"height": 15,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "CLEAR",
+					"top": 36,
+					"left": 463,
+					"width": 44,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Del]",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				}
+			}
+		}
+	],
+	"geometryStamp": 5,
+	"width": 683,
+	"height": 420,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

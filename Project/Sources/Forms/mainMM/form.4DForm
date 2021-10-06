@@ -1,0 +1,116 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Static Picture1": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 220,
+					"height": 50,
+					"picture": "/RESOURCES/images/ms-logo.svg"
+				},
+				"btnLearner": {
+					"type": "button",
+					"text": "Learner",
+					"top": 80,
+					"left": 10,
+					"width": 120,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnLearner",
+					"method": "ObjectMethods/btnLearner.4dm"
+				},
+				"mainSubform": {
+					"type": "subform",
+					"left": 200,
+					"top": 80,
+					"width": 800,
+					"height": 600,
+					"dataSource": "Form:C1466.mainSubform",
+					"right": 1000,
+					"bottom": 680,
+					"events": [
+						"onLoad"
+					]
+				},
+				"btnCourse": {
+					"type": "button",
+					"text": "Course",
+					"top": 120,
+					"left": 10,
+					"width": 120,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnCourse",
+					"method": "ObjectMethods/btnCourse.4dm"
+				},
+				"btnVoucher": {
+					"type": "button",
+					"text": "Voucher",
+					"top": 160,
+					"left": 10,
+					"width": 120,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnVoucher",
+					"method": "ObjectMethods/btnVoucher.4dm"
+				},
+				"btnAdmin": {
+					"type": "button",
+					"text": "Admin",
+					"top": 240,
+					"left": 10,
+					"width": 120,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnAdmin"
+				}
+			}
+		}
+	],
+	"geometryStamp": 52,
+	"method": "method.4dm"
+}

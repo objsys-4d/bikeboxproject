@@ -1,0 +1,350 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"eventOutput_lb": {
+					"type": "listbox",
+					"left": 14,
+					"top": 80,
+					"width": 398,
+					"height": 464,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"dataSource": "Form:C1466.eventOutput_lb.data",
+					"listboxType": "collection",
+					"right": 412,
+					"currentItemSource": "Form:C1466.eventOutput_lb.curItem",
+					"currentItemPositionSource": "Form:C1466.eventOutput_lb.curPos",
+					"selectedItemsSource": "Form:C1466.eventOutput_lb.curSel",
+					"method": "ObjectMethods/eventOutput_lb.4dm",
+					"alternateFill": "#FFBE80",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Event",
+								"name": "Header1",
+								"fontWeight": "bold"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 280,
+							"dataSource": "This:C1470.eventName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Date",
+								"fontFamily": "Tahoma",
+								"fontWeight": "bold"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.dateEvent",
+							"width": 100,
+							"enterable": false,
+							"dataSourceTypeHint": "date"
+						}
+					]
+				},
+				"quickSearch": {
+					"type": "input",
+					"left": 98,
+					"top": 55,
+					"width": 270,
+					"height": 16,
+					"dataSource": "Form:C1466.eventOutput_lb.text",
+					"method": "ObjectMethods/quickSearch.4dm",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke"
+					],
+					"fontTheme": "normal",
+					"fontSize": 14
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Event Search:",
+					"top": 58,
+					"left": 15,
+					"width": 89,
+					"height": 15,
+					"fontWeight": "bold"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "CLEAR",
+					"top": 53,
+					"left": 371,
+					"width": 44,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Del]"
+				},
+				"label_LastName": {
+					"type": "text",
+					"text": "Event :",
+					"top": 78,
+					"left": 511,
+					"width": 100,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_eventName": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.eventName",
+					"top": 78,
+					"left": 618,
+					"width": 300,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"fill": "#FFFFFF"
+				},
+				"label_FirstName": {
+					"type": "text",
+					"text": "Date :",
+					"top": 103,
+					"left": 511,
+					"width": 100,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_dateEvent": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.dateEvent",
+					"top": 103,
+					"left": 618,
+					"width": 160,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"fill": "#FFFFFF"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Participants",
+					"top": 161,
+					"left": 457,
+					"width": 126,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "EVENTS",
+					"top": 14,
+					"left": 15,
+					"width": 126,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"label_LastName1": {
+					"type": "text",
+					"text": "Total Participants :",
+					"top": 126,
+					"left": 471,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_eventName1": {
+					"type": "input",
+					"dataSource": "vl_totalPart",
+					"top": 126,
+					"left": 618,
+					"width": 80,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"enterable": false,
+					"fill": "#FFFFFF",
+					"dataSourceTypeHint": "number",
+					"textAlign": "right"
+				},
+				"participantlbobj": {
+					"type": "listbox",
+					"left": 457,
+					"top": 186,
+					"width": 480,
+					"height": 308,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"listboxType": "collection",
+					"selectionMode": "single",
+					"singleClickEdit": true,
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"dataSource": "Form:C1466.participantlb",
+					"right": 937,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"alternateFill": "#FFBE80",
+					"currentItemSource": "curItem",
+					"currentItemPositionSource": "curPos",
+					"selectedItemsSource": "curSel",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header2",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.Participant_Person.lastName+\", \"+This:C1470.Participant_Person.firstName",
+							"width": 199
+						},
+						{
+							"header": {
+								"text": "Company",
+								"name": "Header5",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.Participant_Company.companyName",
+							"width": 165
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Amount",
+								"fontWeight": "bold",
+								"fontSize": 12
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"width": 20,
+							"enterable": false,
+							"dataSource": "This:C1470.amountDonated",
+							"dataSourceTypeHint": "number",
+							"numberFormat": "$###,###,###,##0.00",
+							"events": [
+								"onDataChange"
+							]
+						}
+					]
+				},
+				"label_totalDonation": {
+					"type": "text",
+					"text": "Total Donation :",
+					"top": 498,
+					"left": 618,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_totalDonation": {
+					"type": "input",
+					"dataSource": "Form:C1466.event.totalDonation",
+					"top": 498,
+					"left": 768,
+					"width": 150,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "number",
+					"entryFilter": "&\"0-9;.;-\"",
+					"numberFormat": "$###,###,###,##0.00",
+					"enterable": false,
+					"fill": "#FFFFFF",
+					"focusable": false
+				}
+			}
+		}
+	],
+	"geometryStamp": 130,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

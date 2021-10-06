@@ -1,0 +1,72 @@
+﻿{
+	"Donation Tab": {
+		"editable": true,
+		"items": [
+			{
+				"text": "PERSON",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "EVENT",
+				"ref": 2,
+				"editable": true
+			}
+		]
+	},
+	"Orders Status": {
+		"editable": true,
+		"items": [
+			{
+				"text": "ACTIVE",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "PENDING",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "RETURNED",
+				"ref": 3,
+				"editable": true
+			},
+			{
+				"text": "CANCELLED",
+				"ref": 4,
+				"editable": true
+			},
+			{
+				"text": "LOST",
+				"ref": 5,
+				"editable": true
+			}
+		]
+	},
+	"Order Status": {
+		"editable": true,
+		"items": [
+			{
+				"text": "Processing",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "Shipped",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "Cancelled",
+				"ref": 3,
+				"editable": true
+			},
+			{
+				"text": "Disputed",
+				"ref": 4,
+				"editable": true
+			}
+		]
+	}
+}

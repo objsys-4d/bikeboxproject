@@ -1,0 +1,181 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"label_amount": {
+					"type": "text",
+					"text": "Donation Amount :",
+					"top": 64,
+					"left": 13,
+					"width": 140,
+					"height": 19,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_amount": {
+					"type": "input",
+					"dataSource": "vrAmount",
+					"top": 64,
+					"left": 157,
+					"width": 110,
+					"height": 20,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "number",
+					"entryFilter": "&\"0-9;.;-\"",
+					"numberFormat": "$###,###,###,##0.00",
+					"textAlign": "right"
+				},
+				"label_dateDonation": {
+					"type": "text",
+					"text": "Date Donation:",
+					"top": 101,
+					"left": 13,
+					"width": 140,
+					"height": 19,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_dateDonation": {
+					"type": "input",
+					"dataSource": "vdDonationDate",
+					"top": 101,
+					"left": 179,
+					"width": 110,
+					"height": 20,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"dataSourceTypeHint": "date",
+					"entryFilter": "!0&9##/##/####",
+					"textAlign": "center"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Add Donation",
+					"top": 10,
+					"left": 16,
+					"width": 165,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"PopupDate": {
+					"type": "subform",
+					"top": 102,
+					"left": 157,
+					"width": 19,
+					"height": 16,
+					"dataSource": "vdDonationDate",
+					"dataSourceTypeHint": "date",
+					"detailForm": "DateButton",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/PopupDate.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "OK",
+					"top": 156,
+					"left": 195,
+					"width": 79,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"defaultButton": true,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"dataSource": "bttnOK",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Enter]",
+					"action": "accept"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 156,
+					"left": 281,
+					"width": 79,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"dataSource": "bttnCancel",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Esc]",
+					"action": "cancel"
+				}
+			},
+			"entryOrder": [
+				"field_amount",
+				"PopupDate",
+				"field_dateDonation",
+				"Button",
+				"Button1"
+			]
+		}
+	],
+	"geometryStamp": 81,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm",
+	"width": 376,
+	"height": 200
+}

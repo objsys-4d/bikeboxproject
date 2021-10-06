@@ -1,0 +1,185 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"merchOutput_lb": {
+					"type": "listbox",
+					"left": 9,
+					"top": 62,
+					"width": 732,
+					"height": 506,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"rowHeight": "23px",
+					"alternateFill": "#FFBE80",
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.merchOutput_lb.data",
+					"resizingMode": "rightToLeft",
+					"scrollbarHorizontal": "hidden",
+					"method": "ObjectMethods/merchOutput_lb.4dm",
+					"currentItemSource": "Form:C1466.merchOutput_lb.curItem",
+					"currentItemPositionSource": "Form:C1466.merchOutput_lb.curPos",
+					"selectedItemsSource": "Form:C1466.merchOutput_lb.curSel",
+					"columns": [
+						{
+							"header": {
+								"text": "Product Name",
+								"name": "Header1",
+								"fontWeight": "bold"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.merchName",
+							"width": 250
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Variant",
+								"fontWeight": "bold"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.variant",
+							"width": 200
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Stock",
+								"fontWeight": "bold"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.stock",
+							"width": 135,
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Price",
+								"fontWeight": "bold"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.price",
+							"width": 130,
+							"dataSourceTypeHint": "number",
+							"numberFormat": "$###,###,##0.00"
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "MERCHANDISE",
+					"top": 11,
+					"left": 15,
+					"width": 266,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold"
+				},
+				"quickSearch": {
+					"type": "input",
+					"left": 112,
+					"top": 37,
+					"width": 399,
+					"height": 16,
+					"dataSource": "Form:C1466.merchOutput_lb.text",
+					"method": "ObjectMethods/quickSearch.4dm",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke"
+					],
+					"fontTheme": "normal",
+					"fontSize": 14
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Product Search :",
+					"top": 41,
+					"left": 15,
+					"width": 131,
+					"height": 15,
+					"fontWeight": "bold"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "CLEAR",
+					"top": 36,
+					"left": 515,
+					"width": 44,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Del]"
+				}
+			}
+		}
+	],
+	"geometryStamp": 32,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}
