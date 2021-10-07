@@ -1,0 +1,149 @@
+    <!--FORM METHOD-->
+    {{Donation_Detail}}
+    
+    <!--HIDDEN VALUES-->
+    <input type="hidden" name="Donation.UUID" value="{{Donation.UUID}}" />
+    <input type="hidden" name="Donation.donationID" value="{{Donation.donationID}}" />
+    <!--/HIDDEN VALUES-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%donations}}</h1>
+        <!--/TITLE-->
+    </div>
+            
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=Donation_Cancel');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+
+            <hr/>
+            
+            <!--FORM TOOLBAR-->
+            <div class="btn-toolbar justify-content-center" role="toolbar">
+                <div>
+                    <!--SAVE RECORD-->
+                    <button type="button" class="btn btn-success"
+                        onclick="ltgFormAction('?action=save&record={{Donation.UUID}}&method=Donation_Save');">{{%save}}</button>
+                    <!--/SAVE RECORD-->
+
+                    <!--DELETE RECORD-->
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgFormAction('?action=delete-confirm&method=Donation_Delete');">{{%delete}}</button>
+                    <!--/DELETE RECORD-->
+                    
+                </div>
+            </div>
+            <!--/FORM TOOLBAR-->
+            
+            <hr/>
+			
+        <div class="row">
+            <div class="col">
+					
+                <label for="Donation.dateDonation" class="col-form-label">{{%dateDonation}}</label>
+                <div class="input-group date" id="donateDatePicker" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input"  id="Donation.dateDonation" style="width:200px"
+                        name="Donation.dateDonation" value="{{Donation.dateDonation}}" data-target="#donateDatePicker" />
+                    <div class="input-group-append" data-target="#donateDatePicker" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>   
+
+            </div>
+			
+            <div class="col">
+			</div>			
+        </div>
+            
+
+        <div class="row">
+            <div class="col">
+                        <label for="Donation.personID" class="col-form-label">{{%person}}</label>
+                        <div>
+                    <select class="custom-select" id="Donation.personID" name="Donation.personID" onchange="ltgFormAction('donationPerson-modal.html?action=edit&modal=true&record={{Donation.personID}}');"></select>								
+                        </div>
+            </div>
+
+           <div class="col">
+                        <label for="Donation.event" class="col-form-label">{{%event}}</label>
+                        <div>
+                    <select class="custom-select" id="Donation.event" name="Donation.event" onchange="ltgFormAction('donationEvent-modal.html?action=edit&modal=true&record={{Donation.eventID}}');"></select>								
+                        </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                        <label for="Donation.amount" class="col-form-label">{{%donateTotal}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Donation.amount" style="width:200px"
+                                name="Donation.amount" value="{{Donation.amount}}" />
+                        </div>
+            </div>
+
+        </div>
+		
+            <!--PAGINATION-->
+            <nav id="donation-pagination">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=previous');">{{%previous}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=first');">1</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">{{.donationPageNumber}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=last');">{{.donationPageCount}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=next');">{{%next}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/PAGINATION-->
+            
+            <!--DELETE RECORD DIALOG-->
+            <div class="modal" id="donation-delete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{%delete}}</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="dialog-content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                onclick="ltgFormAction('?action=delete&record={{Donation.UUID}}&method=Donation_Delete');">{{%delete}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/DELETE RECORD DIALOG-->
+        </div>
+        <!--/BODY-->
+		
+<script>
+
+        $(function () {
+            $('#donateDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+		
+		
+</script>

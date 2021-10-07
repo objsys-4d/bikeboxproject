@@ -1,0 +1,81 @@
+<!--FORM METHOD-->
+{{Donation_DetailMod}}
+
+<!--HIDDEN VALUES-->
+<input type="hidden" name="Donation.UUID" value="{{Donation.UUID}}" />
+<!--/HIDDEN VALUES-->
+
+<!--MODAL FORM-->
+<div class="modal" id="donmod-detail.html" tabindex="-1" role="dialog" aria-labelledby="donmod-detail.html" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">{{%donation}}</h5>
+            </div>
+            <div class="modal-body bg-gray-100">
+                              
+                <label for="Donation.dateDonation" class="col-form-label">{{%dateDonation}}</label>
+                <div class="input-group date" id="donateDatePicker" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input"  id="Donation.dateDonation" style="width:200px"
+                        name="Donation.dateDonation" value="{{Donation.dateDonation}}" data-target="#donateDatePicker" />
+                    <div class="input-group-append" data-target="#donateDatePicker" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>   
+                
+                <div class="form-group">
+                        <div>
+                            <input type="text" class="form-control" id="Donation.personID" hidden
+                                name="Donation.personID" value="{{Donation.personID}}" />
+                        </div>
+						
+                        <label for="Donation.person" class="col-form-label">{{%person}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Donation.person" readonly
+                                name="Donation.person" value="{{Donation.person}}" />
+                        </div>
+                </div>
+                
+                <div class="form-group">
+                        <label for="Donation.event" class="col-form-label">{{%event}}</label>
+                        <div>
+                    <select class="custom-select" id="Donation.event" name="Donation.event" ;"></select>								
+                        </div>
+                </div>
+
+				
+                <div class="form-group">
+                        <label for="Donation.amount" class="col-form-label">{{%donateTotal}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Donation.amount" style="width:200px"
+                                name="Donation.amount" value="{{Donation.amount}}" />
+                        </div>
+                </div>
+				
+            </div>
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Donation.UUID}}&method=Donation_Save');">{{%save}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+
+        $(function () {
+            $('#donateDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+   
+   /* DESTROY MODAL AFTER DISMISSING */
+   
+   ltgObj('donmod-detail.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('donmod-detail.html')
+    })
+</script>

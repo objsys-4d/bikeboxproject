@@ -1,0 +1,99 @@
+<!--FORM METHOD-->
+{{PersonCompany_Modal}}
+
+<!--MODAL FORM-->
+<div class="modal" id="personCompany-modal.html" tabindex="-1" role="dialog" aria-labelledby="personCompany-modal.html" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">{{%company}}</h5>
+            </div>
+            <div class="modal-body bg-gray-100">
+                              
+                        <label for="Company.companyName" class="col-form-label">{{%companyName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.companyName"
+                                name="Company.companyName" value="{{Company.companyName}}" />
+                        </div>
+                
+                        <label for="Company.address" class="col-form-label">{{%address}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.address"
+                                name="Company.address" value="{{Company.address}}" />
+                        </div>
+
+                        <label for="Company.city" class="col-form-label">{{%city}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.city"
+                                name="Company.city" value="{{Company.city}}" />
+                        </div>
+        <div class="row">
+            <div class="col">
+                        <label for="Company.state" class="col-form-label">{{%state}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.state" style="width:200px"
+                                name="Company.state" value="{{Company.state}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Company.postalCode" class="col-form-label">{{%postalCode}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.postalCode" style="width:200px"
+                                name="Company.postalCode" value="{{Company.postalCode}}" />
+                        </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                        <label for="Company.phone1" class="col-form-label">{{%phone1}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.phone1"
+                                name="Company.phone1" value="{{Company.phone1}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Company.phone2" class="col-form-label">{{%phone2}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.phone2"
+                                name="Company.phone2" value="{{Company.phone2}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Company.fax" class="col-form-label">{{%fax}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.fax"
+                                name="Company.fax" value="{{Company.fax}}" />
+                        </div>
+            </div>
+        </div>
+                <label for="Company.email" class="col-form-label">{{%email}}</label>
+                <div class=input-group>
+                    <input type="email" class="form-control" id="Company.email" name="Company.email" value="{{Company.email}}" />
+                </div>
+                <label for="Company.website" class="col-form-label">{{%website}}</label>
+                  <div>
+                    <input type="text" class="form-control" id="Company.website"
+                                name="Company.website" value="{{Company.website}}" />
+                  </div>
+				                
+            </div>
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ltgExecuteMethod('PersonCompany_Cancel');">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Person.UUID}}&method=BBCompany_Save');">{{%save}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+   
+   /* DESTROY MODAL AFTER DISMISSING */
+   
+   ltgObj('personCompany-modal.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('personCompany-modal.html')
+    })
+</script>

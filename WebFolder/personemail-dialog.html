@@ -1,0 +1,66 @@
+<!--FORM METHOD-->
+{{Email_dlgWeb}}
+
+<!--HIDDEN VALUES-->
+<input type="hidden" name="Person.UUID" value="{{Person.UUID}}" />
+<!--/HIDDEN VALUES-->
+
+<!--MODAL FORM-->
+<div class="modal" id="personemail-dialog.html" tabindex="-1" role="dialog" aria-labelledby="personemail-dialog.html" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">Send Email</h5>
+            </div>
+            <div class="modal-body bg-gray-100">
+                              
+                <div class="form-group">
+                    <label for="Email.sender" class="col-form-label">{{%emailSender}}</label>
+                    <div>
+                        <input type="text" class="form-control" id="Email.sender" readonly="readonly" name="Email.sender" value="BikeBoxProject" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Email.recipients" class="col-form-label">{{%emailRecipients}}</label>
+                    <div>
+                        <input type="text" class="form-control" id="Email.recipients" name="Email.recipients" value="{{Person.email}}" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Email.subject" class="col-form-label">{{%subject}}</label>
+
+                    <div>
+                        <input type="text" class="form-control" id="Email.subject" name="Email.subject" value="{{Email.subject}}" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Email.message" class="col-form-label">{{%emailText}}</label>
+                    <div>
+                        <textarea class="form-control" id="Email.message" name="Email.message"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=cancel&method=Web_Cancel');">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Person.UUID}}&method=WebLtg_Email');">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+   
+   /* DESTROY MODAL AFTER DISMISSING */
+   
+   ltgObj('personemail-dialog.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('personemail-dialog.html')
+    })
+</script>

@@ -1,0 +1,136 @@
+<!--FORM METHOD-->
+{{OrderPerson_Modal}}
+
+<!--MODAL FORM-->
+<div class="modal" id="orderPerson-modal.html" tabindex="-1" role="dialog" aria-labelledby="orderPerson-modal.html" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">{{%person}}</h5>
+            </div>
+            <div class="modal-body bg-gray-100">
+                              
+        <div class="row">
+            <div class="col">
+                        <label for="Person.lastName" class="col-form-label">{{%lastName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.lastName"
+                                name="Person.lastName" value="{{Person.lastName}}" />
+                        </div>
+            </div>
+
+            <div class="col">
+                        <label for="Person.firstName" class="col-form-label">{{%firstName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.firstName"
+                                name="Person.firstName" value="{{Person.firstName}}" />
+                        </div>
+            </div>
+        </div>  
+		
+                <label for="Person.dateBirth" class="col-form-label">{{%dateBirth}}</label>
+                <div class="input-group date" id="personDatePicker" style="width:200px" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input"  id="Person.dateBirth"
+                        name="Person.dateBirth" value="{{Person.dateBirth}}" data-target="#personDatePicker" />
+                    <div class="input-group-append" data-target="#personDatePicker" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>   
+	
+		              
+        <div class="row">
+            <div class="col">
+                        <label for="Person.address1" class="col-form-label">{{%address1}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.address1"
+                                name="Person.address1" value="{{Person.address1}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Person.address2" class="col-form-label">{{%address2}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.address2"
+                                name="Person.address2" value="{{Person.address2}}" />
+                        </div>
+            </div>
+        </div>
+		
+        <div class="row">
+            <div class="col">
+                        <label for="Person.city" class="col-form-label">{{%city}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.city"
+                                name="Person.city" value="{{Person.city}}" />
+                        </div>
+            </div>
+
+            <div class="col">
+                        <label for="Person.state" class="col-form-label">{{%state}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.state"
+                                name="Person.state" value="{{Person.state}}" />
+                        </div>
+            </div>
+        </div>
+			
+        <div class="row">
+            <div class="col">
+                        <label for="Person.country" class="col-form-label">{{%country}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.country"
+                                name="Person.country" value="{{Person.country}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Person.postalCode" class="col-form-label">{{%postalCode}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.postalCode"
+                                name="Person.postalCode" value="{{Person.postalCode}}" />
+                        </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                        <label for="Person.phone" class="col-form-label">{{%phone}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.phone"
+                                name="Person.phone" value="{{Person.phone}}" />
+                        </div>
+            </div>
+
+            <div class="col">
+                        <label for="Person.email" class="col-form-label">{{%email}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.email"
+                                name="Person.email" value="{{Person.email}}" />
+                        </div>
+            </div>
+        </div>
+
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ltgExecuteMethod('OrderPerson_Cancel');">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Person.UUID}}&method=Person_Save');">{{%save}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+
+        $(function () {
+            $('#personDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+   
+   /* DESTROY MODAL AFTER DISMISSING */
+   
+   ltgObj('orderPerson-modal.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('orderPerson-modal.html')
+    })
+</script>

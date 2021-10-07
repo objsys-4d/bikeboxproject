@@ -1,0 +1,64 @@
+<!--FORM METHOD-->
+{{DonationEvent_Modal}}
+
+<!--MODAL FORM-->
+<div class="modal" id="donationEvent-modal.html" tabindex="-1" role="dialog" aria-labelledby="donationEvent-modal.html" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">{{%person}}</h5>
+            </div>
+            <div class="modal-body bg-gray-100">
+                              
+        <div class="row">
+            <div class="col">
+                		 <label for="Event.dateEvent" class="col-form-label">{{%dateEvent}}</label>
+                		 		<div class="input-group date" id="eventDatePicker" data-target-input="nearest">
+                    				 <input type="text" class="form-control datetimepicker-input"  id="Event.dateEvent"
+                       				 		name="Event.dateEvent" data-target="#eventDatePicker" value="{{Event.dateEvent}}"/>
+                    				<div class="input-group-append" data-target="#eventDatePicker" data-toggle="datetimepicker">
+                        				 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    				</div>
+                				</div>   
+       		</div>
+            <div class="col">
+       		</div>
+          </div>      
+        <div class="row">
+            <div class="col">
+                        <label for="Event.eventName" class="col-form-label">{{%eventName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Event.eventName" style="width:400px"
+                                name="Event.eventName" value="{{Event.eventName}}" />
+                        </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ltgExecuteMethod('DonationEvent_Cancel');">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Event.UUID}}&method=Event_Save');">{{%save}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+
+        $(function () {
+            $('#eventDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+   
+   /* DESTROY MODAL AFTER DISMISSING */
+   
+   ltgObj('donationEvent-modal.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('donationEvent-modal.html')
+    })
+</script>
