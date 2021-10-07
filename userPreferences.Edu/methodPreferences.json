@@ -1,0 +1,56 @@
+﻿{
+	"Sources/Methods/SYS_StartUp.4dm": {
+		"startSelection": 0,
+		"endSelection": 18,
+		"firstSelectedLine": 13,
+		"lastSelectedLine": 13,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-07T17:01:39.961Z"
+	},
+	"Sources/Methods/SystemSetting_Load.4dm": {
+		"startSelection": 34,
+		"endSelection": 34,
+		"firstSelectedLine": 32,
+		"lastSelectedLine": 32,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-07T17:36:31.777Z"
+	},
+	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
+		"startSelection": 43,
+		"endSelection": 43,
+		"firstSelectedLine": 2,
+		"lastSelectedLine": 2,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-07T17:26:32.138Z"
+	},
+	"Sources/Forms/email/ObjectMethods/Bouton2.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 7,
+		"lastSelectedLine": 7,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-07T17:21:58.766Z"
+	},
+	"Sources/Forms/email/ObjectMethods/Hierarchical List.4dm": {
+		"startSelection": 16,
+		"endSelection": 16,
+		"firstSelectedLine": 2,
+		"lastSelectedLine": 2,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-07T17:26:50.706Z"
+	},
+	"Sources/Methods/_EDR_Test01.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 17,
+		"lastSelectedLine": 17,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-07T17:40:36.715Z"
+	}
+}

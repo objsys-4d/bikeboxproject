@@ -1,0 +1,38 @@
+﻿{
+	"Sources/Methods/SYS_StartUp.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Methods/SystemSetting_Load.4dm": {
+		"left": 494,
+		"top": 157,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/Bouton2.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/Hierarchical List.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Methods/_EDR_Test01.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 1650,
+		"height": 857
+	}
+}

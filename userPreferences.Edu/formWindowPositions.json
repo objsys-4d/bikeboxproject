@@ -1,0 +1,20 @@
+﻿{
+	"Sources/TableForms/23/Input/form.4DForm": {
+		"left": 83,
+		"top": 138,
+		"width": 1458,
+		"height": 753
+	},
+	"Sources/Forms/email/form.4DForm": {
+		"left": 83,
+		"top": 138,
+		"width": 1458,
+		"height": 753
+	},
+	"Sources/TableForms/23/Output/form.4DForm": {
+		"left": 83,
+		"top": 138,
+		"width": 1458,
+		"height": 753
+	}
+}
