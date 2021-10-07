@@ -264,6 +264,7 @@
 		<field name="address2" uuid="53819FDC2E5DE444B5DEC9E575014F17" type="10" limiting_length="255" never_null="true" id="13"/>
 		<field name="companyID" uuid="DB2C2045D1B55840B71273FA583E872F" type="4" never_null="true" id="14"/>
 		<field name="notes" uuid="433F2F7768BF7944B057F2C711A8A439" type="10" limiting_length="255" never_null="true" id="15"/>
+		<field name="fullName" uuid="7F75147290B0D3478F7E7AB139A851E1" type="10" limiting_length="255" never_null="true" id="16"/>
 		<primary_key field_name="UUID" field_uuid="A43E07A13AC93F4C851CF2DF4F92758A"/>
 		<table_extra input_form="personSubform" output_form="Output">
 			<editor_table_info displayable_fields_count="16">
