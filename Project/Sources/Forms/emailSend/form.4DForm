@@ -1,0 +1,241 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Variable5": {
+					"type": "input",
+					"top": 21,
+					"left": 127,
+					"width": 547,
+					"height": 16,
+					"dataSource": "vtEmailSend_To",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"contextMenu": "none",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Texte6": {
+					"type": "text",
+					"top": 21,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "To:",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 48,
+					"left": 127,
+					"width": 547,
+					"height": 16,
+					"dataSource": "vtEmailSend_CC",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"contextMenu": "none",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 75,
+					"left": 127,
+					"width": 547,
+					"height": 16,
+					"dataSource": "vtEmailSend_Subject",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"contextMenu": "none",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"btAttach_Add": {
+					"type": "button",
+					"top": 101,
+					"left": 514,
+					"width": 162,
+					"height": 19,
+					"text": "Attach...",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Texte7": {
+					"type": "text",
+					"top": 48,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "CC:",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Texte10": {
+					"type": "text",
+					"top": 75,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "Subject:",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Texte11": {
+					"type": "text",
+					"top": 101,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "Attachment(s):",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Input": {
+					"type": "input",
+					"left": 27,
+					"top": 177,
+					"width": 634,
+					"height": 448,
+					"styledText": true,
+					"allowFontColorPicker": true,
+					"scrollbarVertical": "visible",
+					"dataSource": "vtEmailSend_Message"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 128,
+					"top": 103,
+					"width": 380,
+					"height": 61,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"resizingMode": "legacy",
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"dataSource": "Attachmentslb",
+					"scrollbarVertical": "visible",
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "atAttachments"
+						}
+					]
+				},
+				"btAttach_Rem": {
+					"type": "button",
+					"top": 121,
+					"left": 514,
+					"width": 162,
+					"height": 19,
+					"text": "Remove Attachment",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Button": {
+					"type": "button",
+					"text": "Send",
+					"top": 641,
+					"left": 586,
+					"width": 90,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"action": "accept",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 641,
+					"left": 492,
+					"width": 90,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				}
+			}
+		}
+	],
+	"geometryStamp": 90,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Menu Bar #1"
+}
