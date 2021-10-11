@@ -38,7 +38,7 @@
 			"objects": {
 				"Variable5": {
 					"type": "input",
-					"top": 21,
+					"top": 15,
 					"left": 127,
 					"width": 547,
 					"height": 16,
@@ -54,7 +54,7 @@
 				},
 				"Texte6": {
 					"type": "text",
-					"top": 21,
+					"top": 15,
 					"left": 27,
 					"width": 138,
 					"height": 15,
@@ -64,7 +64,7 @@
 				},
 				"Variable6": {
 					"type": "input",
-					"top": 48,
+					"top": 37,
 					"left": 127,
 					"width": 547,
 					"height": 16,
@@ -80,7 +80,7 @@
 				},
 				"Variable9": {
 					"type": "input",
-					"top": 75,
+					"top": 60,
 					"left": 127,
 					"width": 547,
 					"height": 16,
@@ -96,7 +96,7 @@
 				},
 				"btAttach_Add": {
 					"type": "button",
-					"top": 101,
+					"top": 82,
 					"left": 514,
 					"width": 162,
 					"height": 19,
@@ -106,11 +106,12 @@
 						"onClick"
 					],
 					"fontFamily": "Tahoma",
-					"fontSize": 12
+					"fontSize": 12,
+					"method": "ObjectMethods/btAttach_Add.4dm"
 				},
 				"Texte7": {
 					"type": "text",
-					"top": 48,
+					"top": 37,
 					"left": 27,
 					"width": 138,
 					"height": 15,
@@ -120,7 +121,7 @@
 				},
 				"Texte10": {
 					"type": "text",
-					"top": 75,
+					"top": 60,
 					"left": 27,
 					"width": 138,
 					"height": 15,
@@ -130,7 +131,7 @@
 				},
 				"Texte11": {
 					"type": "text",
-					"top": 101,
+					"top": 82,
 					"left": 27,
 					"width": 138,
 					"height": 15,
@@ -138,21 +139,10 @@
 					"fontFamily": "Tahoma",
 					"fontSize": 12
 				},
-				"Input": {
-					"type": "input",
-					"left": 27,
-					"top": 177,
-					"width": 634,
-					"height": 448,
-					"styledText": true,
-					"allowFontColorPicker": true,
-					"scrollbarVertical": "visible",
-					"dataSource": "vtEmailSend_Message"
-				},
 				"List Box": {
 					"type": "listbox",
 					"left": 128,
-					"top": 103,
+					"top": 84,
 					"width": 380,
 					"height": 61,
 					"events": [
@@ -167,6 +157,7 @@
 					"dataSource": "Attachmentslb",
 					"scrollbarVertical": "visible",
 					"scrollbarHorizontal": "hidden",
+					"method": "ObjectMethods/List Box.4dm",
 					"columns": [
 						{
 							"header": {
@@ -177,13 +168,27 @@
 							"footer": {
 								"name": "Footer1"
 							},
-							"dataSource": "atAttachments"
+							"dataSource": "atAttachments",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "atAttachmentsPath",
+							"enterable": false,
+							"visibility": "hidden"
 						}
 					]
 				},
 				"btAttach_Rem": {
 					"type": "button",
-					"top": 121,
+					"top": 102,
 					"left": 514,
 					"width": 162,
 					"height": 19,
@@ -198,7 +203,7 @@
 				"Button": {
 					"type": "button",
 					"text": "Send",
-					"top": 641,
+					"top": 798,
 					"left": 586,
 					"width": 90,
 					"height": 30,
@@ -214,7 +219,7 @@
 				"Button1": {
 					"type": "button",
 					"text": "Cancel",
-					"top": 641,
+					"top": 798,
 					"left": 492,
 					"width": 90,
 					"height": 30,
@@ -224,11 +229,45 @@
 					"action": "cancel",
 					"fontFamily": "Tahoma",
 					"fontSize": 12
+				},
+				"Web Area": {
+					"type": "webArea",
+					"left": 27,
+					"top": 365,
+					"width": 651,
+					"height": 428,
+					"dataSource": "vtEmailSend_WA"
+				},
+				"Input": {
+					"type": "input",
+					"left": 27,
+					"top": 153,
+					"width": 634,
+					"height": 188,
+					"styledText": true,
+					"allowFontColorPicker": true,
+					"scrollbarVertical": "visible",
+					"dataSource": "vtEmailSend_Message"
+				},
+				"Text": {
+					"type": "text",
+					"text": "HTML View",
+					"top": 349,
+					"left": 30,
+					"width": 137,
+					"height": 15,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "normal",
+					"fontStyle": "italic"
 				}
 			}
+		},
+		{
+			"objects": {}
 		}
 	],
-	"geometryStamp": 90,
+	"geometryStamp": 214,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

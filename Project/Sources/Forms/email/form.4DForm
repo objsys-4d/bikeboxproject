@@ -53,7 +53,7 @@
 					"left": 470,
 					"width": 547,
 					"height": 16,
-					"dataSource": "DisplayEmailAddresses(Form:C1466.receiveMails_lb.curItem.from)",
+					"dataSource": "vtMail_From",
 					"dragging": "none",
 					"dropping": "custom",
 					"events": [
@@ -75,7 +75,7 @@
 					"left": 470,
 					"width": 547,
 					"height": 16,
-					"dataSource": "DisplayEmailAddresses(Form:C1466.receiveMails_lb.curItem.to)",
+					"dataSource": "vtMail_To",
 					"dragging": "none",
 					"dropping": "custom",
 					"events": [
@@ -97,7 +97,7 @@
 					"left": 470,
 					"width": 547,
 					"height": 16,
-					"dataSource": "DisplayEmailAddresses(Form:C1466.receiveMails_lb.curItem.cc)",
+					"dataSource": "vtMail_CC",
 					"dragging": "none",
 					"dropping": "custom",
 					"events": [
@@ -111,7 +111,7 @@
 					"left": 470,
 					"width": 547,
 					"height": 16,
-					"dataSource": "Form:C1466.receiveMails_lb.curItem.subject",
+					"dataSource": "vtMail_Subject",
 					"dragging": "none",
 					"dropping": "custom",
 					"events": [
@@ -177,7 +177,7 @@
 					"events": [
 						"onSelectionChange"
 					],
-					"dataSource": "Form:C1466.receiveMails_lb.mails",
+					"dataSource": "Form:C1466.receiveMails_lb.data",
 					"method": "ObjectMethods/receiveMails_lb.4dm",
 					"selectionMode": "single",
 					"listboxType": "collection",
@@ -210,7 +210,7 @@
 								"name": "Footer1"
 							},
 							"width": 194,
-							"dataSource": "DisplayEmailAddresses(This:C1470.from)",
+							"dataSource": "This:C1470.fromMail",
 							"enterable": false
 						},
 						{
@@ -248,7 +248,7 @@
 					"top": 464,
 					"width": 693,
 					"height": 395,
-					"dataSource": "Form:C1466.textBody",
+					"dataSource": "vtMail_Body",
 					"contextMenu": "none",
 					"enterable": true,
 					"styledText": true,
@@ -281,7 +281,7 @@
 					"left": 470,
 					"width": 547,
 					"height": 16,
-					"dataSource": "String:C10(Date:C102(Form:C1466.receiveMails_lb.curItem.sendAt); Date RFC 1123:K1:11; Time:C179(Form:C1466.receiveMails_lb.curItem.sendAt))",
+					"dataSource": "vtMail_DateSend",
 					"dragging": "none",
 					"dropping": "custom",
 					"events": [
@@ -388,7 +388,8 @@
 						"onClick"
 					],
 					"fontFamily": "Tahoma",
-					"fontSize": 12
+					"fontSize": 12,
+					"method": "ObjectMethods/btMail_Reply.4dm"
 				},
 				"btMail_ReplyAll": {
 					"type": "button",
@@ -401,7 +402,8 @@
 						"onClick"
 					],
 					"fontFamily": "Tahoma",
-					"fontSize": 12
+					"fontSize": 12,
+					"method": "ObjectMethods/btMail_ReplyAll.4dm"
 				},
 				"btMail_Forward": {
 					"type": "button",
@@ -414,7 +416,8 @@
 						"onClick"
 					],
 					"fontFamily": "Tahoma",
-					"fontSize": 12
+					"fontSize": 12,
+					"method": "ObjectMethods/btMail_Forward.4dm"
 				},
 				"btMail_Delete": {
 					"type": "button",
@@ -456,7 +459,7 @@
 			}
 		}
 	],
-	"geometryStamp": 562,
+	"geometryStamp": 576,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

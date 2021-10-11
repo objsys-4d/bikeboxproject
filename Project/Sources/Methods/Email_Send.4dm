@@ -28,7 +28,7 @@ If ((Count parameters:C259>=3) | (vbTest))
 	
 	If (vbTest)
 		//values are set
-		$to:="edureyesjr@objectivesystems.com, mikebeatty@objectivesystems.com"
+		$to:="edureyesjr@objectivesystems.com; mikebeatty@objectivesystems.com"
 		$vtSubject:="ModernStatesTest"
 		$message:=$vtSubject+String:C10(Timestamp:C1445)
 	Else 
@@ -67,6 +67,13 @@ If ((Count parameters:C259>=3) | (vbTest))
 	Else 
 		$email.textBody:=$message
 	End if 
+	
+	//attachment
+	//add a link to download file
+	//$email.attachments:=New collection(MAIL New attachment(Document))
+	
+	//insert an inline picture (use a cid)
+	//$email.attachments[1]:=MAIL New attachment("c:\\Pictures\\4D.jpg";"";"4D")
 	
 	//{success:true,status:250,statusText:2.6.0 <0066A48D5928B641BE9448D1F0A8741E@adreima.com> [InternalId=139333034049617, Hostname=PHX-EXCHHYB2-P.arm.local] 1142 bytes in 0.199, 5.598 KB/sec Queued mail for delivery}
 	//{success:false,status:0,statusText:Failed to send message.}
