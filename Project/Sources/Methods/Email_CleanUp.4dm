@@ -30,7 +30,7 @@ If (Position:C15(";"; $email)#0)
 		End if 
 		
 		If ($blCheckSelf)  //used in 'reply all'
-			If (Position:C15(<>Email_UserName; $SingleEmail)=0)
+			If (Position:C15(<>IMAP_UserName; $SingleEmail)=0)
 				$proceed:=True:C214
 			Else 
 				$proceed:=False:C215

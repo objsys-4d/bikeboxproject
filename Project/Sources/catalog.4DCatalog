@@ -450,26 +450,31 @@
 		<field name="fax" uuid="9D3479C14417BF419E035A929CD9AE80" type="10" limiting_length="255" never_null="true" id="8">
 			<field_extra multi_line="false"/>
 		</field>
-		<field name="email_hostName" uuid="1DC7919DE8260B4AA41F18BDA8E56175" type="10" limiting_length="255" never_null="true" id="9">
+		<field name="IMAP_hostName" uuid="1DC7919DE8260B4AA41F18BDA8E56175" type="10" limiting_length="255" never_null="true" id="9">
 			<field_extra multi_line="false"/>
 		</field>
-		<field name="email_userName" uuid="EA7D6DCDD6C3FD4D9A37A8E71F4C778B" type="10" limiting_length="255" never_null="true" id="10"/>
-		<field name="email_password" uuid="F98296F2359A91418C452D4CF7B013ED" type="10" limiting_length="255" never_null="true" id="11">
+		<field name="IMAP_userName" uuid="EA7D6DCDD6C3FD4D9A37A8E71F4C778B" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="IMAP_password" uuid="F98296F2359A91418C452D4CF7B013ED" type="10" limiting_length="255" never_null="true" id="11">
 			<field_extra multi_line="false"/>
 		</field>
-		<field name="email_port" uuid="681998B4D0836F4386ECD9BB12FB625C" type="10" limiting_length="255" never_null="true" id="12"/>
-		<field name="email_security" uuid="61EE20757198484D87505848BD311889" type="1" never_null="true" id="13">
+		<field name="IMAP_port" uuid="681998B4D0836F4386ECD9BB12FB625C" type="10" limiting_length="255" never_null="true" id="12"/>
+		<field name="IMAP_security" uuid="61EE20757198484D87505848BD311889" type="1" never_null="true" id="13">
 			<field_extra multi_line="false"/>
 		</field>
 		<field name="emailAddress" uuid="83D50DF4036924468D7FE048F761E295" type="10" limiting_length="255" never_null="true" id="14"/>
 		<field name="website" uuid="F90F397A9E9948468849D8311F8E189B" type="10" limiting_length="255" never_null="true" id="15">
 			<field_extra multi_line="false"/>
 		</field>
+		<field name="SMTP_hostName" uuid="C221F1B96B82404AA0F1303106E91314" type="10" limiting_length="255" never_null="true" id="16"/>
+		<field name="SMTP_userName" uuid="B3584107B7E87F409BE4093D81A49297" type="10" limiting_length="255" never_null="true" id="17"/>
+		<field name="SMTP_password" uuid="3401A866182AE242BB3FC14042F8B4B3" type="10" limiting_length="255" never_null="true" id="18"/>
+		<field name="SMTP_port" uuid="C6F3CBC6609AEA4896F55A7FC73D76EA" type="10" limiting_length="255" never_null="true" id="19"/>
+		<field name="SMTP_security" uuid="BA1F655D44B82D4895D8DB2C060F20A0" type="1" never_null="true" id="20"/>
 		<primary_key field_name="UUID" field_uuid="2C297DEFD60D124E9677159B84BF64DE"/>
 		<table_extra output_form="Output" input_form="Input">
-			<editor_table_info displayable_fields_count="15">
+			<editor_table_info displayable_fields_count="22">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="1233" top="858.31640625" width="169" height="357.33203125"/>
+				<coordinates left="1233" top="858.31640625" width="177" height="522.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

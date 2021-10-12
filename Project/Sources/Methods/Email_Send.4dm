@@ -6,15 +6,16 @@
 
 C_TEXT:C284($from; $user; $host; $pass; $replyto; $from)
 C_TEXT:C284($to; $vtSubject; $message)
-C_LONGINT:C283($error; $smtp_id)
+C_LONGINT:C283($error; $smtp_id; $attachCount)
 C_BOOLEAN:C305($html; vbTest)
 C_OBJECT:C1216($email; $server; $transporter; $status)
+C_COLLECTION:C1488($attachmentsColl)
 
 $server:=New object:C1471
-$server.host:="smtp.office365.com"  //
-$server.user:="developer@objectivesystems.com"
-$server.password:="0bjSys4D!"
-$server.port:=587
+$server.host:=<>SMTP_Hostname
+$server.user:=<>SMTP_UserName
+$server.password:=<>SMTP_Password
+$server.port:=<>SMTP_Port
 
 $transporter:=SMTP New transporter:C1608($server)
 $email:=New object:C1471
@@ -53,6 +54,11 @@ If ((Count parameters:C259>=3) | (vbTest))
 		$html:=$6
 	End if 
 	
+	If (Count parameters:C259>=7)
+		$attachmentsColl:=$7
+	End if 
+	
+	
 	If ($replyto="")
 		$replyto:=$from
 	End if 
@@ -63,17 +69,22 @@ If ((Count parameters:C259>=3) | (vbTest))
 	$email.subject:=$vtSubject
 	
 	If ($html)
+		$message:="<html><body>"+$message+"</body></html>"
 		$email.htmlBody:=$message
 	Else 
 		$email.textBody:=$message
 	End if 
 	
 	//attachment
-	//add a link to download file
-	//$email.attachments:=New collection(MAIL New attachment(Document))
-	
-	//insert an inline picture (use a cid)
-	//$email.attachments[1]:=MAIL New attachment("c:\\Pictures\\4D.jpg";"";"4D")
+	$attachCount:=$attachmentsColl.length
+	If ($attachCount>0)
+		$loop:=$attachCount-1
+		
+		$email.attachments:=New collection:C1472(MAIL New attachment:C1644($attachmentsColl[0].filePath))
+		For ($a; 1; $loop)
+			$email.attachments[$a]:=MAIL New attachment:C1644($attachmentsColl[$a].filePath)
+		End for 
+	End if 
 	
 	//{success:true,status:250,statusText:2.6.0 <0066A48D5928B641BE9448D1F0A8741E@adreima.com> [InternalId=139333034049617, Hostname=PHX-EXCHHYB2-P.arm.local] 1142 bytes in 0.199, 5.598 KB/sec Queued mail for delivery}
 	//{success:false,status:0,statusText:Failed to send message.}

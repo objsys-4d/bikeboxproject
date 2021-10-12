@@ -4,11 +4,11 @@
 
 var $1; $attachments : Collection
 
-CLEAR VARIABLE:C89(Attachments)
-
+//CLEAR VARIABLE(Attachments)
+ARRAY TEXT:C222(pdAttachments; 0)
 $attachments:=$1
 
 If ($attachments#Null:C1517)
-	COLLECTION TO ARRAY:C1562($attachments; Attachments; "name")
-	Attachments:=1
+	COLLECTION TO ARRAY:C1562($attachments; pdAttachments; "name")
+	pdAttachments:=1
 End if 

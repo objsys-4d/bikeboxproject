@@ -198,7 +198,9 @@
 						"onClick"
 					],
 					"fontFamily": "Tahoma",
-					"fontSize": 12
+					"fontSize": 12,
+					"dataSource": "btAttach_Rem",
+					"method": "ObjectMethods/btAttach_Rem.4dm"
 				},
 				"Button": {
 					"type": "button",
@@ -210,7 +212,7 @@
 					"events": [
 						"onClick"
 					],
-					"action": "accept",
+					"action": "",
 					"fontFamily": "Tahoma",
 					"fontSize": 12,
 					"fontWeight": "bold",
@@ -230,7 +232,7 @@
 					"fontFamily": "Tahoma",
 					"fontSize": 12
 				},
-				"Web Area": {
+				"emailHTML_WA": {
 					"type": "webArea",
 					"left": 27,
 					"top": 365,
@@ -249,9 +251,9 @@
 					"scrollbarVertical": "visible",
 					"dataSource": "vtEmailSend_Message"
 				},
-				"Text": {
+				"emailHTML_Text": {
 					"type": "text",
-					"text": "HTML View",
+					"text": "Original Message",
 					"top": 349,
 					"left": 30,
 					"width": 137,
@@ -267,7 +269,7 @@
 			"objects": {}
 		}
 	],
-	"geometryStamp": 214,
+	"geometryStamp": 362,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

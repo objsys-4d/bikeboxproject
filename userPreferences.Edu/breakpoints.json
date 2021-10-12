@@ -25,23 +25,8 @@
 		"method": {
 			"type": 2,
 			"formName": "email",
-			"objectName": "btMail_ReplyAll",
-			"methodPath": "/SOURCES/Forms/email/ObjectMethods/btMail_ReplyAll.4dm"
-		}
-	},
-	{
-		"line": 16,
-		"method": {
-			"type": 1,
-			"methodName": "ShowBody"
-		}
-	},
-	{
-		"line": 18,
-		"method": {
-			"type": 3,
-			"formName": "emailSend",
-			"methodPath": "/SOURCES/Forms/emailSend/method.4dm"
+			"objectName": "Bouton2",
+			"methodPath": "/SOURCES/Forms/email/ObjectMethods/Bouton2.4dm"
 		}
 	}
 ]

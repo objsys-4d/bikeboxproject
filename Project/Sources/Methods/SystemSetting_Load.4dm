@@ -24,11 +24,20 @@ C_TEXT:C284(<>Sys_CompanyName; <>Sys_Address; <>Sys_City; <>Sys_State; <>Sys_Pho
 <>Sys_Website:=$oSysSettings[0].website
 
 
-//email settings
-C_TEXT:C284(<>Email_Hostname; <>Email_Port; <>Email_UserName; <>Email_Password)
-C_BOOLEAN:C305(<>Email_Security)
-<>Email_Hostname:=$oSysSettings[0].email_hostName
-<>Email_Port:=$oSysSettings[0].email_port
-<>Email_UserName:=$oSysSettings[0].email_userName
-<>Email_Password:=$oSysSettings[0].email_password
-<>Email_Security:=$oSysSettings[0].email_security
+//email settings - IMAP
+C_TEXT:C284(<>IMAP_Hostname; <>IMAP_Port; <>IMAP_UserName; <>IMAP_Password)
+C_BOOLEAN:C305(<>IMAP_Security)
+<>IMAP_Hostname:=$oSysSettings[0].IMAP_hostName
+<>IMAP_Port:=$oSysSettings[0].IMAP_port
+<>IMAP_UserName:=$oSysSettings[0].IMAP_userName
+<>IMAP_Password:=$oSysSettings[0].IMAP_password
+<>IMAP_Security:=$oSysSettings[0].IMAP_security
+
+//email settings - IMAP
+C_TEXT:C284(<>SMTP_Hostname; <>SMTP_Port; <>SMTP_UserName; <>SMTP_Password)
+C_BOOLEAN:C305(<>SMTP_Security)
+<>SMTP_Hostname:=$oSysSettings[0].SMTP_hostName
+<>SMTP_Port:=$oSysSettings[0].SMTP_port
+<>SMTP_UserName:=$oSysSettings[0].SMTP_userName
+<>SMTP_Password:=$oSysSettings[0].SMTP_password
+<>SMTP_Security:=$oSysSettings[0].SMTP_security

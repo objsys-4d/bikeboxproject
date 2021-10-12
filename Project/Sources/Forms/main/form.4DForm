@@ -314,6 +314,25 @@
 					"height": 83,
 					"picture": "Images/bikebox.jpg",
 					"pictureFormat": "scaled"
+				},
+				"Button9": {
+					"type": "button",
+					"text": "Email Settings",
+					"top": 415,
+					"left": 20,
+					"width": 160,
+					"height": 35,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button9.4dm",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[F10]",
+					"fontWeight": "bold",
+					"fontSize": 12
 				}
 			}
 		},
@@ -321,7 +340,7 @@
 			"objects": {}
 		}
 	],
-	"geometryStamp": 371,
+	"geometryStamp": 377,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
