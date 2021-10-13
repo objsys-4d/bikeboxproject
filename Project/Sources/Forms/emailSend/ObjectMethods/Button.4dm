@@ -16,13 +16,10 @@ End case
 
 
 If ($Proceed)
+	C_BLOB:C604($attachmentBLOB)
+	BLOB_VarsToBLOB(->$attachmentBLOB; ->atAttachments; ->atAttachmentsPath; ->atAttachmentsType; ->atAttachmentsBLOB)
 	
-	If (Size of array:C274(atAttachments)#0)
-		$attachmentsColl:=New collection:C1472
-		ARRAY TO COLLECTION:C1563($attachmentsColl; atAttachments; "fileName"; atAttachmentsPath; "filePath")
-	End if 
-	
-	$ProcID:=New process:C317("Email_Send"; 0; "Send Email"; vtEmailSend_To; vtEmailSend_Subject; vtEmailSend_Message; ""; ""; True:C214; $attachmentsColl)
+	$ProcID:=New process:C317("Email_Send"; 0; "Send Email"; vtEmailSend_To; vtEmailSend_Subject; vtEmailSend_Message; ""; ""; True:C214; $attachmentBLOB)  //$attachmentsColl; vblMailAttach)
 	
 	ACCEPT:C269
 End if 

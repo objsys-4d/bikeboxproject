@@ -1,32 +1,14 @@
 ﻿{
-	"Sources/Forms/main/form.4DForm": {
-		"left": 450,
-		"top": 109,
-		"width": 1424,
-		"height": 836
-	},
 	"Sources/Forms/email/form.4DForm": {
-		"left": 42,
+		"left": 27,
 		"top": 109,
 		"width": 1424,
 		"height": 836
 	},
 	"Sources/Forms/emailSend/form.4DForm": {
-		"left": 180,
-		"top": 119,
+		"left": 48,
+		"top": 124,
 		"width": 1191,
 		"height": 762
-	},
-	"Sources/TableForms/23/emailSettings/form.4DForm": {
-		"left": 146,
-		"top": 109,
-		"width": 1424,
-		"height": 836
-	},
-	"Sources/TableForms/23/Input/form.4DForm": {
-		"left": 42,
-		"top": 109,
-		"width": 1424,
-		"height": 836
 	}
 }

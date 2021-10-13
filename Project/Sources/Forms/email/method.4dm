@@ -2,6 +2,7 @@ Case of
 	: (Form event code:C388=On Load:K2:1)
 		ARRAY BOOLEAN:C223(lbBoxNames; 0)
 		C_TEXT:C284(vtMessageCountText; vtCurrentBox)
+		C_BLOB:C604(vbBlankBlob)
 		GEN_ListBox_AllItemsSelect(->lbBoxNames; False:C215)
 		Output_lbInit("receiveMails_lb")
 		

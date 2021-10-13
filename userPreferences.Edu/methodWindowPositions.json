@@ -138,10 +138,10 @@
 		"height": 850
 	},
 	"Sources/Methods/emailStartProcess.4dm": {
-		"left": 695,
-		"top": 134,
+		"left": 372,
+		"top": 142,
 		"width": 857,
-		"height": 857
+		"height": 618
 	},
 	"Sources/Methods/mainStart.4dm": {
 		"left": 695,
@@ -162,8 +162,8 @@
 		"height": 857
 	},
 	"Sources/Methods/emailSendStart.4dm": {
-		"left": 413,
-		"top": 153,
+		"left": 230,
+		"top": 148,
 		"width": 1123,
 		"height": 857
 	},
@@ -180,9 +180,9 @@
 		"height": 857
 	},
 	"Sources/Methods/Email_Send.4dm": {
-		"left": 700,
-		"top": 125,
-		"width": 1072,
+		"left": 184,
+		"top": 109,
+		"width": 1205,
 		"height": 857
 	},
 	"Sources/Methods/Email_SendGUI.4dm": {
@@ -198,9 +198,9 @@
 		"height": 857
 	},
 	"Sources/Forms/emailSend/ObjectMethods/Button.4dm": {
-		"left": 413,
-		"top": 109,
-		"width": 1415,
+		"left": 157,
+		"top": 121,
+		"width": 1644,
 		"height": 854
 	},
 	"Sources/Forms/email/ObjectMethods/btCheckMail.4dm": {
@@ -246,10 +246,10 @@
 		"height": 724
 	},
 	"Sources/Forms/email/ObjectMethods/btMail_Forward.4dm": {
-		"left": 820,
-		"top": 187,
+		"left": 300,
+		"top": 173,
 		"width": 1123,
-		"height": 857
+		"height": 686
 	},
 	"Sources/Forms/emailSend/ObjectMethods/btAttach_Add.4dm": {
 		"left": 433,
@@ -322,5 +322,29 @@
 		"top": 109,
 		"width": 1072,
 		"height": 857
+	},
+	"Sources/Methods/EmailSend_Attachments.4dm": {
+		"left": 437,
+		"top": 200,
+		"width": 989,
+		"height": 675
+	},
+	"Sources/Methods/EmailSend_GUI_Init.4dm": {
+		"left": 103,
+		"top": 227,
+		"width": 987,
+		"height": 675
+	},
+	"Sources/Methods/BLOB_BLOBToVars.4dm": {
+		"left": 481,
+		"top": 189,
+		"width": 989,
+		"height": 675
+	},
+	"Sources/Methods/BLOB_VarsToBLOB.4dm": {
+		"left": 481,
+		"top": 189,
+		"width": 989,
+		"height": 675
 	}
 }
