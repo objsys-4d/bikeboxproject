@@ -1,13 +1,19 @@
 ﻿{
+	"Sources/Forms/main/form.4DForm": {
+		"left": 216,
+		"top": 172,
+		"width": 1497,
+		"height": 762
+	},
 	"Sources/Forms/email/form.4DForm": {
-		"left": 27,
-		"top": 109,
+		"left": 68,
+		"top": 111,
 		"width": 1424,
 		"height": 836
 	},
 	"Sources/Forms/emailSend/form.4DForm": {
-		"left": 48,
-		"top": 124,
+		"left": 261,
+		"top": 216,
 		"width": 1191,
 		"height": 762
 	}

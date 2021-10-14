@@ -14,19 +14,5 @@
 			"objectName": "Bouton2",
 			"methodPath": "/SOURCES/Forms/email/ObjectMethods/Bouton2.4dm"
 		}
-	},
-	{
-		"line": 108,
-		"method": {
-			"type": 1,
-			"methodName": "Email_Send"
-		}
-	},
-	{
-		"line": 83,
-		"method": {
-			"type": 1,
-			"methodName": "Email_Send"
-		}
 	}
 ]

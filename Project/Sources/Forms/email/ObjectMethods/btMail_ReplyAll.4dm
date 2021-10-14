@@ -16,4 +16,7 @@ $oMailInfo.subject:=vtMail_Subject
 $oMailInfo.type:="reply all"
 $oMailInfo.message:=vtMail_Body
 $oMailInfo.bodyType:=vtMail_BodyType
+$oMailInfo.from:=UTIL_DropSpaces(vtMail_From)
+$oMailInfo.to:=UTIL_DropSpaces(vtMail_To)
+$oMailInfo.dateInfo:=vtMail_DateSend
 emailSendStartProcess($oMailInfo)
