@@ -156,8 +156,8 @@
 		"height": 857
 	},
 	"Sources/Forms/emailSend/method.4dm": {
-		"left": 390,
-		"top": 111,
+		"left": 671,
+		"top": 161,
 		"width": 1031,
 		"height": 857
 	},
@@ -346,5 +346,71 @@
 		"top": 189,
 		"width": 989,
 		"height": 675
+	},
+	"Sources/Forms/emailSend/ObjectMethods/Variable5.4dm": {
+		"left": 506,
+		"top": 190,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/16/companyList/method.4dm": {
+		"left": 390,
+		"top": 111,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/20/donationSubform/method.4dm": {
+		"left": 390,
+		"top": 111,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/20/donationSubform/ObjectMethods/Tab Control.4dm": {
+		"left": 390,
+		"top": 111,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/15/personInput/ObjectMethods/Button.4dm": {
+		"left": 65,
+		"top": 174,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/FindEmail.4dm": {
+		"left": 462,
+		"top": 338,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/emailList_lb.4dm": {
+		"left": 271,
+		"top": 359,
+		"width": 1072,
+		"height": 785
+	},
+	"Sources/Methods/EmailSend_GUI_SelectEmail.4dm": {
+		"left": 385,
+		"top": 163,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/Button2.4dm": {
+		"left": 671,
+		"top": 161,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/Methods/EmailSend_AddressLookAhead.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/EMailSend_AddressRebuild.4dm": {
+		"left": 296,
+		"top": 204,
+		"width": 1123,
+		"height": 724
 	}
 }

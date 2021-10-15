@@ -14,5 +14,23 @@
 			"objectName": "Bouton2",
 			"methodPath": "/SOURCES/Forms/email/ObjectMethods/Bouton2.4dm"
 		}
+	},
+	{
+		"line": 9,
+		"method": {
+			"type": 3,
+			"table": 16,
+			"formName": "companyList",
+			"methodPath": "/SOURCES/TableForms/16/companyList/method.4dm"
+		}
+	},
+	{
+		"line": 4,
+		"method": {
+			"type": 2,
+			"formName": "emailSend",
+			"objectName": "Variable5",
+			"methodPath": "/SOURCES/Forms/emailSend/ObjectMethods/Variable5.4dm"
+		}
 	}
 ]
