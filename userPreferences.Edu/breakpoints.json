@@ -23,14 +23,5 @@
 			"formName": "companyList",
 			"methodPath": "/SOURCES/TableForms/16/companyList/method.4dm"
 		}
-	},
-	{
-		"line": 4,
-		"method": {
-			"type": 2,
-			"formName": "emailSend",
-			"objectName": "Variable5",
-			"methodPath": "/SOURCES/Forms/emailSend/ObjectMethods/Variable5.4dm"
-		}
 	}
 ]

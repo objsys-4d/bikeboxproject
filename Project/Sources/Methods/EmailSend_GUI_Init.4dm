@@ -12,6 +12,8 @@
 
 C_TEXT:C284(vtEmailSend_To; vtEmailSend_To2; vtEmailSend_CC; vtEmailSend_Subject; vtEmailSend_Message; vtEmailSend_Type; vtorigMessage; vtmessageHeader)
 C_OBJECT:C1216(voMailSendInfo)
+C_POINTER:C301(vEmailPtr)
+vEmailPtr:=->vtEmailSend_To
 
 OBJECT SET ENABLED:C1123(btAttach_Rem; False:C215)
 $cr:=Char:C90(13)

@@ -85,6 +85,7 @@
 					"dragging": "none",
 					"dropping": "custom",
 					"events": [
+						"onGettingFocus",
 						"onDataChange",
 						"onAfterKeystroke"
 					],
@@ -114,12 +115,15 @@
 					"dragging": "none",
 					"dropping": "custom",
 					"events": [
-						"onDataChange"
+						"onGettingFocus",
+						"onDataChange",
+						"onAfterKeystroke"
 					],
 					"contextMenu": "none",
 					"fontFamily": "Tahoma",
 					"fontSize": 12,
-					"sizingX": "grow"
+					"sizingX": "grow",
+					"method": "ObjectMethods/Variable6.4dm"
 				},
 				"Variable9": {
 					"type": "input",
@@ -408,7 +412,7 @@
 			"objects": {}
 		}
 	],
-	"geometryStamp": 492,
+	"geometryStamp": 503,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

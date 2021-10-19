@@ -456,11 +456,27 @@
 					"fontFamily": "Tahoma",
 					"fontSize": 12,
 					"method": "ObjectMethods/btComposeMail.4dm"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Not Junk move to Inbox",
+					"top": 3,
+					"left": 833,
+					"width": 187,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnotJunk",
+					"fontFamily": "Tahoma",
+					"fontSize": 11,
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 578,
+	"geometryStamp": 589,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

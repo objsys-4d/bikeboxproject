@@ -1,6 +1,6 @@
 Case of 
 	: (Form event code:C388=On Getting Focus:K2:7)
-		vEmailCurrentField:="to"
+		vEmailCurrentField:="cc"
 		vEmailPtr:=Self:C308
 		vtEmailSend_Temp:=vEmailPtr->
 		

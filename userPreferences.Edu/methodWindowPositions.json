@@ -30,8 +30,8 @@
 		"height": 857
 	},
 	"Sources/Methods/_EDR_Test01.4dm": {
-		"left": 309,
-		"top": 140,
+		"left": 138,
+		"top": 109,
 		"width": 1650,
 		"height": 857
 	},
@@ -330,10 +330,10 @@
 		"height": 675
 	},
 	"Sources/Methods/EmailSend_GUI_Init.4dm": {
-		"left": 136,
-		"top": 141,
+		"left": 642,
+		"top": 161,
 		"width": 1368,
-		"height": 803
+		"height": 808
 	},
 	"Sources/Methods/BLOB_BLOBToVars.4dm": {
 		"left": 481,
@@ -348,8 +348,8 @@
 		"height": 675
 	},
 	"Sources/Forms/emailSend/ObjectMethods/Variable5.4dm": {
-		"left": 506,
-		"top": 190,
+		"left": 1016,
+		"top": 133,
 		"width": 1031,
 		"height": 857
 	},
@@ -390,8 +390,8 @@
 		"height": 785
 	},
 	"Sources/Methods/EmailSend_GUI_SelectEmail.4dm": {
-		"left": 385,
-		"top": 163,
+		"left": 996,
+		"top": 109,
 		"width": 1031,
 		"height": 857
 	},
@@ -412,5 +412,29 @@
 		"top": 204,
 		"width": 1123,
 		"height": 724
+	},
+	"Sources/Methods/EmailSend_CleanUp.4dm": {
+		"left": 399,
+		"top": 149,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/EmailSend_TypeAhead.4dm": {
+		"left": 1019,
+		"top": 120,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/Variable6.4dm": {
+		"left": 461,
+		"top": 131,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/Button.4dm": {
+		"left": 153,
+		"top": 225,
+		"width": 1103,
+		"height": 857
 	}
 }

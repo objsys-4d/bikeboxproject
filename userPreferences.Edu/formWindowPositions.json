@@ -1,21 +1,21 @@
 ﻿{
-	"Sources/TableForms/16/companyList/form.4DForm": {
-		"left": 107,
-		"top": 115,
-		"width": 1458,
-		"height": 753
-	},
-	"Sources/TableForms/16/companySubform/form.4DForm": {
-		"left": 107,
-		"top": 115,
-		"width": 1458,
-		"height": 753
-	},
 	"Sources/Forms/main/form.4DForm": {
 		"left": 216,
 		"top": 172,
 		"width": 1497,
 		"height": 762
+	},
+	"Sources/TableForms/15/personInput/form.4DForm": {
+		"left": 107,
+		"top": 115,
+		"width": 1458,
+		"height": 753
+	},
+	"Sources/TableForms/20/donationSubform/form.4DForm": {
+		"left": 249,
+		"top": 138,
+		"width": 1458,
+		"height": 753
 	},
 	"Sources/Forms/email/form.4DForm": {
 		"left": 13,
@@ -24,21 +24,9 @@
 		"height": 836
 	},
 	"Sources/Forms/emailSend/form.4DForm": {
-		"left": 247,
-		"top": 109,
+		"left": 290,
+		"top": 115,
 		"width": 1247,
 		"height": 866
-	},
-	"Sources/TableForms/20/donationSubform/form.4DForm": {
-		"left": 249,
-		"top": 138,
-		"width": 1458,
-		"height": 753
-	},
-	"Sources/TableForms/15/personInput/form.4DForm": {
-		"left": 107,
-		"top": 115,
-		"width": 1458,
-		"height": 753
 	}
 }
