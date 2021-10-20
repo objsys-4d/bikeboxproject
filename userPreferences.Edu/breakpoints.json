@@ -23,5 +23,30 @@
 			"formName": "companyList",
 			"methodPath": "/SOURCES/TableForms/16/companyList/method.4dm"
 		}
+	},
+	{
+		"line": 31,
+		"method": {
+			"type": 1,
+			"methodName": "_EDR_Test01"
+		}
+	},
+	{
+		"line": 3,
+		"method": {
+			"type": 2,
+			"formName": "email",
+			"objectName": "Button",
+			"methodPath": "/SOURCES/Forms/email/ObjectMethods/Button.4dm"
+		}
+	},
+	{
+		"line": 8,
+		"method": {
+			"type": 2,
+			"formName": "email",
+			"objectName": "Button",
+			"methodPath": "/SOURCES/Forms/email/ObjectMethods/Button.4dm"
+		}
 	}
 ]

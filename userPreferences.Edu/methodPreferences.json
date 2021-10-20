@@ -18,13 +18,13 @@
 		"stamp": "2021-10-12T12:57:29.614Z"
 	},
 	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
-		"startSelection": 36,
+		"startSelection": 0,
 		"endSelection": 0,
-		"firstSelectedLine": 23,
-		"lastSelectedLine": 23,
+		"firstSelectedLine": 24,
+		"lastSelectedLine": 24,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-19T17:23:03.231Z"
+		"stamp": "2021-10-20T17:15:43.910Z"
 	},
 	"Sources/Forms/email/ObjectMethods/Bouton2.4dm": {
 		"startSelection": 0,
@@ -45,22 +45,22 @@
 		"stamp": "2021-10-07T17:26:50.706Z"
 	},
 	"Sources/Methods/_EDR_Test01.4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 2,
-		"lastSelectedLine": 2,
+		"startSelection": 9,
+		"endSelection": 28,
+		"firstSelectedLine": 9,
+		"lastSelectedLine": 9,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-19T14:04:35.218Z"
+		"stamp": "2021-10-20T15:18:02.668Z"
 	},
 	"Sources/Forms/email/method.4dm": {
-		"startSelection": 36,
-		"endSelection": 36,
-		"firstSelectedLine": 20,
-		"lastSelectedLine": 20,
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 32,
+		"lastSelectedLine": 32,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-19T17:14:29.115Z"
+		"stamp": "2021-10-20T11:31:39.360Z"
 	},
 	"Sources/Methods/Email_InitTransporter.4dm": {
 		"startSelection": 0,
@@ -99,10 +99,10 @@
 		"stamp": "2021-10-08T12:24:06.752Z"
 	},
 	"Sources/Forms/email/ObjectMethods/receiveMails_lb.4dm": {
-		"startSelection": 35,
-		"endSelection": 35,
-		"firstSelectedLine": 23,
-		"lastSelectedLine": 23,
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 17,
+		"lastSelectedLine": 18,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-19T17:20:52.619Z"
@@ -128,11 +128,11 @@
 	"Sources/Methods/EMail_LoadEmails.4dm": {
 		"startSelection": 0,
 		"endSelection": 0,
-		"firstSelectedLine": 36,
-		"lastSelectedLine": 36,
+		"firstSelectedLine": 0,
+		"lastSelectedLine": 0,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-15T14:27:19.394Z"
+		"stamp": "2021-10-20T15:06:41.985Z"
 	},
 	"Sources/Methods/GEN_ListBox_AllItemsSelect.4dm": {
 		"startSelection": 0,
@@ -648,12 +648,111 @@
 		"stamp": "2021-10-19T11:56:12.464Z"
 	},
 	"Sources/Forms/email/ObjectMethods/Button.4dm": {
-		"startSelection": 13,
-		"endSelection": 13,
-		"firstSelectedLine": 14,
-		"lastSelectedLine": 14,
+		"startSelection": 9,
+		"endSelection": 9,
+		"firstSelectedLine": 1,
+		"lastSelectedLine": 1,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-19T17:28:52.096Z"
+		"stamp": "2021-10-20T17:11:02.406Z"
+	},
+	"Sources/Methods/Email_ExtractPerson.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 52,
+		"lastSelectedLine": 53,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-20T14:04:48.051Z"
+	},
+	"Sources/TableForms/21/eventInput/method.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 0,
+		"lastSelectedLine": 0,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.870Z"
+	},
+	"Sources/Methods/ObjForm_NavBtn.4dm": {
+		"startSelection": 48,
+		"endSelection": 59,
+		"firstSelectedLine": 29,
+		"lastSelectedLine": 29,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.770Z"
+	},
+	"Sources/Forms/main/ObjectMethods/navBtn_New.4dm": {
+		"startSelection": 0,
+		"endSelection": 14,
+		"firstSelectedLine": 3,
+		"lastSelectedLine": 3,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.664Z"
+	},
+	"Sources/Methods/ObjForm_ActBtn.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 0,
+		"lastSelectedLine": 0,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.770Z"
+	},
+	"Sources/Forms/main/ObjectMethods/actBtn_Save.4dm": {
+		"startSelection": 0,
+		"endSelection": 14,
+		"firstSelectedLine": 3,
+		"lastSelectedLine": 3,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.663Z"
+	},
+	"Sources/TableForms/15/personInput/ObjectMethods/bttnAdd_Donation.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 0,
+		"lastSelectedLine": 0,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.821Z"
+	},
+	"Sources/TableForms/15/personInput/method.4dm": {
+		"startSelection": 28,
+		"endSelection": 28,
+		"firstSelectedLine": 11,
+		"lastSelectedLine": 11,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.827Z"
+	},
+	"Sources/TableForms/21/eventInput/ObjectMethods/bttnAdd_Part.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 17,
+		"lastSelectedLine": 18,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.869Z"
+	},
+	"Sources/Methods/Person_List.4dm": {
+		"startSelection": 99,
+		"endSelection": 99,
+		"firstSelectedLine": 97,
+		"lastSelectedLine": 97,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-20T14:38:25.840Z"
+	},
+	"Sources/Methods/Person_Detail.4dm": {
+		"startSelection": 62,
+		"endSelection": 62,
+		"firstSelectedLine": 124,
+		"lastSelectedLine": 124,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-20T15:29:53.816Z"
 	}
 }

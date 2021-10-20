@@ -31,19 +31,24 @@ Else
 		
 		$loop.receivedDate:=Date:C102($loop.receivedAt)
 		$loop.fromMail:=DisplayEmailAddresses($loop.from)
+		
 	End for each 
 	
 	<>CollEmailList:=New collection:C1472
 	<>CollEmailList:=$oEmails.extract("fromMail").distinct()
 	
+	//extract person record 
+	C_LONGINT:C283($procID)
+	$procID:=New process:C317("Email_ExtractPerson"; 0; "Extract Person from Email"; <>CollEmailList)
+	
 	Form:C1466.receiveMails_lb.data:=$oEmails
 	vtMessageCountText:=String:C10($boxInfo.mailCount)+" messages."
 	
+	Form:C1466.receiveMails_lb.data:=Form:C1466.receiveMails_lb.data.orderBy("receivedAt desc")
 End if 
 
 GEN_Message("close")
 
-Form:C1466.receiveMails_lb.data:=Form:C1466.receiveMails_lb.data.orderBy("receivedAt desc")
 OBJECT SET ENABLED:C1123(*; "btMail_@"; False:C215)
 LISTBOX SELECT ROW:C912(*; "receiveMails_lb"; 0; lk remove from selection:K53:3)  //no selection
 
