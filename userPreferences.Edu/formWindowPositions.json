@@ -1,4 +1,5 @@
-﻿{
+{
+
 	"Sources/TableForms/16/companyList/form.4DForm": {
 		"left": 107,
 		"top": 115,
@@ -40,5 +41,6 @@
 		"top": 115,
 		"width": 1458,
 		"height": 753
+
 	}
 }
