@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>BikeBoxProject</title>
+  <link rel="icon" sizes="192x192" href="images/bikebox_icon.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!--FONT AWESOME-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!--TEMPUS DOMINUS DATE/TIME PICKER 5.1.2-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/css/tempusdominus-bootstrap-4.min.css" />
+  
+    <!--SB ADMIN 2-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="css/sb-admin-2.min.css" rel="stylesheet"/>
+
+  <!--UPPY-->
+  <link href="https://transloadit.edgly.net/releases/uppy/v1.21.1/uppy.min.css" rel="stylesheet">
+
+  <!--JQUERY-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  
+  <!--BOOTSTRAP-->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <!--DATATABLES-->
+  <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/r-2.2.5/datatables.min.css"/>
+  <script src="https://cdn.datatables.net/v/bs4/dt-1.10.21/r-2.2.5/datatables.min.js"></script>
+  
+  <!---LIGHTNING-->
+  <script src="js/lightning.min.js"></script>
+
+  <!---APPLICATION-->
+  <script src="js/app.js"></script>
+  
+  <!--CUSTOM STYLES-->
+  <style>
+    .autocomplete {
+      overflow:auto;
+      position:absolute;
+      display:none;
+      z-index:1000;
+    }
+    .clearboth {
+      clear:both;
+    }
+    .cursor-pointer{
+      cursor: pointer;
+    }
+  </style>
+  <!--/CUSTOM STYLES-->
+</head>
+
+  <body id="page-top">
+    
+    <!--QUALITY CONTROL-->
+		{{include qc.html}}
+		<!--/QUALITY CONTROL-->
+
+    <!--LIGHTNING FORM-->
+    <form autocomplete="off" id="lightning" name="lightning" method="post" enctype="multipart/form-data" target="_self">
+    
+    <!--FORM METHOD-->
+    {{Index_Form}}  
+    <!--/FORM METHOD-->
+      
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+  
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+  
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+          <div class="sidebar-brand-icon">
+            <img src="images/bikebox_icon.png">
+          </div>
+          <div class="sidebar-brand-text mx-3">BikeBoxProject</div>
+        </a>
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+  
+         <!-- Nav Item - Dashboard -->
+        <li class="nav-item active" id="nav-dashboard">
+          <a class="nav-link" href="#" onclick="ltgFormAction('dashboard.html?action=tab');">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span id="dashboard_menu">{{%dashboard}}</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+  
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Interface
+        </div>
+  
+         <!--PERSON-->
+        <li class="nav-item" id="nav-person">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#nav-person-panel" aria-expanded="true" aria-controls="nav-person-panel">
+            <i class="fas fa-fw fa-address-card"></i>
+            <span id="person_menu">{{%person}}</span>
+          </a>
+          <div id="nav-person-panel" class="collapse" aria-labelledby="nav-person-panel" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">{{%action}}</h6>
+              <a class="collapse-item" id="person_menu_list" onclick="ltgFormAction('person-list.html?action=tab');" href="#">{{%person}} {{%list}}</a>
+			  
+              <a class="collapse-item" id="person_menu_new" onclick="ltgFormAction('person-detail.html?action=new');" href="#"
+                >{{%new}} {{%person}}</a>
+              
+              <a class="collapse-item" id="person_menu_export" onclick="ltgFormAction('?action=file&method=Person_Export');"" href="#"
+                >{{%export}} {{%person}}</a>
+			  
+            </div>
+          </div>
+        </li>
+        <!--/PERSON-->
+  
+        <!--COMPANY-->
+        <li class="nav-item" id="nav-company">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#nav-company-panel" aria-expanded="true" aria-controls="nav-company-panel">
+            <i class="fas fa-fw fa-building"></i>
+            <span id="company_menu">{{%company}}</span>
+          </a>
+          <div id="nav-company-panel" class="collapse" aria-labelledby="nav-company-panel" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">{{%action}}</h6>
+              
+              <a class="collapse-item" id="company_menu_list" onclick="ltgFormAction('bbcompany-list.html?action=tab');" href="#"
+                >{{%company}} {{%list}} </a>
+              
+              <a class="collapse-item" id="company_menu_new" onclick="ltgFormAction('bbcompany-detail.html?action=new');" href="#"
+                >{{%new}} {{%company}}</a>
+              
+              <a class="collapse-item" id="company_menu_export" onclick="ltgFormAction('?action=file&method=BBCompany_Export');"" href="#"
+                >{{%export}} {{%companies}}</a>
+            </div>
+          </div>
+        </li>
+        <!--/COMPANY-->
+
+        <!--DONATION-->
+        <li class="nav-item" id="nav-donation">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#nav-donation-panel" aria-expanded="true" aria-controls="nav-donation-panel">
+            <i class="fas fa-fw fa-dollar-sign"></i>
+            <span id="donation_menu">{{%donations}}</span>
+          </a>
+          <div id="nav-donation-panel" class="collapse" aria-labelledby="nav-donation-panel" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">{{%action}}</h6>
+              
+              <a class="collapse-item" id="donation_menu_list" onclick="ltgFormAction('donations-list.html?action=tab');" href="#"
+                >{{%donation}} {{%list}} </a>
+              
+              <a class="collapse-item" id="donation_menu_new" onclick="ltgFormAction('donations-detail.html?action=new');" href="#"
+                >{{%new}} {{%donation}}</a>
+            </div>
+          </div>
+        </li>
+        <!--/DONATIONS-->
+
+        <!--EVENTS-->
+        <li class="nav-item" id="nav-event">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#nav-event-panel" aria-expanded="true" aria-controls="nav-event-panel">
+            <i class="fas fa-fw fa-calendar"></i>
+            <span id="event_menu">{{%events}}</span>
+          </a>
+          <div id="nav-event-panel" class="collapse" aria-labelledby="nav-event-panel" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">{{%action}}</h6>
+              
+              <a class="collapse-item" id="event_menu_list" onclick="ltgFormAction('events-list.html?action=tab');" href="#"
+                >{{%event}} {{%list}} </a>
+              
+              <a class="collapse-item" id="event_menu_new" onclick="ltgFormAction('events-detail.html?action=new');" href="#"
+                >{{%new}} {{%event}}</a>
+            </div>
+          </div>
+        </li>
+        <!--/EVENTS-->
+        
+        <!--MERCH-->
+        <li class="nav-item" id="nav-merch">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#nav-merch-panel" aria-expanded="true" aria-controls="nav-merch-panel">
+            <i class="fas fa-fw fa-box"></i>
+            <span id="merch_menu">{{%merch}}</span>
+          </a>
+          <div id="nav-merch-panel" class="collapse" aria-labelledby="nav-merch-panel" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">{{%action}}</h6>
+              <a class="collapse-item" id="merch_menu_list" onclick="ltgFormAction('merch-list.html?action=tab');" href="#">{{%merch}} {{%list}}</a>
+			  
+              <a class="collapse-item" id="merch_menu_new" onclick="ltgFormAction('merch-detail.html?action=new');" href="#"
+                >{{%new}} {{%merch}}</a>
+              
+              <a class="collapse-item" id="merch_menu_export" onclick="ltgFormAction('?action=file&method=Merch_Export');"" href="#"
+                >{{%export}} {{%merch}}</a>
+
+            </div>
+          </div>
+        </li>
+        <!--/MERCH-->
+
+        <!--ORDERS-->
+        <li class="nav-item" id="nav-order">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#nav-order-panel" aria-expanded="true" aria-controls="nav-order-panel">
+            <i class="fas fa-fw fa-file-alt"></i>
+            <span id="order_menu">{{%orders}}</span>
+          </a>
+          <div id="nav-order-panel" class="collapse" aria-labelledby="nav-order-panel" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">{{%action}}</h6>
+              <a class="collapse-item" id="order_menu_list" onclick="ltgFormAction('order-list.html?action=tab');" href="#">{{%order}} {{%list}}</a>
+              
+              <a class="collapse-item" id="order_menu_new" onclick="ltgFormAction('order-detail.html?action=new');" href="#"
+                >{{%new}} {{%order}}</a>
+
+              <a class="collapse-item" id="order_menu_export" onclick="ltgFormAction('?action=file&method=BBOrder_Export');"" href="#"
+                >{{%export}} {{%merch}}</a>
+
+            </div>
+          </div>
+        </li>
+        <!--/ORDERS-->
+        
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+  
+        <!-- Heading -->
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+  
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+     
+          <a class="btn rounded-circle border-0" href="#" id="sidebarToggle"></a>
+        </div>
+  
+      </ul>
+      <!-- End of Sidebar -->
+  
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+  
+        <!-- Main Content -->
+        <div id="content">
+  
+          <!--TOPBAR-->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar">
+  
+            <!--SIDEBAR TOGGLE-->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+            <!--/SIDEBAR TOGGLE-->
+            
+            <!--SEARCH-->
+            <div class="d-none" id="navbar-search">
+              <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-1 my-2 my-md-0 mw-100 navbar-search">     
+                <div class="input-group">
+                  <select class="custom-select bg-light small" id=".searchFilter" name=".searchFilter" onchange="ltgObjFocus('.searchString');"></select>
+                  
+                  <input class="form-control bg-light" id=".searchString" name=".searchString"
+                    onkeypress="ltgObjSynch('.searchString', this.value); return ltgSearchSubmit(event);" onchange="ltgObjSynch('.searchString', this.value);" placeholder="{{%search}}..." type="text" aria-label="{{%search}}" aria-describedby="basic-addon2" value="{{.searchString}}" />
+                                
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" onclick="return ltgSearchSubmit();" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <!--/SEARCH-->
+            
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+  
+              <!-- SEARCH (Visible Only XS) -->
+              <li class="nav-item dropdown no-arrow d-sm-none">
+                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-search fa-fw"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                    <div class="input-group">
+                      
+                      <input class="form-control bg-light border-0 small" id=".searchString" name=".searchString"
+                        onkeypress="ltgObjSynch('.searchString', this.value);return ltgSearchSubmit(event);" placeholder="{{%search}}..." type="text" aria-label="{{%search}}" aria-describedby="basic-addon2" value="{{.searchString}}" />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" onclick="return ltgSearchSubmit();" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+              </li>
+              <!--/SEARCH-->
+              
+            <!--NOTIFICATIONS-->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="notificationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter -->
+                <span class="badge badge-counter" id="notifications_counter"></span>
+              </a>
+              <!-- Dropdown -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="notificationsDropdown">
+                <h6 class="dropdown-header">
+                  <div id="notifications_title">{{%notifications}}</div>
+                </h6>
+                <div id="notifications"></div>
+                <a class="dropdown-item text-center small text-gray-500" href="#" id="notifications_clear" onclick="notificationsClear();">{{%notifications_clear}}</a>
+              </div>
+            </li>
+              <!--/NOTIFICATIONS-->
+              
+              <!--LANGUAGE-->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="currencyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-globe fa-fw"></i>
+                </a>
+                <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="currencyDropdown">
+                  <a class="dropdown-item" href="#" onclick="ltgFormAction('?action=language&method=Language_Set/en-GB');">English</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" onclick="ltgFormAction('?action=language&method=Language_Set/fr');">Français</a>
+                </div>
+              </li>
+              <!--/LANGUAGE-->
+           
+              <div class="topbar-divider d-none d-sm-block"></div>
+  
+              <!--USER-->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{.userName}}</span>
+                  
+                  <img class="img-profile rounded-circle" src="{{User_Avatar}}" alt="Avatar"/>
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#" onclick="ltgQCPopover();">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    {{%log}}
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    {{%logout}}
+                  </a>
+                </div>
+              </li>
+              <!--/USER-->
+            </ul>
+          </nav>
+          <!--/TOPBAR-->
+  
+            <!--MAIN CONTENT-->
+            <div class="container-fluid" id="ltg-content">{{content}}</div>
+            <div id="ltg-modals"></div>
+            <!--/MAIN CONTENT-->
+          </div>
+      </div>
+      <!-- End of Content Wrapper -->
+  
+    </div>
+    <!-- End of Page Wrapper -->
+  
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+  
+      <!--LOGOUT MODAL-->
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Select "{{%logout}}" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">{{%cancel}}</button>
+              <a class="btn btn-primary" href="#" onclick="ltgLogout('logout');">{{%logout}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/LOGOUT MODAL-->
+      
+    </form>
+    <!--/LIGHTNING FORM-->
+    
+    <!--CORE PLUGIN JAVASCRIPT-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    
+    <!--SB ADMIN 2 JAVASCRIPT-->
+    <script src="js/sb-admin-2.min.js"></script>
+    
+    <!--UPPY-->
+    <script src="https://transloadit.edgly.net/releases/uppy/v1.21.1/uppy.min.js"></script>
+          
+    <!--TEMPUS DOMINUS DATE/TIME PICKER 5.1.2-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="vendor/chart.js/Chart.min.js"></script>
+  </body>
+</html>

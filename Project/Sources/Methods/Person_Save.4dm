@@ -26,6 +26,28 @@ $oPerson.phone:=oConnection.data.Person.phone
 $oPerson.email:=oConnection.data.Person.email
 $oPerson.country:=oConnection.data.Person.country
 $oPerson.postalCode:=oConnection.data.Person.postalCode
+
+//personObject
+If (oConnection.data.personActive="true")
+	$oPerson.personObject.active:="Yes"
+Else 
+	$oPerson.personObject.active:="No"
+End if 
+
+If (oConnection.data.personValid="true")
+	$oPerson.personObject.valid:="Yes"
+Else 
+	$oPerson.personObject.valid:="No"
+End if 
+
+If (oConnection.data.personDuplicate="true")
+	$oPerson.personObject.duplicateName:="Yes"
+Else 
+	$oPerson.personObject.duplicateName:="No"
+End if 
+
+//$oPerson.personObject.status
+
 $oPerson.save()
 
 // RETURN TO THE REFERER...

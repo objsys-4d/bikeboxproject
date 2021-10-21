@@ -46,143 +46,149 @@
 			
         <div class="row">
             <div class="col">
-                        <label for="Person.firstName" class="col-form-label">{{%firstName}}</label>
-                        <div>
-                            <input type="text" class="form-control" id="Person.firstName" tabindex="1"
-                                name="Person.firstName" value="{{Person.firstName}}" />
-                        </div>
-            </div>
-            <div class="col">
+                    <div class="form-group">
                         <label for="Person.lastName" class="col-form-label">{{%lastName}}</label>
                         <div>
-                            <input type="text" class="form-control" id="Person.lastName" tabindex="2"
+                            <input type="text" class="form-control" id="Person.lastName"
                                 name="Person.lastName" value="{{Person.lastName}}" />
                         </div>
-            </div>
-            <div class="col">
-                        <label for="Person.address1" class="col-form-label">{{%address1}}</label>
-                        <div>
-                            <input type="text" class="form-control" id="Person.address1" tabindex="7"
-                                name="Person.address1" value="{{Person.address1}}" />
-                        </div>
-            </div>
-            <div class="col">
-                        <label for="Person.address2" class="col-form-label">{{%address2}}</label>
-                        <div>
-                            <input type="text" class="form-control" id="Person.address2" tabindex="8"
-                                name="Person.address2" value="{{Person.address2}}" />
-                        </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                        <label for="Person.phone" class="col-form-label">{{%phone}}</label>
-                        <div>
-                            <input type="text" class="form-control" id="phoneField" tabindex="3"
-                                name="Person.phone" value="{{Person.phone}}" />
-                        </div>
-            </div>
-            <div class="col">
-                <label for="Person.email" class="col-form-label">{{%email}}</label>
-                <div class=input-group>
-                    <input type="email" class="form-control" id="Person.email" tabindex="4" name="Person.email" value="{{Person.email}}" />
-                    <div class="input-group-append">
-                        <div class="input-group-text cursor-pointer"><a class="text-secondary" href="#" onclick="ltgFormAction('personemail-dialog.html?action=new&modal=true');"><i class="fa fa-envelope"></i></a></div>
-
                     </div>
-                </div> 
-            </div>
-		
-            <div class="col">
-                        <label for="Person.city" class="col-form-label">{{%city}}</label>
-                        <div>
-                            <input type="text" class="form-control" id="Person.city" tabindex="9"
-                                name="Person.city" value="{{Person.city}}" />
-                        </div>
             </div>
 
             <div class="col">
-                        <label for="Person.state" class="col-form-label">{{%state}}</label>
+                    <div class="form-group">
+                        <label for="Person.firstName" class="col-form-label">{{%firstName}}</label>
                         <div>
-							<select class="custom-select" id="Person.state" name="Person.state" tabindex="10"></select>
+                            <input type="text" class="form-control" style="width:120px" id="Person.firstName"
+                                name="Person.firstName" value="{{Person.firstName}}" />
                         </div>
+                    </div>
             </div>
         </div>
-			
+            
+
         <div class="row">
-		    <div class="col">
-                <label for="Person.company" class="col-form-label">{{%companyName}}</label>
-                  <div>
-                    <select class="custom-select" id="Person.company" name="Person.company" tabindex="5" onchange="ltgFormAction('personCompany-modal.html?action=edit&modal=true&record={{Person.UUID}}');"></select>								
-                  </div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Person.companyID" class="col-form-label">{{%company}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.companyID"
+                                name="Person.companyID" value="{{Person.companyID}}" />
+                        </div>
+                    </div>
             </div>
             <div class="col">
-                <label for="Person.dateBirth" class="col-form-label">Date of Birth</label>
+                    <div class="form-group">
+                        <label for="Person.companyName" class="col-form-label">{{%companyName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.companyName"
+                                name="Person.companyName" value="{{Person.person_Company.companyName}}" />
+                        </div>
+                    </div>
+            </div>
+            <div class="col">
+                    <div class="form-group">
+					
+                <label for="Person.dateBirth" class="col-form-label">{{%dateBirth}}</label>
                 <div class="input-group date" id="personDatePicker" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input"  id="Person.dateBirth" tabindex="6"
+                    <input type="text" class="form-control datetimepicker-input"  id="Person.dateBirth"
                         name="Person.dateBirth" value="{{Person.dateBirth}}" data-target="#personDatePicker" />
                     <div class="input-group-append" data-target="#personDatePicker" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                     </div>
                 </div>   
+
+                    </div>               
             </div>
+        </div>
+        <div class="row">
             <div class="col">
+                    <div class="form-group">
+                        <label for="Person.address1" class="col-form-label">{{%address1}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.address1"
+                                name="Person.address1" value="{{Person.address1}}" />
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Person.address2" class="col-form-label">{{%address2}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.address2"
+                                name="Person.address2" value="{{Person.address2}}" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Person.city" class="col-form-label">{{%city}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.city"
+                                name="Person.city" value="{{Person.city}}" />
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Person.state" class="col-form-label">{{%state}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.state"
+                                name="Person.state" value="{{Person.state}}" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Person.phone" class="col-form-label">{{%phone}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.phone"
+                                name="Person.phone" value="{{Person.phone}}" />
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col">
+                <label for="Person.email" class="col-form-label">{{%email}}</label>
+                <div class=input-group>
+                    <input type="email" class="form-control" id="Person.email" name="Person.email" value="{{Person.email}}" />
+                    <div class="input-group-append">
+                        <div class="input-group-text cursor-pointer"><a class="text-secondary" href="#" onclick="ltgFormAction('email-dialog.html?action=new&modal=true');"><i class="fa fa-envelope"></i></a></div>
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
                         <label for="Person.country" class="col-form-label">{{%country}}</label>
                         <div>
-                            <input type="text" class="form-control" id="Person.country" tabindex="11"
+                            <input type="text" class="form-control" id="Person.country"
                                 name="Person.country" value="{{Person.country}}" />
                         </div>
+                    </div>
             </div>
+
             <div class="col">
+                    <div class="form-group">
                         <label for="Person.postalCode" class="col-form-label">{{%postalCode}}</label>
                         <div>
-                            <input type="text" class="form-control" id="Person.postalCode" tabindex="12"
+                            <input type="text" class="form-control" id="Person.postalCode"
                                 name="Person.postalCode" value="{{Person.postalCode}}" />
                         </div>
+                    </div>
             </div>
         </div>
-		
-		<div class="row">
-            <div class="col">
-                        <label for="Person.notes" class="col-form-label">{{%notes}}</label>
-                        <div>
-                            <textarea rows="3" class="form-control" id="Person.notes" tabindex="13"
-                                name="Person.notes" value="{{Person.notes}}" /></textarea>
-                        </div>
-            </div>
-        </div>
-
-		
-		<div class="row">
-            <div class="col">
-                        <label for=".personActive" class="col-form-label">Active</label>
-                        <div>
-                        <input type="checkbox" id=".personActive" name=".personActive" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
-                        </div>
-            </div>
-            <div class="col">
-                        <label for=".personValid" class="col-form-label">Valid</label>
-                        <div>
-                        <input type="checkbox" id=".personValid" name=".personValid" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
-                        </div>
-            </div>
-            <div class="col">
-                        <label for=".personStatus" class="col-form-label">Status</label>
-                        <div>
-                            <input type="text" class="form-control" id=".personStatus" tabindex="8"
-                                name=".personStatus" value="{{.personStatus}}" />
-                        </div>
-            </div>
-            <div class="col">
-                        <label for=".personDuplicate" class="col-form-label">Duplicate Name</label>
-                        <div>
-                        <input type="checkbox" id=".personDuplicate" name=".personDuplicate" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
-                        </div>
-            </div>
-        </div>
-
-		
             <!--TABS-->
             <ul class="nav nav-tabs mb-3 mt-3" id="tabs-tab" role="tablist">
                 <li class="nav-item">
@@ -209,6 +215,7 @@
             </div>
             <!--/TABS-->
 
+		
             <!--PAGINATION-->
             <nav id="person-pagination">
                 <ul class="pagination justify-content-end">
@@ -252,32 +259,6 @@
                 </div>
             </div>
             <!--/DELETE RECORD DIALOG-->
-			
-			
-			
-            <!--ADD RECORD DIALOG-->
-            <div class="modal" id="company-add" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Add Company</h5>
-                            <button type="button" class="close" data-dismiss="modal" onclick="ltgExecuteMethod('PersonCompany_Cancel');">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p id="dialog-content2"></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ltgExecuteMethod('PersonCompany_Cancel');">{{%cancel}}</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                onclick="ltgFormAction('personCompany-modal.html?action=edit&modal=true&record={{Person.UUID}}');">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ADD RECORD DIALOG-->
-			
         </div>
         <!--/BODY-->
 		
@@ -290,34 +271,5 @@
             });
         });
 		
-
-var phoneField = document.getElementById('phoneField');
-phoneField.addEventListener('keyup', function(){
-  var phoneValue = phoneField.value;
-  var output;
-  phoneValue = phoneValue.replace(/[^0-9]/g, '');
-    var area = phoneValue.substr(0, 3);
-    var pre = phoneValue.substr(3, 3);
-    var tel = phoneValue.substr(6, 4);
-    if (area.length < 2) {
-        output = "" + area;
-    } else if (area.length < 3) {
-        output = "(" + area;	
-    } else if (area.length == 3 && pre.length < 3) {
-        output = "(" + area + ")" + " " + pre;
-    } else if (area.length == 3 && pre.length == 3) {
-        output = "(" + area + ")" + " " + pre + " - "+tel;
-    }
-  phoneField.value = output;
-  
-});		
-
-$(document).ready(function() {
-  $(window).keydown(function(event){
-    if(event.keyCode == 13) {
-      event.preventDefault();
-      return false;
-    }
-  });
-});
+		
 </script>

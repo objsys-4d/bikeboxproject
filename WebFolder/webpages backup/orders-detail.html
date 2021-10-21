@@ -1,0 +1,295 @@
+<!--FORM METHOD-->
+{{Order_Detail}}
+
+<!--HIDDEN VALUES-->
+<input type="hidden" id="Order.Order_ID" name="Order.Order_ID" value="{{Order.Order_ID}}" />
+<input type="hidden" id="Order.Company_ID" name="Order.Company_ID" value="{{Order.Company_ID}}" />
+<!--/HIDDEN VALUES-->
+    
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%orders}}</h1>
+        <!--/TITLE-->
+    </div>
+    
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('orders-list.html?action=tab');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+    
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+        
+        <hr/>
+        
+        <!--FORM TOOLBAR-->
+        <div class="btn-toolbar justify-content-center" role="toolbar">
+            <div>
+                <!--SAVE RECORD-->
+                <button type="button" class="btn btn-success"
+                     onclick="ltgFormAction('?action=save&record={{Order.Order_ID}}&method=Order_SaveAndClose');">{{%save}}</button>
+                <!--/SAVE RECORD-->
+                 
+                <!--DELETE RECORD-->
+                <button type="button" class="btn btn-secondary"
+                    onclick="ltgFormAction('?action=delete-confirm&method=Order_Delete');">{{%delete}}</button>
+                <!--/DELETE RECORD-->
+            </div>
+        </div>
+        <!--/FORM TOOLBAR-->
+        
+        <hr/>
+        
+        <div class="row">
+            <div class="col">
+                <label for="Order.Order_Number" class="col-form-label">{{%order_number}}</label>
+                <div>
+                    <input type="text" class="form-control" readonly="readonly" id="Order.Order_Number"
+                        name="Order.Order_Number" value="{{Order.Order_Number}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label for="Order.Status" class="col-form-label">{{%status}}</label>
+                <div>
+                    <div>
+                        <select class="custom-select" id="Order.Status" name="Order.Status">
+                            <option value="Processing">{{%processing}}</option>
+                            <option value="Shipped">{{%shipped}}</option>
+                            <option value="Cancelled">{{%cancelled}}</option>
+                            <option value="Disputed">{{%disputed}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <label for="Order.Company_Name" class="col-form-label">{{%company_name}}</label>
+                <div class=input-group>
+                    <input autocomplete="off" type="text" class="form-control" id="Order.Company_Name" name="Order.Company_Name" oninput="ltgExecuteMethod('Order_Company',this.value);" value="{{Order.Company_Name}}"/>
+                    <div class="input-group-append">
+                        <div class="input-group-text cursor-pointer" onclick="autocompleteToggle('orderCompany','Order_Company')"><i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div>
+                <ul id="orderCompany" class="autocomplete list-group"></ul>
+            </div>
+            <div class="col">
+                <label for="Order.Order_Date" class="col-form-label">{{%order_date}}</label>
+                <div class="input-group date" id="orderDatePicker" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input"  id="Order.Order_Date"
+                        name="Order.Order_Date" data-target="#orderDatePicker" value="{{Order.Order_Date}}" />
+                    <div class="input-group-append" data-target="#orderDatePicker" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        
+        <div class="row mb-3">
+            <div class="col">
+                <label for="Order.Contact_ID" class="col-form-label">{{%name}}</label>
+                <div>
+                    <select class="custom-select" id="Order.Contact_ID" name="Order.Contact_ID"></select>
+                </div>
+            </div>
+            <div class="col">
+                <label for="Order.PO_Reference" class="col-form-label">{{%order_reference}}</label>
+                <div>
+                    <input type="text" class="form-control" id="Order.PO_Reference"
+                        name="Order.PO_Reference" value="{{Order.PO_Reference}}" />
+                </div>   
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="Order.Email" class="col-form-label">{{%email}}</label>
+                <div class=input-group>
+                    <input type="email" class="form-control" id="Order.Email" name="Order.Email" value="{{Order.Email}}" />
+                    <div class="input-group-append">
+                        <div class="input-group-text cursor-pointer"><a class="text-secondary" href="#" onclick="ltgExecuteMethod('Order_Email');"><i class="fa fa-envelope"></i></a></div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col">
+                <label for="Order.Contact_ID" class="col-form-label">{{%salesperson}}</label>
+                <div>
+                    <select class="custom-select" id="Order.Salesperson" name="Order.Salesperson">
+                        <option value="jsturgess">John Sturgess</option>
+                        <option value="mbenson">Mike Benson</option>
+                        <option value="mhammond">Meredith Hammond</option>
+                        <option value="stevedavids">Steve Davids</option>
+                        <option value="tsutherland">Thomas Sutherland</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+         <!--DATATABLES TABLE-->
+        <table class="table table-hover table-responsive-md mt-2" id="items" style="width:100%;">
+                <thead>
+                    <tr>
+                        <!--COLUMNS-->
+                        <th>
+                            <!--EDIT-->
+                        </th>
+                        <th>
+                            <!--HIDDEN ITEM_ID-->
+                        </th>
+                        <th>
+                            {{%product}}
+                        </th>
+                        <th>
+                            {{%description}}
+                        </th>
+                        <th>
+                            {{%quantity}}
+                        </th>
+                        <th>
+                            {{%rate}}
+                        </th>
+                        <th>
+                            {{%amount}}
+                        </th>
+                        <th>
+                            <!--DELETE-->
+                        </th>
+                        <!--/COLUMNS-->
+                    </tr>
+                </thead>
+            </table>
+            <!--/DATATABLES TABLE-->
+            
+            <hr>
+            
+            <!--NEW RECORD-->
+            <button type="button" class="btn btn-primary" 
+                onclick="ltgFormAction('order-item-detail.html?action=new&modal=true');">{{%add}}</button>
+            <!--/NEW RECORD-->
+            
+            <!--TOTALS-->
+            <div class="row mb-1 mr-1 float-right">
+                <label for=".orderSubtotal" class="col-form-label mr-2"><strong>{{%subtotal}}</strong></label>
+                <div>
+                    <input class="form-control text-right" readonly="readonly" id=".orderSubtotal" style="width:140px;" value="{{.orderSubtotal}}"/>
+                </div>
+            </div>
+                
+            <div class="row mb-1 mr-1 float-right clearboth">
+                <label for=".orderTax" class="col-form-label mr-2"><strong>{{%tax}}</strong></label>
+                <div>
+                    <input class="form-control text-right" readonly="readonly" id=".orderTax" style="width:140px;" value="{{.orderTax}}"/>
+                </div>
+            </div>
+                
+            <div class="row mb-1 mr-1 float-right clearboth">
+                <label for=".orderTotal" class="col-form-label mr-2"><strong>{{%total}}</strong></label>
+                <div>
+                    <input class="form-control text-right" readonly="readonly" id=".orderTotal" style="width:140px;" value="{{.orderTotal}}"/>
+                </div>
+            </div>
+            <!--/TOTALS-->
+    </div>
+    <!--/BODY-->
+    
+    <!--DELETE RECORD DIALOG-->
+    <div class="modal" id="order-delete" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{%delete}}</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="dialog-content"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        onclick="ltgFormAction('?action=delete&method=Order_Delete');">{{%delete}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/DELETE RECORD DIALOG-->
+    
+    <script>
+        
+        // INITIALISE AUTOCOMPLETE (COMPANY NAME)
+        
+        autocompleteInit('orderCompany','Order_Company');
+        
+        // INITIALISE DATEPICKER (ORDER DATE)
+        
+        $(function () {
+            $('#orderDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+        
+        // DATATABLES...
+            
+        var table = ltgObj('items').DataTable(
+            {
+                columnDefs: [
+                {
+                    targets: [ 0 ],
+                    orderable: false,
+                    render: function ( data, type, row, meta ) {
+                     if(type === 'display'){ 
+                     
+                      data = '<a class="text-secondary" href="#" onclick="ltgFormAction(\'order-item-detail.html?action=edit&modal=true&record='+row[1]+'\');"><i class="fas fa-edit"></i></a>';
+                     }
+                     return data;
+                    }                    
+                },
+                {
+                    targets: [ 1 ],
+                    visible: false // HIDE ITEM_ID
+                },
+                {
+                    targets: [ 4 ],
+                    className: 'text-right'
+                },
+                {
+                    targets: [ 5 ],
+                    className: 'text-right'
+                },
+                {
+                    targets: [ 6 ],
+                    className: 'text-right'
+                },
+                {
+                    targets: [ 7 ],
+                    orderable: false,
+                    render: function ( data, type, row, meta ) {
+                    if(type === 'display'){ 
+                        data='<a class="text-secondary" href="#" onclick="ltgExecuteMethod(\'OrderItem_Delete\',\''+row[1]+'\');"><i class="fas fa-trash"></i></a>';
+                    }
+                    return data;
+                    }
+                },                    
+            ],
+            info: false,
+            language: {'lengthMenu': '{{%page_Size}} _MENU_','emptyTable': '{{%records_none}}'},
+            order: [[ 2, 'asc' ]],
+            paging: false,
+            responsive: true,
+            searching: false,
+            }
+        );
+        
+        // REMOVES A ROW WHEN THE DELETE ICON IS CLICKED...
+        
+        ltgObj('items tbody').on( 'click', 'i.fa-trash', function () {
+            
+            table.row($(this).parents('tr')).remove().draw();
+        } );
+    </script>

@@ -1,0 +1,217 @@
+    <!--FORM METHOD-->
+    {{BBCompany_Detail}}
+    
+    <!--HIDDEN VALUES-->
+    <input type="hidden" name="Company.UUID" value="{{Company.UUID}}" />
+    <input type="hidden" name="Company.companyID" value="{{Company.companyID}}" />
+    <!--/HIDDEN VALUES-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%company}}</h1>
+        <!--/TITLE-->
+    </div>
+            
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=BBCompany_Cancel');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+
+            <hr/>
+            
+            <!--FORM TOOLBAR-->
+            <div class="btn-toolbar justify-content-center" role="toolbar">
+                <div>
+                    <!--SAVE RECORD-->
+                    <button type="button" class="btn btn-success"
+                        onclick="ltgFormAction('?action=save&record={{Company.UUID}}&method=BBCompany_Save');">{{%save}}</button>
+                    <!--/SAVE RECORD-->
+
+                    <!--DELETE RECORD-->
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgFormAction('?action=delete-confirm&method=BBCompany_Delete');">{{%delete}}</button>
+                    <!--/DELETE RECORD-->
+                    
+                </div>
+            </div>
+            <!--/FORM TOOLBAR-->
+            
+            <hr/>
+			
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.companyName" class="col-form-label">{{%companyName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.companyName"
+                                name="Company.companyName" value="{{Company.companyName}}" />
+                        </div>
+                    </div>
+            </div>
+
+     
+        </div>
+            
+
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.address" class="col-form-label">{{%address}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.address"
+                                name="Company.address" value="{{Company.address}}" />
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.city" class="col-form-label">{{%city}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.city"
+                                name="Company.city" value="{{Company.city}}" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.state" class="col-form-label">{{%state}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.state"
+                                name="Company.state" value="{{Company.state}}" />
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.postalCode" class="col-form-label">{{%postalCode}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.postalCode"
+                                name="Company.postalCode" value="{{Company.postalCode}}" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+		
+		
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.phone1" class="col-form-label">{{%phone1}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.phone1"
+                                name="Company.phone1" value="{{Company.phone1}}" />
+                        </div>
+                    </div>
+            </div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.phone2" class="col-form-label">{{%phone2}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.phone2"
+                                name="Company.phone2" value="{{Company.phone2}}" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="Company.email" class="col-form-label">{{%email}}</label>
+                <div class=input-group>
+                    <input type="email" class="form-control" id="Company.email" name="Company.email" value="{{Company.email}}" />
+                    <div class="input-group-append">
+                        <div class="input-group-text cursor-pointer"><a class="text-secondary" href="#" onclick="ltgFormAction('email-dialog.html?action=new&modal=true');"><i class="fa fa-envelope"></i></a></div>
+
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.website" class="col-form-label">{{%website}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.website"
+                                name="Company.website" value="{{Company.website}}" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+		
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Company.fax" class="col-form-label">{{%fax}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.fax"
+                                name="Company.fax" value="{{Company.fax}}" />
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col">
+                    <div class="form-group">
+
+                    </div>
+            </div>
+        </div>
+
+					
+			
+            <!--PAGINATION-->
+            <nav id="company-pagination">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=previous');">{{%previous}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=first');">1</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">{{.companyPageNumber}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=last');">{{.companyPageCount}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=next');">{{%next}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/PAGINATION-->
+            
+            <!--DELETE RECORD DIALOG-->
+            <div class="modal" id="learn-delete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{%delete}}</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="dialog-content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                onclick="ltgFormAction('?action=delete&record={{Company.UUID}}&method=BBCompany_Delete');">{{%delete}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/DELETE RECORD DIALOG-->
+        </div>
+        <!--/BODY-->
+	

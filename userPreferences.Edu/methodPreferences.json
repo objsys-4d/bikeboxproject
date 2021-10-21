@@ -45,19 +45,19 @@
 		"stamp": "2021-10-07T17:26:50.706Z"
 	},
 	"Sources/Methods/_EDR_Test01.4dm": {
-		"startSelection": 9,
-		"endSelection": 28,
-		"firstSelectedLine": 9,
-		"lastSelectedLine": 9,
+		"startSelection": 0,
+		"endSelection": 7,
+		"firstSelectedLine": 6,
+		"lastSelectedLine": 18,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-20T15:18:02.668Z"
+		"stamp": "2021-10-21T14:23:00.962Z"
 	},
 	"Sources/Forms/email/method.4dm": {
 		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 32,
-		"lastSelectedLine": 32,
+		"endSelection": 16,
+		"firstSelectedLine": 25,
+		"lastSelectedLine": 25,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-20T11:31:39.360Z"
@@ -126,10 +126,10 @@
 		"stamp": "2021-10-06T15:41:58.668Z"
 	},
 	"Sources/Methods/EMail_LoadEmails.4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 0,
-		"lastSelectedLine": 0,
+		"startSelection": 22,
+		"endSelection": 41,
+		"firstSelectedLine": 40,
+		"lastSelectedLine": 40,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-20T15:06:41.985Z"
@@ -522,13 +522,13 @@
 		"stamp": "2021-10-13T14:15:52.788Z"
 	},
 	"Sources/Forms/emailSend/ObjectMethods/Variable5.4dm": {
-		"startSelection": 0,
-		"endSelection": 19,
-		"firstSelectedLine": 7,
-		"lastSelectedLine": 7,
+		"startSelection": 42,
+		"endSelection": 42,
+		"firstSelectedLine": 11,
+		"lastSelectedLine": 11,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-19T11:55:07.007Z"
+		"stamp": "2021-10-21T15:48:53.952Z"
 	},
 	"Sources/TableForms/16/companyList/method.4dm": {
 		"startSelection": 20,
@@ -639,13 +639,13 @@
 		"stamp": "2021-10-19T11:28:11.419Z"
 	},
 	"Sources/Forms/emailSend/ObjectMethods/Variable6.4dm": {
-		"startSelection": 41,
-		"endSelection": 41,
+		"startSelection": 42,
+		"endSelection": 42,
 		"firstSelectedLine": 11,
 		"lastSelectedLine": 11,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-19T11:56:12.464Z"
+		"stamp": "2021-10-21T15:48:59.734Z"
 	},
 	"Sources/Forms/email/ObjectMethods/Button.4dm": {
 		"startSelection": 9,
@@ -657,13 +657,13 @@
 		"stamp": "2021-10-20T17:11:02.406Z"
 	},
 	"Sources/Methods/Email_ExtractPerson.4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 52,
-		"lastSelectedLine": 53,
+		"startSelection": 28,
+		"endSelection": 28,
+		"firstSelectedLine": 27,
+		"lastSelectedLine": 27,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-20T14:04:48.051Z"
+		"stamp": "2021-10-21T14:33:14.972Z"
 	},
 	"Sources/TableForms/21/eventInput/method.4dm": {
 		"startSelection": 0,
@@ -738,21 +738,48 @@
 		"stamp": "2021-10-06T15:41:58.869Z"
 	},
 	"Sources/Methods/Person_List.4dm": {
-		"startSelection": 99,
-		"endSelection": 99,
-		"firstSelectedLine": 97,
-		"lastSelectedLine": 97,
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 103,
+		"lastSelectedLine": 103,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-20T14:38:25.840Z"
+		"stamp": "2021-10-21T09:24:17.513Z"
 	},
 	"Sources/Methods/Person_Detail.4dm": {
-		"startSelection": 62,
-		"endSelection": 62,
-		"firstSelectedLine": 124,
-		"lastSelectedLine": 124,
+		"startSelection": 51,
+		"endSelection": 51,
+		"firstSelectedLine": 144,
+		"lastSelectedLine": 144,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-20T15:29:53.816Z"
+		"stamp": "2021-10-21T10:55:33.406Z"
+	},
+	"Sources/Methods/PersonObject_checkbox.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 25,
+		"lastSelectedLine": 25,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-21T11:52:07.346Z"
+	},
+	"Sources/Methods/Person_Save.4dm": {
+		"startSelection": 41,
+		"endSelection": 41,
+		"firstSelectedLine": 44,
+		"lastSelectedLine": 44,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-21T12:20:23.661Z"
+	},
+	"Sources/Methods/UTIL_ProperCase.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 0,
+		"lastSelectedLine": 0,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-08-16T17:30:08.803Z"
 	}
 }

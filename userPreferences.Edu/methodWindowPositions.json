@@ -438,8 +438,8 @@
 		"height": 857
 	},
 	"Sources/Methods/Email_ExtractPerson.4dm": {
-		"left": 103,
-		"top": 116,
+		"left": 217,
+		"top": 109,
 		"width": 1650,
 		"height": 857
 	},
@@ -498,9 +498,27 @@
 		"height": 867
 	},
 	"Sources/Methods/Person_Detail.4dm": {
+		"left": 128,
+		"top": 112,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/PersonObject_checkbox.4dm": {
 		"left": 177,
 		"top": 119,
 		"width": 1779,
 		"height": 867
+	},
+	"Sources/Methods/Person_Save.4dm": {
+		"left": 177,
+		"top": 119,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/UTIL_ProperCase.4dm": {
+		"left": 8,
+		"top": 109,
+		"width": 1571,
+		"height": 857
 	}
 }

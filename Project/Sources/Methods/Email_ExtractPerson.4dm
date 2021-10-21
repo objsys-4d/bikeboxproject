@@ -26,6 +26,20 @@ For ($i; 0; $EmailCollection.length-1)
 	
 	If ($name#"")  //if name not blank, lookup Person table. if name is still blank, skip.
 		
+		$name:=UTIL_ProperCase($name)
+		If (Position:C15(","; $name)=0)
+			If (Position:C15(" "; $name)=0)
+				$firstName:=$name
+				$lastName:=""
+			Else 
+				$firstName:=Substring:C12($name; 1; Position:C15(" "; $name)-1)
+				$lastName:=Substring:C12($name; Position:C15(" "; $name)+1)
+			End if 
+		Else 
+			$firstName:=Substring:C12($name; Position:C15(","; $name)+2)
+			$lastName:=Substring:C12($name; 1; Position:C15(","; $name)-1)
+		End if 
+		
 		//get email
 		$email:=Substring:C12($EmailCollection[$i]; Position:C15("<"; $EmailCollection[$i]))
 		$email:=Replace string:C233($email; "<"; "")
@@ -37,6 +51,8 @@ For ($i; 0; $EmailCollection.length-1)
 		If ($oPerson.length=0)
 			$oNewPerson:=ds:C1482.Person.new()
 			$oNewPerson.fullName:=$name
+			$oNewPerson.firstName:=$firstName
+			$oNewPerson.lastName:=$lastName
 			$oNewPerson.email:=$email
 			
 			$oNewPerson.personObject:=New object:C1471

@@ -9,6 +9,6 @@ Case of
 		
 	: (Form event code:C388=On Data Change:K2:15)
 		
-		vEmailPtr->:=EmailSend_CleanUp(vEmailPtr)
+		vEmailPtr->:=EmailSend_CleanUp(vEmailPtr->)
 		
 End case 

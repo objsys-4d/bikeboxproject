@@ -1,0 +1,25 @@
+<style>
+    .popover {
+      overflow:auto;
+      max-height:298px;
+      max-width:100%
+    }
+</style>
+  
+<!--QUALITY CONTROL-->
+<div class="bg-white border-bottom-primary" id="ltg-qc">
+    <div class="container-fluid h-100">
+        <div class="row align-items-center justify-content-between h-100">
+            <div class="col-auto col-lg"></div>
+            <div class="col col-auto d-xl-block justify-content-center">
+              <button type="button" class="btn btn-outline-success" data-toggle="popover" data-content="" data-placement="bottom" id="ltg-qc-popover" onclick="ltgQCPopover();" style="border:0px;border-radius:0px;min-width:220px;"><span id="ltg-performance"></span><span id="ltg-errors"></span></button>
+            </div>
+            <div class="col text-right">
+              <a href="#" class="btn btn-link btn-sm d-md-inline-block" onclick="ltgQCHide();">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!--/QUALITY CONTROL-->

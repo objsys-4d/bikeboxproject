@@ -1,0 +1,69 @@
+<!--FORM METHOD-->
+{{OrderItem_Detail}}
+
+<!--MODAL FORM-->
+<div class="modal" id="order-item-detail.html" tabindex="-1" role="dialog" aria-labelledby="order-item-detail.html" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">{{%orders}}</h5>
+            </div>
+            <div class="modal-body bg-gray-100">
+                    
+                <!--HIDDEN VALUES-->
+                <input type="hidden" name="Item.Item_ID" value="{{Item.Item_ID}}" />
+                <input type="hidden" id="Item.Product" name="Item.Product" value="{{Item.Product}}" />
+                <input type="hidden" id="Item.Description" name="Item.Description" value="{{Item.Description}}" />
+                <!--/HIDDEN VALUES-->
+
+                <div class="form-group">
+                    <label for="Product.Type" class="col-form-label">{{%type}}</label>
+                    <select class="custom-select" id="Product.Type" name="Product.Type" onchange="ltgExecuteMethod('OrderItem_Calculate');"></select>								
+                </div>
+                <div class="form-group">
+                    <label for="Product.Colour" class="col-form-label">{{%colour}}</label>
+                    <select class="custom-select" id="Product.Colour" name="Product.Colour" onchange="ltgExecuteMethod('OrderItem_Calculate');"></select>								
+                </div>
+                <div class="form-group">
+                    <label for="Product.Size" class="col-form-label">{{%size}}</label>
+                    <select class="custom-select" id="Product.Size" name="Product.Size" onchange="ltgExecuteMethod('OrderItem_Calculate');"></select>								
+                </div>
+                <div class="form-group">
+                    <label for=".itemQuantity" class="col-form-label">{{%quantity}}</label>
+                    <div>
+                        <input class="form-control text-right" type="text" id=".itemQuantity" name=".itemQuantity" onchange="ltgExecuteMethod('OrderItem_Calculate');" value="{{.itemQuantity}}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Item.Rate" class="col-form-label">{{%rate}}</label>
+                    <div>
+                        <input readonly="readonly" class="form-control text-right" type="text" id=".itemRate" name=".itemRate" value="{{.itemRate}}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for=".itemAmount" class="col-form-label">{{%amount}}</label>
+                    <div>
+                        <input readonly="readonly" class="form-control text-right" type="text" id=".itemAmount" name=".itemAmount" value="{{.itemAmount}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                onclick="ltgFormAction('?action=cancel&method=OrderItem_Cancel');">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Item.Item_ID}}&method=OrderItem_Save');">{{%save}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+
+   /* DESTROY MODAL AFTER DISMISSING */
+   
+   ltgObj('order-item-detail.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('order-item-detail.html');
+    })
+</script>

@@ -1,0 +1,57 @@
+<!--FORM METHOD-->
+{{Contacts_Included_List}}
+<!--/FORM METHOD-->
+
+    <!--BODY-->
+    <div class="mt-3">
+    
+        <!--THIS DATATABLE HAS INLINE STYLE ADDITIONS = DISPLAYED IN A BOOTSTRAP TAB-->
+        <table class="table table-hover mt-2" style="border-top:0px;width:100% !important" id="contacts">
+            <thead>
+                <tr>
+                    <th><!--HIDDEN CONTACT_ID--></th>
+                    <th>{{%contact_name}}</th>
+                    <th>{{%job_title}}</th>
+                    <th>{{%phone}}</th>
+                    <th>{{%email}}</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <!--/BODY-->
+        
+    <script>
+    
+        // DATATABLES...
+        
+        var data = {{.contactsDataTable}};
+        
+        ltgObj('contacts').DataTable(
+            {
+                data: data,
+                columnDefs: [
+                {
+                    targets: [ 0 ],
+                    visible: false, // CONTACT_ID (HIDDEN)
+                },
+                {
+                    targets: [ 1 ], // CONTACT NAME LINK
+                     render: function ( data, type, row, meta ) {
+                        if(type === 'display'){
+                        
+                            data = '<a href="#" onclick="ltgFormAction(\'contacts-detail.html?action=edit&modal=true&record='+row[0]+'\');">'+data+'</a>';
+                        }
+    
+                        return data;
+                    }
+                }
+            ],
+            language: {'lengthMenu': '{{%page_Size}} _MENU_','emptyTable': '{{%records_none}}'},
+            order: [[ 1, 'asc' ]],
+            info: false,
+            paging: false,
+            responsive: true,
+            searching: false
+            }
+        );
+    </script>

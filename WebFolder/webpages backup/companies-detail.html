@@ -1,0 +1,162 @@
+    <!--FORM METHOD-->
+    {{Company_Detail}}
+    
+    <!--HIDDEN VALUES-->
+    <input type="hidden" name="Company.Company_ID" value="{{Company.Company_ID}}" />
+    <!--/HIDDEN VALUES-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%companies}}</h1>
+        <!--/TITLE-->
+    </div>
+            
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=Company_Cancel');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+
+            <hr/>
+            
+            <!--FORM TOOLBAR-->
+            <div class="btn-toolbar justify-content-center" role="toolbar">
+                <div>
+                    <!--SAVE RECORD-->
+                    <button type="button" class="btn btn-success"
+                        onclick="ltgFormAction('?action=save&record={{Company.Company_ID}}&method=Company_Save');">{{%save}}</button>
+                    <!--/SAVE RECORD-->
+
+                    <!--DELETE RECORD-->
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgFormAction('?action=delete-confirm&method=Company_Delete');">{{%delete}}</button>
+                    <!--/DELETE RECORD-->
+                    
+                    <!--NEW CONTACT-->
+                    <button type="button" class="btn btn-secondary" 
+                        onclick="ltgFormAction('contacts-detail.html?action=new&modal=true&record={{Company.Company_ID}}');">{{%new}} {{%contact}}</button>
+                    <!--/NEW CONTACT-->
+                </div>
+            </div>
+            <!--/FORM TOOLBAR-->
+            
+            <hr/>
+            
+            <!--TABS-->
+            <ul class="nav nav-tabs mb-3 mt-3" id="tabs-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tabs-company-tab" data-toggle="tab" href="#tabs-company" onclick="ltgTabSetActive('tabs-company-tab');" role="tab"
+                        aria-controls="tabs-company" aria-selected="true">{{%company}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tabs-contacts-tab" data-toggle="tab" href="#tabs-contacts" onclick="ltgTabSetActive('tabs-contacts-tab');" role="tab"
+                        aria-controls="tabs-contacts" aria-selected="false">{{%contacts}}</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+
+                <!--COMPANY TAB-->
+                <div class="tab-pane fade show active" id="tabs-company" role="tabpanel"
+                    aria-labelledby="tabs-company-tab">
+                    <div class="form-group">
+                        <label for="Company.Company_Name" class="col-form-label">{{%company_name}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.Company_Name"
+                                name="Company.Company_Name" value="{{Company.Company_Name}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Company.Address" class="col-form-label">{{%address}}</label>
+                        <div>
+                            <textarea class="form-control" id="Company.Address"
+                                name="Company.Address">{{Company.Address}}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Company.City" class="col-form-label">{{%city}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.City" name="Company.City"
+                                value="{{Company.City}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Company.County" class="col-form-label">{{%county}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.County" name="Company.County"
+                                value="{{Company.County}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Company.Postcode" class="col-form-label">{{%postcode}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Company.Postcode" name="Company.Postcode"
+                                value="{{Company.Postcode}}" />
+                        </div>
+                    </div>
+                </div>
+                <!--/COMPANY TAB-->
+                
+                <!--CONTACTS TAB-->
+                <div class="tab-pane fade" id="tabs-contacts" role="tabpanel" aria-labelledby="tabs-contacts-tab">
+
+                    {{include contacts-included.html}}
+                </div>
+                <!--/CONTACTS TAB-->
+            </div>
+            <!--/TABS-->
+            
+            <!--PAGINATION-->
+            <nav id="companies-pagination">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=previous');">{{%previous}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=first');">1</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">{{.companiesPageNumber}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=last');">{{.companiesPageCount}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=next');">{{%next}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/PAGINATION-->
+            
+            <!--DELETE RECORD DIALOG-->
+            <div class="modal" id="company-delete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{%delete}}</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="dialog-content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                onclick="ltgFormAction('?action=delete&record={{Company.Company_ID}}&method=Company_Delete');">{{%delete}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/DELETE RECORD DIALOG-->
+        </div>
+        <!--/BODY-->
