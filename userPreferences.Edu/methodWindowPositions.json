@@ -85,9 +85,9 @@
 	},
 	"Sources/Methods/EMail_LoadEmails.4dm": {
 		"left": 204,
-		"top": 241,
+		"top": 123,
 		"width": 1772,
-		"height": 857
+		"height": 975
 	},
 	"Sources/Methods/GEN_ListBox_AllItemsSelect.4dm": {
 		"left": 65,
@@ -156,8 +156,8 @@
 		"height": 857
 	},
 	"Sources/Forms/emailSend/method.4dm": {
-		"left": 874,
-		"top": 109,
+		"left": 390,
+		"top": 111,
 		"width": 1031,
 		"height": 857
 	},
@@ -180,9 +180,9 @@
 		"height": 857
 	},
 	"Sources/Methods/Email_Send.4dm": {
-		"left": 184,
-		"top": 109,
-		"width": 1205,
+		"left": 914,
+		"top": 140,
+		"width": 925,
 		"height": 857
 	},
 	"Sources/Methods/Email_SendGUI.4dm": {
@@ -330,10 +330,10 @@
 		"height": 675
 	},
 	"Sources/Methods/EmailSend_GUI_Init.4dm": {
-		"left": 103,
-		"top": 227,
-		"width": 987,
-		"height": 675
+		"left": 136,
+		"top": 141,
+		"width": 1368,
+		"height": 803
 	},
 	"Sources/Methods/BLOB_BLOBToVars.4dm": {
 		"left": 481,

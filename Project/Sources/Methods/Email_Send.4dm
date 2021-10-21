@@ -69,7 +69,6 @@ If ((Count parameters:C259>=3) | (vbTest))
 	$email.subject:=$vtSubject
 	
 	If ($html)
-		$message:="<html><body>"+$message+"</body></html>"
 		$email.htmlBody:=$message
 	Else 
 		$email.textBody:=$message

@@ -266,7 +266,7 @@
 					"height": 428,
 					"dataSource": "vtEmailSend_WA"
 				},
-				"Input": {
+				"objvtEmailSend_Message": {
 					"type": "input",
 					"left": 27,
 					"top": 153,
@@ -288,14 +288,52 @@
 					"fontSize": 12,
 					"fontWeight": "normal",
 					"fontStyle": "italic"
+				},
+				"List Box1": {
+					"type": "listbox",
+					"left": 781,
+					"top": 51,
+					"width": 199,
+					"height": 313,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header5"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							}
+						}
+					]
 				}
-			}
+			},
+			"entryOrder": [
+				"Variable5",
+				"Variable6",
+				"Variable9",
+				"List Box",
+				"btAttach_Add",
+				"btAttach_Rem",
+				"objvtEmailSend_Message",
+				"emailHTML_WA",
+				"Button",
+				"Button1",
+				"List Box1"
+			]
 		},
 		{
 			"objects": {}
 		}
 	],
-	"geometryStamp": 363,
+	"geometryStamp": 406,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

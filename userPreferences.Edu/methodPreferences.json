@@ -54,10 +54,10 @@
 		"stamp": "2021-10-13T16:38:10.392Z"
 	},
 	"Sources/Forms/email/method.4dm": {
-		"startSelection": 19,
-		"endSelection": 19,
-		"firstSelectedLine": 4,
-		"lastSelectedLine": 4,
+		"startSelection": 13,
+		"endSelection": 13,
+		"firstSelectedLine": 27,
+		"lastSelectedLine": 27,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-13T13:05:42.451Z"
@@ -128,11 +128,11 @@
 	"Sources/Methods/EMail_LoadEmails.4dm": {
 		"startSelection": 0,
 		"endSelection": 0,
-		"firstSelectedLine": 43,
-		"lastSelectedLine": 44,
+		"firstSelectedLine": 38,
+		"lastSelectedLine": 38,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-12T14:49:02.994Z"
+		"stamp": "2021-10-14T15:07:35.832Z"
 	},
 	"Sources/Methods/GEN_ListBox_AllItemsSelect.4dm": {
 		"startSelection": 0,
@@ -234,10 +234,10 @@
 		"stamp": "2021-10-08T14:03:32.512Z"
 	},
 	"Sources/Forms/emailSend/method.4dm": {
-		"startSelection": 0,
-		"endSelection": 21,
-		"firstSelectedLine": 4,
-		"lastSelectedLine": 4,
+		"startSelection": 9,
+		"endSelection": 9,
+		"firstSelectedLine": 6,
+		"lastSelectedLine": 6,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-13T14:28:33.249Z"
@@ -270,13 +270,13 @@
 		"stamp": "2021-10-08T14:22:54.437Z"
 	},
 	"Sources/Methods/Email_Send.4dm": {
-		"startSelection": 23,
-		"endSelection": 23,
-		"firstSelectedLine": 95,
-		"lastSelectedLine": 95,
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 70,
+		"lastSelectedLine": 70,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-13T16:52:37.395Z"
+		"stamp": "2021-10-14T10:24:36.286Z"
 	},
 	"Sources/Methods/Email_SendGUI.4dm": {
 		"startSelection": 20,
@@ -297,13 +297,13 @@
 		"stamp": "2021-10-06T15:41:58.805Z"
 	},
 	"Sources/Forms/emailSend/ObjectMethods/Button.4dm": {
-		"startSelection": 22,
-		"endSelection": 32,
-		"firstSelectedLine": 21,
-		"lastSelectedLine": 21,
+		"startSelection": 19,
+		"endSelection": 19,
+		"firstSelectedLine": 18,
+		"lastSelectedLine": 18,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-13T14:39:06.758Z"
+		"stamp": "2021-10-14T13:50:37.376Z"
 	},
 	"Sources/Forms/email/ObjectMethods/btCheckMail.4dm": {
 		"startSelection": 0,
@@ -324,13 +324,13 @@
 		"stamp": "2021-10-08T09:19:56.657Z"
 	},
 	"Sources/Forms/email/ObjectMethods/btMail_Reply.4dm": {
-		"startSelection": 31,
-		"endSelection": 31,
-		"firstSelectedLine": 6,
-		"lastSelectedLine": 6,
+		"startSelection": 24,
+		"endSelection": 24,
+		"firstSelectedLine": 3,
+		"lastSelectedLine": 3,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-12T09:35:58.507Z"
+		"stamp": "2021-10-14T12:46:39.001Z"
 	},
 	"Sources/Methods/Output_lbInit.4dm": {
 		"startSelection": 0,
@@ -344,11 +344,11 @@
 	"Sources/Forms/email/ObjectMethods/btMail_ReplyAll.4dm": {
 		"startSelection": 0,
 		"endSelection": 0,
-		"firstSelectedLine": 17,
-		"lastSelectedLine": 17,
+		"firstSelectedLine": 20,
+		"lastSelectedLine": 20,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-12T09:35:58.527Z"
+		"stamp": "2021-10-14T12:46:48.535Z"
 	},
 	"Sources/Methods/Email_CleanUp.4dm": {
 		"startSelection": 55,
@@ -370,12 +370,12 @@
 	},
 	"Sources/Forms/email/ObjectMethods/btMail_Forward.4dm": {
 		"startSelection": 0,
-		"endSelection": 21,
-		"firstSelectedLine": 11,
-		"lastSelectedLine": 11,
+		"endSelection": 0,
+		"firstSelectedLine": 10,
+		"lastSelectedLine": 10,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-13T14:18:32.045Z"
+		"stamp": "2021-10-14T12:46:58.418Z"
 	},
 	"Sources/Forms/emailSend/ObjectMethods/btAttach_Add.4dm": {
 		"startSelection": 46,
@@ -497,11 +497,11 @@
 	"Sources/Methods/EmailSend_GUI_Init.4dm": {
 		"startSelection": 0,
 		"endSelection": 0,
-		"firstSelectedLine": 14,
-		"lastSelectedLine": 14,
+		"firstSelectedLine": 63,
+		"lastSelectedLine": 63,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-13T13:11:34.573Z"
+		"stamp": "2021-10-14T16:36:53.068Z"
 	},
 	"Sources/Methods/BLOB_BLOBToVars.4dm": {
 		"startSelection": 8,

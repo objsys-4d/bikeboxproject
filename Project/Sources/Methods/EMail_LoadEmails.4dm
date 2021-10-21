@@ -33,6 +33,10 @@ Else
 		$loop.fromMail:=DisplayEmailAddresses($loop.from)
 	End for each 
 	
+	$colEmail:=New collection:C1472
+	$colEmail:=$oEmails.extract("fromMail").distinct()
+	
+	
 	Form:C1466.receiveMails_lb.data:=$oEmails
 	vtMessageCountText:=String:C10($boxInfo.mailCount)+" messages."
 	
