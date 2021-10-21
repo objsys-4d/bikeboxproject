@@ -1,0 +1,249 @@
+    <!--FORM METHOD-->
+    {{Person_Detail}}
+	
+    <!--HIDDEN VALUES-->
+    <input type="hidden" name="Person.UUID" value="{{Person.UUID}}" />
+    <input type="hidden" name="Person.personID" value="{{Person.personID}}" />
+    <!--/HIDDEN VALUES-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%person}}</h1>
+        <!--/TITLE-->
+    </div>
+            
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=Person_Cancel');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+
+            <hr/>
+            
+            <!--FORM TOOLBAR-->
+            <div class="btn-toolbar justify-content-center" role="toolbar">
+                <div>
+                    <!--SAVE RECORD-->
+                    <button type="button" class="btn btn-success"
+                        onclick="ltgFormAction('?action=save&record={{Person.UUID}}&method=Person_Save');">{{%save}}</button>
+                    <!--/SAVE RECORD-->
+
+                    <!--DELETE RECORD-->
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgFormAction('?action=delete-confirm&method=Person_Delete');">{{%delete}}</button>
+                    <!--/DELETE RECORD-->
+                    
+                </div>
+            </div>
+            <!--/FORM TOOLBAR-->
+            
+            <hr/>
+			
+        <div class="row">
+            <div class="col">
+                        <label for="Person.lastName" class="col-form-label">{{%lastName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.lastName" style="width:200px"
+                                name="Person.lastName" value="{{Person.lastName}}" />
+                        </div>
+            </div>
+
+            <div class="col">
+                        <label for="Person.firstName" class="col-form-label">{{%firstName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.firstName" style="width:200px"
+                                name="Person.firstName" value="{{Person.firstName}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Person.companyID" class="col-form-label">{{%company}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.companyID" style="width:100px"
+                                name="Person.companyID" value="{{Person.companyID}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Person.companyName" class="col-form-label">{{%companyName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.companyName" style="width:200px"
+                                name="Person.companyName" value="{{Person.person_Company.companyName}}" />
+                        </div>
+            </div>
+			
+            <div class="col">
+                <label for="Person.dateBirth" class="col-form-label">{{%dateBirth}}</label>
+                <div class="input-group date" id="personDatePicker" style="width:200px" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input"  id="Person.dateBirth"
+                        name="Person.dateBirth" value="{{Person.dateBirth}}" data-target="#personDatePicker" />
+                    <div class="input-group-append" data-target="#personDatePicker" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+            
+
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+					
+
+                    </div>               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                        <label for="Person.address1" class="col-form-label">{{%address1}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.address1"
+                                name="Person.address1" value="{{Person.address1}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Person.address2" class="col-form-label">{{%address2}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.address2"
+                                name="Person.address2" value="{{Person.address2}}" />
+                        </div>
+            </div>
+        </div>
+
+		
+        <div class="row">
+            <div class="col">
+                        <label for="Person.city" class="col-form-label">{{%city}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.city" style="width:200px"
+                                name="Person.city" value="{{Person.city}}" />
+                        </div>
+            </div>
+
+            <div class="col">
+                        <label for="Person.state" class="col-form-label">{{%state}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.state" style="width:200px"
+                                name="Person.state" value="{{Person.state}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Person.country" class="col-form-label">{{%country}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.country" style="width:200px"
+                                name="Person.country" value="{{Person.country}}" />
+                        </div>
+            </div>
+            <div class="col">
+                        <label for="Person.postalCode" class="col-form-label">{{%postalCode}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.postalCode" style="width:200px"
+                                name="Person.postalCode" value="{{Person.postalCode}}" />
+                        </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                        <label for="Person.phone" class="col-form-label">{{%phone}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Person.phone" style="width:200px"
+                                name="Person.phone" value="{{Person.phone}}" />
+                        </div>
+            </div>
+
+            <div class="col">
+                <label for="Person.email" class="col-form-label">{{%email}}</label>
+                    <div class="input-group-append" style="width:200px">
+                    <input type="email" class="form-control" id="Person.email" style="width:200px" name="Person.email" value="{{Person.email}}" />
+                        <div class="input-group-text cursor-pointer"><a class="text-secondary" href="#" onclick="ltgFormAction('email-dialog.html?action=new&modal=true');"><i class="fa fa-envelope"></i></a></div>
+                    </div>
+            </div>
+        </div>
+
+            <!--TABS-->
+            <ul class="nav nav-tabs mb-3 mt-3" id="tabs-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tabs-donations-tab" data-toggle="tab" href="#tabs-donations" onclick="ltgTabSetActive('tabs-donations-tab');" role="tab"
+                        aria-controls="tabs-donations" aria-selected="true">{{%donations}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tabs-events-tab" data-toggle="tab" href="#tabs-events" onclick="ltgTabSetActive('tabs-events-tab');" role="tab"
+                        aria-controls="tabs-events" aria-selected="false">{{%events}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!--Donations TAB-->
+                <div class="tab-pane fade show active" id="tabs-donations" role="tabpanel" aria-labelledby="tabs-donations-tab">
+                    {{include donations-included.html}}
+                </div>
+                <!--/Donations TAB-->
+
+                <!--EVENTS TAB-->
+                <div class="tab-pane fade" id="tabs-events" role="tabpanel" aria-labelledby="tabs-events-tab">
+                    {{include events-included.html}}
+                </div>
+                <!--/EVENTS TAB-->
+            </div>
+            <!--/TABS-->
+
+		
+            <!--PAGINATION-->
+            <nav id="person-pagination">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=previous');">{{%previous}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=first');">1</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">{{.personPageNumber}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=last');">{{.personPageCount}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=next');">{{%next}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/PAGINATION-->
+            
+            <!--DELETE RECORD DIALOG-->
+            <div class="modal" id="person-delete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{%delete}}</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="dialog-content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                onclick="ltgFormAction('?action=delete&record={{Person.UUID}}&method=Person_Delete');">{{%delete}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/DELETE RECORD DIALOG-->
+        </div>
+        <!--/BODY-->
+		
+<script>
+
+        $(function () {
+            $('#personDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+		
+		
+</script>

@@ -1,12 +1,5 @@
 ﻿[
 	{
-		"line": 92,
-		"method": {
-			"type": 1,
-			"methodName": "BBCompany_List"
-		}
-	},
-	{
 		"line": 1,
 		"method": {
 			"type": 2,
@@ -25,7 +18,7 @@
 		}
 	},
 	{
-		"line": 31,
+		"line": 56,
 		"method": {
 			"type": 1,
 			"methodName": "_EDR_Test01"
@@ -47,6 +40,13 @@
 			"formName": "email",
 			"objectName": "Button",
 			"methodPath": "/SOURCES/Forms/email/ObjectMethods/Button.4dm"
+		}
+	},
+	{
+		"line": 20,
+		"method": {
+			"type": 1,
+			"methodName": "_EDR_Test01"
 		}
 	}
 ]

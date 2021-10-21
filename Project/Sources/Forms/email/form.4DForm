@@ -381,7 +381,7 @@
 					"type": "button",
 					"text": "Reply",
 					"top": 237,
-					"left": 578,
+					"left": 581,
 					"width": 109,
 					"height": 30,
 					"events": [
@@ -395,7 +395,7 @@
 					"type": "button",
 					"text": "Reply All",
 					"top": 237,
-					"left": 688,
+					"left": 691,
 					"width": 109,
 					"height": 30,
 					"events": [
@@ -409,7 +409,7 @@
 					"type": "button",
 					"text": "Forward",
 					"top": 237,
-					"left": 798,
+					"left": 801,
 					"width": 109,
 					"height": 30,
 					"events": [
@@ -423,7 +423,7 @@
 					"type": "button",
 					"text": "Delete",
 					"top": 237,
-					"left": 908,
+					"left": 911,
 					"width": 109,
 					"height": 30,
 					"events": [
@@ -476,7 +476,7 @@
 			}
 		}
 	],
-	"geometryStamp": 589,
+	"geometryStamp": 592,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

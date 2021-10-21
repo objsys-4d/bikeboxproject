@@ -123,7 +123,28 @@ State_ltgPulldown("person"; $oPerson.state)
 // UPDATE CONNECTION DATA...
 
 oConnection.data.Person:=$oPerson  // PERSON
-//oConnection.data.Person.active:=$oPerson.personObject.active
+
+//oConnection.data.personActive:=$oPerson.personObject.active
+If ($oPerson.personObject.active="Yes")
+	Ltg_JS_Send("ltgObj('.personActive').prop('checked', true)")
+Else 
+	Ltg_JS_Send("ltgObj('.personActive').prop('checked', false)")
+End if 
+
+If ($oPerson.personObject.valid="Yes")
+	Ltg_JS_Send("ltgObj('.personValid').prop('checked', true)")
+Else 
+	Ltg_JS_Send("ltgObj('.personValid').prop('checked', false)")
+End if 
+
+If ($oPerson.personObject.duplicateName="Yes")
+	Ltg_JS_Send("ltgObj('.personDuplicate').prop('checked', true)")
+Else 
+	Ltg_JS_Send("ltgObj('.personDuplicate').prop('checked', false)")
+End if 
+
+oConnection.data.personStatus:=$oPerson.personObject.status
+
 //Ltg_JS_Send("ltgObj('Person.company')
 //oConnection.data.Person.company:=$oPerson.Person_Company.companyName
 

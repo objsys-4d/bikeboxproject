@@ -1,0 +1,780 @@
+    <!--FORM METHOD-->
+    {{Demos_Detail}}
+    
+    <style>
+        code.client {
+            color:#4e73df;
+        }
+        code.server {
+            color:#1cc88a;
+        }
+        code.demo {
+            color:#36b9cc;
+        }
+    </style>
+        
+    <!--TITLE-->
+    <h1 class="h3 mb-4 text-gray-800">{{%demos}}</h1>
+        
+        <!--CONTAINER-->
+        <div class="mt-3">
+            
+            <!--ROUTING-->
+            <div class="card shadow mb-4">
+                 
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Routing</h6>
+                </div>
+                         
+                <div class="card-body">
+
+                  <p>Demonstrates URL Routing...</p>
+                         
+                     <span class="mb-3 font-weight-bold">HTML</span>
+
+                        <div class="form-group">
+                            <code class="text-info m-3">
+                                &lt;a class="nav-link" href="/companies">{{%companies}} {{%list}}&lt;/a>
+                            </code>
+                        </div>
+                         
+                        <span class="mb-3 font-weight-bold">{{%sequence}}</span>
+                          
+                        <ol>
+                            <li>4D Method = <code class="server">Web_Router</code></li>
+                            <li>4D Method = <code class="server">Web_Publish</code></li>
+                        </ol>
+                          
+                        <span class="mb-3 font-weight-bold">{{%examples}}</span>
+                         
+                        <div class="form-group">
+                            <a class="nav-link" href="/companies">{{%companies}} {{%list}}</a>
+                        </div>
+                       
+                        <div class="form-group">
+                            <a class="nav-link" href="/companies?company=752D81778E41493C92BC1888260CA694">{{%company}} - {{.companyName}}</a>
+                        </div>    
+                         
+                        <div class="form-group">
+                            <a class="nav-link" href="/XXX">404 Page Not Found</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/ROUTING-->
+                
+                <!--EVENTS-->
+                <div class="card shadow mb-4">
+                        
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Events</h6>
+                    </div>
+                        
+                    <div class="card-body">
+                        
+                        <p>Return data via a button <strong>onclick</strong> or input <strong>onchange</strong> event...</p>
+                        
+                        <span class="mb-3 font-weight-bold">JavaScript</span>
+                        
+                        <div class="form-group">
+                            <code class="text-info m-3">
+                                onclick="ltgExecuteMethod('Demos_Event/onclick');"
+                            </code>
+                        </div>
+                        
+                        <span class="mb-3 font-weight-bold">{{%sequence}}</span>
+                        
+                        <ol>
+                            <li>JS Function = <code class="client">ltgExecuteMethod</code></li>
+                            <li>4D Method = <code class="server">Web_Router</code></li>
+                            <li>4D Method = <code class="server">Demos_Event</code></li>
+                            <li>4D Method = <code class="server">Web_Publish</code></li>
+                        </ol>
+                        
+                        <span class="mb-3 font-weight-bold">{{%examples}}</span>
+                        
+                        <div class="form-group mt-3">
+                            <button type="button" class="btn btn-secondary"
+                                onclick="ltgExecuteMethod('Demos_Event/onclick');">Button</button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for=".demosInput" class="col-form-label">Input</label>
+                            <div>
+                                <input type="text" class="form-control" id=".demosInput" name=".demosInput" onchange="ltgExecuteMethod('Demos_Event/onchange');" placeholder="Enter a value..." value="{{.demosInput}}" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for=".demosResult" class="col-form-label">Result</label>
+                            <div>
+                                <input type="text" class="form-control" readonly="readonly" id=".demosResult" name=".demosResult" value="{{.demosResult}}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/EVENTS-->
+            
+            <!--FOCUS-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Focus</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Set the input focus for an object...</p>
+                    
+                    <span class="mb-3 font-weight-bold">JavaScript</span>
+                    
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            onclick="ltgExecuteMethod('Demos_Focus/.demosFocus1');"
+                        </code>
+                    </div>
+                    
+                    <span class="mb-3 font-weight-bold">{{%sequence}}</span>
+                    
+                    <ol>
+                        <li>JS Function = <code class="client">ltgExecuteMethod</code></li>
+                        <li>4D Method = <code class="server">Web_Router</code></li>
+                        <li>4D Method = <code class="server">Demos_Focus</code></li>
+                        <li>JS Function = <code class="client">ltgObjFocus</code></li>
+                        <li>4D Method = <code class="server">Web_Publish</code></li>
+                    </ol>
+                                    
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgExecuteMethod('Demos_Focus/.demosFocus1');">Input #1</button>
+                    
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgExecuteMethod('Demos_Focus/.demosFocus2');">Input #2</button>
+                    
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgExecuteMethod('Demos_Focus/.demosFocus3');">Input #3</button>
+                    
+                    <div class="form-group">
+                        <label for=".demosFocus1" class="col-form-label">Input #1</label>
+                        <div>
+                            <input type="text" class="form-control" id=".demosFocus1" name=".demosFocus1" value="" />
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for=".demosFocus2" class="col-form-label">Input #2</label>
+                        <div>
+                            <input type="text" class="form-control" id=".demosFocus2" name=".demosFocus2" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for=".demosFocus3" class="col-form-label">Input#3</label>
+                        <div>
+                            <input type="text" class="form-control" id=".demosFocus3" name=".demosFocus3"value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/FOCUS-->
+
+            <!--SELECT-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Select</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Manipulate a dropdown list.</p>
+                                 
+                    <div class="form-group">
+                        <ul>
+                            <li>JS Function = <code class="client">ltgSelectAddOption</code></li>
+                            <li>JS Function = <code class="client">ltgSelectGetValue</code></li>
+                            <li>JS Function = <code class="client">ltgSelectDeleteOptions</code></li>
+                        </ul>
+                    </div>
+            
+                    <div class="mb-3">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary"
+                                onclick="ltgSelectAddOption('demos-select','1','Option 1'),
+                                         ltgSelectAddOption('demos-select','2','Option 2'),
+                                         ltgSelectAddOption('demos-select','3','Option 3'),
+                                         ltgSelectAddOption('demos-select','4','Option 4'),
+                                         ltgSelectAddOption('demos-select','5','Option 5'),
+                                         ltgSelectAddOption('demos-select','6','Option 6'),
+                                         ltgSelectAddOption('demos-select','7','Option 7'),
+                                         ltgSelectAddOption('demos-select','8','Option 8'),
+                                         ltgSelectAddOption('demos-select','9','Option 9'),
+                                         ltgSelectAddOption('demos-select','10','Option 10');">Populate</button>
+                            <button type="button" class="btn btn-secondary"
+                            onclick="alert(ltgSelectGetValue('demos-select'));">Value</button>
+                            <button type="button" class="btn btn-secondary"
+                                onclick="ltgSelectDeleteOptions('demos-select');">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="custom-select" id="demos-select" name="demos-select"></select>
+                    </div>
+                </div>
+            </div>
+            <!--/SELECT-->
+
+            <!--ACCORDION-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Accordion</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Click on a button or accordion panel...</p>
+                    
+                    <span class="mb-3 font-weight-bold">JavaScript</span>
+                    
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            onclick="ltgExecuteMethod('Demos_Accordion','accordion-panel-1');"
+                        </code>
+                    </div>
+                    
+                    <b>{{%sequence}}</b>
+                    
+                    <ol>
+                        <li>JS Function = <code class="client">ltgExecuteMethod</code></li>
+                        <li>4D Method = <code class="server">Web_Router</code></li>
+                        <li>4D Method = <code class="server">Demos_Accordion</code></li>
+                        <li>JS Function = <code class="client">ltgAccordionPanelSetActive</code></li>
+                        <li>JS Function = <code class="client">ltgAccordionPanelSetIcon</code></li>
+                        <li>JS Function = <code class="client">ltgAccordionPanelSetTitle</code></li>
+                        <li>4D Method = <code class="server">Web_Publish</code></li>
+                    </ol>
+                    
+                    <div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary"
+                                onclick="ltgExecuteMethod('Demos_Accordion','accordion-panel-1');">Activate
+                                Panel 1</button>
+                            <button type="button" class="btn btn-secondary"
+                                onclick="ltgExecuteMethod('Demos_Accordion','accordion-panel-2');">Activate
+                                Panel 2</button>
+                            <button type="button" class="btn btn-secondary"
+                                onclick="ltgExecuteMethod('Demos_Accordion','accordion-panel-3');">Activate
+                                Panel 3</button>
+                            
+                        </div>
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="accordion" id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="accordion-header-1">
+                                <h2 class="mb-0">
+                                    <button type="button" class="btn btn-link"
+                                        onclick="ltgExecuteMethod('Demos_Accordion','accordion-panel-1');"
+                                        data-toggle="collapse" data-target="#accordion-panel-1" aria-expanded="true"
+                                        aria-controls="accordion-panel-1">
+                                        <i class="fa fa-thumbs-down"></i> <span>Panel 1</span>
+                                    </button>
+                                </h2>
+                            </div>
+                            
+                            <div id="accordion-panel-1" class="collapse" aria-labelledby="accordion-header-1"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div>
+                                        <input type="text" class="form-control is-invalid" id=".demosPanel1"
+                                            name=".demosPanel1" readonly="readonly" value="{{.demosPanel1}}" />
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control mt-2 is-invalid" id=".demosPanel2"
+                                            name=".demosPanel2" readonly="readonly" value="{{.demosPanel2}}" />
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control mt-2 is-invalid" id=".demosPanel3"
+                                            name=".demosPanel3" readonly="readonly" value="{{.demosPanel3}}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="accordion-header-2">
+                                <h2 class="mb-0">
+                                    <button type="button" class="btn btn-link collapsed"
+                                        onclick="ltgExecuteMethod('Demos_Accordion','accordion-panel-2');"
+                                        data-toggle="collapse" data-target="#accordion-panel-2" aria-expanded="false"
+                                        aria-controls="accordion-panel-2">
+                                        <i class="fa fa-thumbs-down"></i> <span>Panel 2</span>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="accordion-panel-2" class="collapse" aria-labelledby="accordion-header-2"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div>
+                                        <input type="text" class="form-control is-invalid" id=".demosPanel1"
+                                            name=".demosPanel1" readonly="readonly" value="{{.demosPanel1}}" />
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control mt-2 is-invalid" id=".demosPanel2"
+                                            name=".demosPanel2" readonly="readonly" value="{{.demosPanel2}}" />
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control mt-2 is-invalid" id=".demosPanel3"
+                                            name=".demosPanel3" readonly="readonly" value="{{.demosPanel3}}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="accordion-header-3">
+                                <h2 class="mb-0">
+                                    <button type="button" class="btn btn-link collapsed"
+                                        onclick="ltgExecuteMethod('Demos_Accordion','accordion-panel-3');"
+                                        data-toggle="collapse" data-target="#accordion-panel-3" aria-expanded="false"
+                                        aria-controls="accordion-panel-3">
+                                        <i class="fa fa-thumbs-down"></i> <span>Panel 3</span>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="accordion-panel-3" class="collapse" aria-labelledby="accordion-header-3"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div>
+                                        <input type="text" class="form-control is-invalid" id=".demosPanel1"
+                                            name=".demosPanel1" readonly="readonly" value="{{.demosPanel1}}" />
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control mt-2 is-invalid" id=".demosPanel2"
+                                            name=".demosPanel2" readonly="readonly" value="{{.demosPanel2}}" />
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control mt-2 is-invalid" id=".demosPanel3"
+                                            name=".demosPanel3" readonly="readonly" value="{{.demosPanel3}}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ACCORDION-->
+          
+            <!--BUTTONS-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Buttons</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p class="mt-2">
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-times"></i> Icon with Text</button>
+                        <button type="button" class="btn btn-secondary"><i class="fa fa-times"></i></button>
+                    </p>
+                    
+                    <p>
+                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                        <button type="button" class="btn btn-outline-danger">Danger</button>
+                        <button type="button" class="btn btn-outline-warning">Warning</button>
+                        <button type="button" class="btn btn-outline-info">Info</button>
+                        <button type="button" class="btn btn-outline-light">Light</button>
+                        <button type="button" class="btn btn-outline-dark">Dark</button>
+                        <button type="button" class="btn btn-outline-link">Link</button>
+                        <button type="button" class="btn btn-outline-primary"><i class="fa fa-times"></i> Icon with
+                            Text</button>
+                        <button type="button" class="btn btn-outline-secondary"><i class="fa fa-times"></i></button>
+                    </p>
+                </div>
+            </div>
+            <!--/BUTTONS-->
+
+            <!--CHECKBOXES AND RADIOS-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Checkboxes and Radios</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" value="" id=".demosBoolean" name=".demosBoolean">
+                        <label class="form-check-label" for=".demosBoolean">
+                            Checkbox
+                        </label>
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name=".demosRadios" id="radio-1" value="Radio 1">
+                        <label class="form-check-label" for="radio-1">
+                            Radio 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name=".demosRadios" id="radio-2" value="Radio 2">
+                        <label class="form-check-label" for="radio-2">
+                            Radio 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name=".demosRadios" id="radio-3" value="Radio 3">
+                        <label class="form-check-label" for="radio-3">
+                            Radio 3
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!--/CHECKBOXES AND RADIOS-->
+
+            <!--DATEPICKER-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Datepicker</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>The Tempus Dominus Date/Time Picker. <a href="https://tempusdominus.github.io/bootstrap-4/Usage/"
+                        target="datepicker">Click here
+                        for documentation</a></p>
+                    
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <div class="input-group date" id="datepicker" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" data-target="#datepicker"
+                                    value="{{.demosDate}}" />
+                                <div class="input-group-append" data-target="#datepicker" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                         $(function () {
+                            $('#datepicker').datetimepicker({
+                                format: 'L', /* Date Only */
+                                locale: '{{.userLanguage}}'
+                            });
+                        });
+                    </script>
+                </div>
+            </div>            
+            <!--/DATEPICKER-->
+            
+            <!--DIALOG-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Dialog</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Click the button to open the dialog...</p>
+                    
+                    <b>JavaScript</b>
+                    
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            onclick="ltgExecuteMethod('Demos_Dialog');"
+                        </code>
+                    </div>
+                    
+                    <b>{{%sequence}}</b>
+                    
+                    <ol>
+                        <li>JS Function = <code class="client">ltgExecuteMethod</code></li>
+                        <li>4D Method = <code class="server">Web_Router</code></li>
+                        <li>4D Method = <code class="server">Demos_Dialog</code></li>
+                        <li>JS Function = <code class="client">ltgDialogOpen</code></li>
+                        <li>4D Method = <code class="server">Web_Publish</code></li>
+                        <li>JS Function = <code class="client">ltgDialogClose</code></li>
+                    </ol>
+                                        
+                    <button type="button" class="btn btn-secondary active"
+                        onclick="ltgExecuteMethod('Demos_Dialog');">Open Dialog</button>
+                    
+                    <div class="modal" id="demo-dialog" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Dialog</h5>
+                                    <button type="button" class="close" onclick="ltgDialogClose('demo-dialog');"
+                                        aria-label="{{%cancel}}">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="demo-dialog-content"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="ltgDialogClose('demo-dialog');">{{%cancel}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!--/DIALOG-->
+            
+            <!--FILES UPLOADS (SINGLE)-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">File Uploads (Single)</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Select a single file and click on the upload button, the uploaded file will be saved in <strong>WebFolder/uploads</strong>.</p>
+                    
+                    <span class="mb-3 font-weight-bold">JavaScript</span>
+                    
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            onclick="ltgFileUpload('file-1','Demos_File_Upload');"
+                        </code>
+                    </div>
+                    
+                    <b>{{%sequence}}</b>
+                    
+                    <ol>
+                        <li>JS Function = <code class="client">ltgFileUpload</code></li>
+                        <li>4D Method = <code class="server">Web_Router</code></li>
+                        <li>4D Method = <code class="server">Demos_File_Upload</code></li>
+                    </ol>
+                    
+                    <div class="input-group mb-4">
+                        <input class="form-control-file" type="file" id="file-1" name="file-1"/>
+                    </div>
+                    
+                    <div class="input-group">
+                        <button class="btn btn-secondary" onclick="ltgFileUpload('file-1','Demos_File_Upload');"><i class="fa fa-upload"></i> Upload</button>
+                    </div>
+                </div>
+            </div>            
+            <!--/FILE UPLOADS (SINGLE)-->
+            
+             <!--FILES UPLOADS (MULTIPLE)-->
+             <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">File Uploads (Multiple)</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Select multiple files and click on the upload button, the uploaded files will be saved in <strong>WebFolder/uploads</strong>.</p>
+                    
+                    <b>JavaScript</b>
+                    
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            var uppy = Uppy.Core()
+                                ...
+                                target: '#drag-drop-area'
+                            })
+                            .use(Uppy.XHRUpload, {endpoint: '/demos-uppy'})
+                        </code>
+                    </div>
+                    
+                    <b>{{%sequence}}</b>
+                    
+                    <ol>
+                        <li>JS Plugin = <code class="client"><a href="https://uppy.io" target="uppy">https://uppy.io</a></code></li>
+                        <li>4D Method = <code class="server">Web_Router</code></li>
+                        <li>4D Method = <code class="server">Demos_File_Upload</code></li>
+                        <li>4D Method = <code class="server">Web_Publish</code></li>
+                    </ol>
+
+                    <!--UPPY DRAG DROP-->
+                    <div id="drag-drop-area"></div>
+                    <!--/UPPY DRAG DROP-->
+                </div>
+            </div>            
+
+            <!--UPPY PLUGIN-->  
+            <script>
+                var uppy = Uppy.Core()
+                    .use(Uppy.Dashboard, {
+                    inline: true,
+                    height: 400,
+                    width: '100%',
+                    target: '#drag-drop-area'
+                })
+                .use(Uppy.XHRUpload, {endpoint: '/demos-uppy'})
+
+                uppy.on('complete', (result) => {
+                    console.log('Upload complete! We’ve uploaded these files:', result.successful)
+                })
+            </script>
+            <!--/UPPY PLUGIN-->
+
+            <!--/FILE UPLOADS (MULTIPLE)-->
+
+            <!--FILE DOWNLOADS-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">File Downloads</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Click the Download button, the downloaded file will be saved in your local downloads folder</p>
+                    
+                    <b>JavaScript</b>
+                    
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            onclick="ltgFormAction('?action=file&method=Companies_Export');"
+                        </code>
+                    </div>
+                    
+                    <b>{{%sequence}}</b>
+                    
+                    <ol>
+                        <li>JS Function = <code class="client">ltgFormAction</code></li>
+                        <li>4D Method = <code class="server">Web_Router</code></li>
+                        <li>4D Method = <code class="server">Companies_Export</code></li>
+                        <li>4D Method = <code class="server">Web_Publish</code></li>
+                    </ol>
+               
+                    <div class="input-group">
+                        <button type="button" class="btn btn-secondary"
+                            onclick="ltgFormAction('?action=file&method=Companies_Export');"><i class="fa fa-download"></i> Download</button>
+                    </div>
+                </div>
+            </div>            
+            <!--/FILE DOWNLOADS-->
+            
+            <!--IMAGES-->
+            <div class="card shadow mb-4">
+                
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Images</h6>
+                </div>
+                
+                <div class="card-body">
+                
+                    <p>Display an image...</p>
+                    
+                    <b>HTML</b>
+                    
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            &lt;img class="rounded" src="{<span></span>{User_Avatar}}" alt="Image"/>
+                        </code>
+                    </div>
+                    
+                    <b>{{%sequence}}</b>
+                    
+                    <ol>
+                        <li>4D Method = <code class="server">User_Avatar</code></li>
+                    </ol>
+                    
+                    <img class="rounded" src="{{User_Avatar}}" alt="Picture Field"/>
+                </div>
+            </div>            
+            <!--/IMAGES-->
+             
+            <!--TABS-->
+            <div class="card shadow mb-4">
+            
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Tabs</h6>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <p>Click on a button or tab...</p>
+                    
+                    <b>JavaScript</b>
+                                       
+                    <div class="form-group">
+                        <code class="text-info m-3">
+                            onclick="ltgExecuteMethod('Demos_Tabs','tabs-tab-1');"
+                        </code>
+                    </div>
+                    
+                    <b>{{%sequence}}</b>
+                    
+                    <ol>
+                        <li>JS Function = <code class="client">ltgExecuteMethod</code></li>
+                        <li>4D Method = <code class="server">Web_Router</code></li>
+                        <li>4D Method = <code class="server">Demos_Tabs</code></li>
+                        <li>JS Function = <code class="client">ltgTabSetActive</code></li>
+                        <li>JS Function = <code class="client">ltgTabSetIcon</code></li>
+                        <li>JS Function = <code class="client">ltgTabSetTitle</code></li>
+                        <li>4D Method = <code class="server">Web_Publish</code></li>
+                    </ol>
+                                        
+                    <button class="btn btn-secondary" type="button" onclick="ltgExecuteMethod('Demos_Tabs','tabs-tab-1');">Activate Tab1</button>
+                    <button class="btn btn-secondary" type="button" onclick="ltgExecuteMethod('Demos_Tabs','tabs-tab-2');">Activate Tab2</button>
+                    <button class="btn btn-secondary" type="button" onclick="ltgExecuteMethod('Demos_Tabs','tabs-tab-3');">Activate Tab3</button>
+                    
+                    <p>&nbsp;</p>
+                    
+                    <ul class="nav nav-tabs mb-3 mt-3" id="tabs" role="tablist">
+                        <li class="nav-item" onclick="ltgExecuteMethod('Demos_Tabs','tabs-tab-1');">
+                            <a class="nav-link active" id="tabs-tab-1" data-toggle="tab" href="#tab-1" role="tab"
+                                aria-controls="tab-1" aria-selected="true"><i class="fa fa-thumbs-down"></i> <span>Tab 1</span></a>
+                        </li>
+                        <li class="nav-item" onclick="ltgExecuteMethod('Demos_Tabs','tabs-tab-2');">
+                            <a class="nav-link" id="tabs-tab-2" data-toggle="tab" href="#tab-2" role="tab"
+                                aria-controls="tab-2" aria-selected="false"><i class="fa fa-thumbs-down"></i> <span>Tab 2</span></a>
+                        </li>
+                        <li class="nav-item" onclick="ltgExecuteMethod('Demos_Tabs','tabs-tab-3');">
+                            <a class="nav-link" id="tabs-tab-3" data-toggle="tab" href="#tab-3" role="tab"
+                                aria-controls="tab-3" aria-selected="false"><i class="fa fa-thumbs-down"></i> <span>Tab 3</span></a>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel"
+                            aria-labelledby="tabs-tab-1">
+                            <p>
+                                Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.
+                            </p>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel"
+                            aria-labelledby="tabs-tab-2">
+                            <p>
+                                Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.                        
+                            </p>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel"
+                            aria-labelledby="tabs-tab-3">
+                            <p>
+                                Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis.                        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!--/TABS-->
+        </div>
+  

@@ -1,0 +1,243 @@
+    <!--FORM METHOD-->
+    {{BBOrder_Detail}}
+    
+    <!--HIDDEN VALUES-->
+    <input type="hidden" name="Order.UUID" value="{{Order.UUID}}" />
+    <input type="hidden" name="Order.orderID" value="{{Order.orderID}}" />
+    <!--/HIDDEN VALUES-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%order}}</h1>
+        <!--/TITLE-->
+    </div>
+            
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=BBOrder_Cancel');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+
+            <hr/>
+            
+            <!--FORM TOOLBAR-->
+            <div class="btn-toolbar justify-content-center" role="toolbar">
+                <div>
+                    <!--SAVE RECORD-->
+                    <button type="button" class="btn btn-success"
+                        onclick="ltgFormAction('?action=save&record={{Order.UUID}}&method=BBOrder_Save');">{{%save}}</button>
+                    <!--/SAVE RECORD-->
+
+                    <!--DELETE RECORD-->
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgFormAction('?action=delete-confirm&method=BBOrder_Delete');">{{%delete}}</button>
+                    <!--/DELETE RECORD-->
+                    
+                </div>
+            </div>
+            <!--/FORM TOOLBAR-->
+            
+            <hr/>
+			
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                		 <label for="Order.dateOrder" class="col-form-label">{{%dateOrder}}</label>
+                		 		<div class="input-group date" id="orderDatePicker" data-target-input="nearest">
+                    				 <input type="text" class="form-control datetimepicker-input"  id="Order.dateOrder"
+                       				 		name="Order.dateOrder" value="{{Order.dateOrder}}" data-target="#orderDatePicker" />
+                    				<div class="input-group-append" data-target="#orderDatePicker" data-toggle="datetimepicker">
+                        				 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    				</div>
+                				</div>   
+                    </div>
+       		</div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.status" class="col-form-label">{{%status}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.status"
+                                name="Order.status" value="{{Order.status}}" />
+                        </div>
+                    </div>
+       		</div>
+          </div>      
+
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.personID" class="col-form-label">{{%customer}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.personID"
+                                name="Order.personID" value="{{Order.personID}}" />
+                        </div>
+                    </div>
+       		</div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.person" class="col-form-label">{{%nameName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.person"
+                                name="Order.person" value="{{Order.person}}" />
+                        </div>
+                    </div>
+       		</div>
+          </div>      
+		  
+		  
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.address" class="col-form-label">{{%address}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.address"
+                                name="Order.address" value="{{Order.address}}" />
+                        </div>
+                    </div>
+       		</div>
+          </div>      
+
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.city" class="col-form-label">{{%city}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.city"
+                                name="Order.city" value="{{Order.city}}" />
+                        </div>
+                    </div>
+       		</div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.state" class="col-form-label">{{%state}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.state"
+                                name="Order.state" value="{{Order.state}}" />
+                        </div>
+                    </div>
+       		</div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.postalCode" class="col-form-label">{{%postalCode}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.postalCode"
+                                name="Order.postalCode" value="{{Order.postalCode}}" />
+                        </div>
+                    </div>
+       		</div>
+          </div>      
+		  
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.phone1" class="col-form-label">{{%phone1}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.phone1"
+                                name="Order.phone1" value="{{Order.phone1}}" />
+                        </div>
+                    </div>
+       		</div>
+            <div class="col">
+                    <div class="form-group">
+                        <label for="Order.phone2" class="col-form-label">{{%phone2}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Order.phone2"
+                                name="Order.phone2" value="{{Order.phone2}}" />
+                        </div>
+                    </div>
+       		</div>
+          </div>      
+
+        <div class="row">
+            <div class="col">
+                <label for="Order.email" class="col-form-label">{{%email}}</label>
+                <div class=input-group>
+                    <input type="email" class="form-control" id="Order.email" name="Order.email" value="{{Order.email}}" />
+                    <div class="input-group-append">
+                        <div class="input-group-text cursor-pointer"><a class="text-secondary" href="#" onclick="ltgFormAction('email-dialog.html?action=new&modal=true');"><i class="fa fa-envelope"></i></a></div>
+
+                    </div>
+                </div> 
+       		</div>
+          </div>      
+    
+            <!--TABS-->
+            <ul class="nav nav-tabs mb-3 mt-3" id="tabs-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tabs-ordItem-tab" data-toggle="tab" href="#tabs-ordItem" onclick="ltgTabSetActive('tabs-ordItem-tab');" role="tab"
+                        aria-controls="tabs-ordItem" aria-selected="true">{{%orderItems}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!--Order Items TAB-->
+                <div class="tab-pane fade show active" id="tabs-ordItem" role="tabpanel"
+                    aria-labelledby="tabs-ordItem-tab">
+                </div>
+                <!--/Order Items TAB-->
+
+            </div>
+            <!--/TABS-->
+
+		
+            <!--PAGINATION-->
+            <nav id="order-pagination">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=previous');">{{%previous}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=first');">1</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">{{.orderPageNumber}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=last');">{{.orderPageCount}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=next');">{{%next}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/PAGINATION-->
+            
+            <!--DELETE RECORD DIALOG-->
+            <div class="modal" id="order-delete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{%delete}}</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="dialog-content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                onclick="ltgFormAction('?action=delete&record={{Order.UUID}}&method=BBOrder_Delete');">{{%delete}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/DELETE RECORD DIALOG-->
+        </div>
+        <!--/BODY-->
+		
+<script>
+
+        $(function () {
+            $('#orderDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+		
+		
+</script>

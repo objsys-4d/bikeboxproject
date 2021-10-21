@@ -1,0 +1,215 @@
+    <!--FORM METHOD-->
+    {{Member_Detail}}
+    
+    <!--HIDDEN VALUES-->
+    <input type="hidden" name="Member.UUID" value="{{Member.UUID}}" />
+    <!--/HIDDEN VALUES-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%member}}</h1>
+        <!--/TITLE-->
+    </div>
+            
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=Member_Cancel');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+
+            <hr/>
+            
+            <!--FORM TOOLBAR-->
+            <div class="btn-toolbar justify-content-center" role="toolbar">
+                <div>
+                    <!--SAVE RECORD-->
+                    <button type="button" class="btn btn-success"
+                        onclick="ltgFormAction('?action=save&record={{Member.UUID}}&method=Member_Save');">{{%save}}</button>
+                    <!--/SAVE RECORD-->
+
+                    <!--DELETE RECORD-->
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgFormAction('?action=delete-confirm&method=Member_Delete');">{{%delete}}</button>
+                    <!--/DELETE RECORD-->
+                    
+                </div>
+            </div>
+            <!--/FORM TOOLBAR-->
+            
+            <hr/>
+            
+                <!--COURSE TAB-->
+                <div class="tab-pane fade show active" id="tabs-member" role="tabpanel"
+                    aria-labelledby="tabs-member-tab">
+                    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <label for="Member.lastName" class="col-form-label">{{%lastName}}</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.lastName"
+                        name="Member.lastName" value="{{Member.lastName}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label for="Member.phone" class="col-form-label">{{%phone}}</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.phone"
+                        name="Member.phone" value="{{Member.phone}}" />
+                </div>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col">
+                <label for="Member.firstName" class="col-form-label">{{%firstName}}</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.firstName"
+                        name="Member.firstName" value="{{Member.firstName}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label for="Member.email" class="col-form-label">{{%email}}</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.email"
+                        name="Member.email" value="{{Member.email}}" />
+                </div>
+            </div>
+        </div>
+		
+        <div class="row">
+            <div class="col">
+                <label for="Member.birthday" class="col-form-label">Date of Birth</label>
+                <div class="input-group date" id="memberDatePicker" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input"  id="Member.birthday"
+                        name="Member.birthday" data-target="#memberDatePicker" value="{{Member.birthday}}" />
+                    <div class="input-group-append" data-target="#memberDatePicker" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>   
+			</div>
+            <div class="col">
+                <label for="spacer" class="col-form-label"> </label>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="Member.address" class="col-form-label">{{%address}}</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.address"
+                        name="Member.address" value="{{Member.address}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label for="Member.city" class="col-form-label">{{%city}}</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.city"
+                        name="Member.city" value="{{Member.city}}" />
+                </div>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col">
+                <label for="Member.state" class="col-form-label">State</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.state"
+                        name="Member.state" value="{{Member.state}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label for="Member.zip" class="col-form-label">Zip</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.zip"
+                        name="Member.zip" value="{{Member.zip}}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="Member.membershipType" class="col-form-label">Membership</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.membershipType"
+                        name="Member.membershipType" value="{{Member.membershipType}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label for="Member.memberSince" class="col-form-label">Member Since</label>
+                <div>
+                    <input type="text" class="form-control" id="Member.memberSince"
+                        name="Member.memberSince" value="{{Member.memberSince}}" />
+                </div>
+            </div>
+        </div>
+
+
+                    </div>
+                </div>
+                <!--/COURSE TAB-->
+                
+                
+            <!--PAGINATION-->
+            <nav id="course-pagination">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=previous');">{{%previous}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=first');">1</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">{{.memberPageNumber}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=last');">{{.memberPageCount}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=next');">{{%next}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/PAGINATION-->
+            
+            <!--DELETE RECORD DIALOG-->
+            <div class="modal" id="members-delete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{%delete}}</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="dialog-content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                onclick="ltgFormAction('?action=delete&record={{Member.UUID}}&method=Member_Delete');">{{%delete}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/DELETE RECORD DIALOG-->
+        </div>
+        <!--/BODY-->
+<script>
+
+        // INITIALISE DATEPICKER (Birthday DATE)
+        
+        $(function () {
+            $('#memberDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+</script>

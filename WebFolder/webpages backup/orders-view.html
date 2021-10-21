@@ -1,0 +1,206 @@
+<!--FORM METHOD-->
+{{Order_Detail}}
+    
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%orders}}</h1>
+        <!--/TITLE-->
+    </div>
+    
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('orders-list.html?action=tab');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+    
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+        
+        <hr/>
+        
+        <!--FORM TOOLBAR-->
+        <div class="btn-toolbar justify-content-center" role="toolbar">
+            <div>
+                <!--SAVE RECORD-->
+                <button type="button" class="btn btn-secondary"
+                    onclick="ltgFormAction('orders-detail.html?action=edit&record={{Order.Order_ID}}');">{{%edit}}</button>
+                <!--/SAVE RECORD-->
+            </div>
+        </div>
+        <!--/FORM TOOLBAR-->
+        
+        <hr/>
+        
+        <div class="row">
+            <div class="col">
+                <label class="col-form-label">{{%order_number}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" readonly="readonly" value="{{Order.Order_Number}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label class="col-form-label">{{%status}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" readonly="readonly" value="{{Order.Status}}" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <label class="col-form-label">{{%company_name}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" readonly="readonly" value="{{Order.Company_Name}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label class="col-form-label">{{%order_date}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" readonly="readonly" value="{{Order.Order_Date}}" />
+                </div>   
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <label class="col-form-label">{{%name}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" readonly="readonly" value="{{Order.Contact_Name}}" />
+                </div>
+            </div>
+            <div class="col">
+                <label class="col-form-label">{{%order_reference}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" readonly="readonly" value="{{Order.PO_Reference}}" />
+                </div>   
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <label class="col-form-label">{{%email}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" value="{{Order.Email}}" />
+                </div> 
+            </div>
+            <div class="col">
+                <label class="col-form-label">{{%salesperson}}</label>
+                <div>
+                    <input type="text" class="form-control-plaintext font-weight-bold" value="{{Order.Salesperson}}" />
+                </div>
+            </div>
+        </div>
+        
+         <!--DATATABLES TABLE-->
+        <table class="table" id="items" style="width:100%;">
+                <thead>
+                    <tr>
+                        <!--COLUMNS-->
+                        <th>
+                            <!--EDIT-->
+                        </th>
+                        <th>
+                            <!--HIDDEN ITEM_ID-->
+                        </th>
+                        <th>
+                            {{%product}}
+                        </th>
+                        <th>
+                            {{%description}}
+                        </th>
+                        <th>
+                            {{%quantity}}
+                        </th>
+                        <th>
+                            {{%rate}}
+                        </th>
+                        <th>
+                            {{%amount}}
+                        </th>
+                        <th>
+                            <!--DELETE-->
+                        </th>
+                        <!--/COLUMNS-->
+                    </tr>
+                </thead>
+            </table>
+            <!--/DATATABLES TABLE-->
+            
+            <hr>
+            
+        <!--TOTALS-->
+        <div class="row mb-1 mr-1 float-right">
+            <label class="col-form-label"><strong>{{%subtotal}}</strong></label>
+            <div>
+                <input class="form-control-plaintext text-right" readonly="readonly" style="width:140px;" value="{{.orderSubtotal}}"/>
+            </div>
+        </div>
+        
+        <div class="row mb-1 mr-1 float-right clearboth">
+            <label class="col-form-label"><strong>{{%tax}}</strong></label>
+            <div>
+                <input class="form-control-plaintext text-right" readonly="readonly" style="width:140px;" value="{{.orderTax}}"/>
+            </div>
+        </div>
+        
+        <div class="row mb-1 mr-1 float-right clearboth">
+            <label class="col-form-label"><strong>{{%total}}</strong></label>
+            <div>
+                <input class="form-control-plaintext text-right" readonly="readonly" style="width:140px;" value="{{.orderTotal}}"/>
+            </div>
+        </div>
+        <!--/TOTALS-->
+    </div>
+    <!--/BODY-->
+        
+    <script>
+                
+        // DATATABLES...
+            
+        var table = ltgObj('items').DataTable(
+            {
+                columnDefs: [
+                {
+                    targets: [ 0 ],
+                    visible: false,
+                },
+                {
+                    targets: [ 1 ],
+                    visible: false // HIDE ITEM_ID
+                },
+                {
+                    targets: [ 4 ],
+                    className: 'text-right'
+                },
+                {
+                    targets: [ 5 ],
+                    className: 'text-right'
+                },
+                {
+                    targets: [ 6 ],
+                    className: 'text-right'
+                },
+                {
+                    targets: [ 7 ],
+                    visible: false
+                }                   
+            ],
+            info: false,
+            language: {'lengthMenu': '{{%page_Size}} _MENU_','emptyTable': '{{%records_none}}'},
+            order: [[ 2, 'asc' ]],
+            paging: false,
+            responsive: true,
+            ordering: false,
+            searching: false
+            }
+        );
+        
+        // REMOVES A ROW WHEN THE DELETE ICON IS CLICKED...
+        
+        ltgObj('items tbody').on( 'click', 'i.fa-trash', function () {
+            
+            table.row($(this).parents('tr')).remove().draw();
+        } );
+    </script>
