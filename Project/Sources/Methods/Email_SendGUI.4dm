@@ -1,4 +1,15 @@
-//%attributes = {"shared":true}
+//%attributes = {}
+// ----------------------------------------------------
+// User name (OS): Edu
+// Date and time: 10/08/21, 22:33:13
+// ----------------------------------------------------
+// Method: Email_SendGUI
+// Description
+// 
+//
+// Parameters
+// ----------------------------------------------------
+
 //new way to send e-mail with Transporter
 //https://doc.4d.com/4Dv18R3/4D/18-R3/Email-object.300-4900452.en.html
 //https://doc.4d.com/4Dv18R3/4D/18-R3/MAIL-New-attachment.301-4900471.en.html

@@ -1,1 +1,23 @@
-﻿[]
+﻿[
+	{
+		"line": 38,
+		"method": {
+			"type": 1,
+			"methodName": "_EDR_Test01"
+		}
+	},
+	{
+		"line": 44,
+		"method": {
+			"type": 1,
+			"methodName": "_EDR_Test01"
+		}
+	},
+	{
+		"line": 92,
+		"method": {
+			"type": 1,
+			"methodName": "BBCompany_List"
+		}
+	}
+]
