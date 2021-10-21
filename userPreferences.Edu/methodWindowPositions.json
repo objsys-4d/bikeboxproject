@@ -12,8 +12,8 @@
 		"height": 857
 	},
 	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
-		"left": 119,
-		"top": 219,
+		"left": 450,
+		"top": 109,
 		"width": 1072,
 		"height": 857
 	},
@@ -96,8 +96,8 @@
 		"height": 857
 	},
 	"Sources/Methods/ShowBody.4dm": {
-		"left": 119,
-		"top": 219,
+		"left": 154,
+		"top": 176,
 		"width": 1072,
 		"height": 857
 	},
@@ -158,19 +158,19 @@
 	"Sources/Forms/emailSend/method.4dm": {
 		"left": 695,
 		"top": 134,
-		"width": 857,
+		"width": 1031,
 		"height": 857
 	},
 	"Sources/Methods/emailSendStart.4dm": {
-		"left": 695,
-		"top": 134,
-		"width": 857,
+		"left": 413,
+		"top": 153,
+		"width": 1123,
 		"height": 857
 	},
 	"Sources/Methods/emailSendStartProcess.4dm": {
 		"left": 695,
 		"top": 134,
-		"width": 857,
+		"width": 1004,
 		"height": 857
 	},
 	"Sources/Forms/email/ObjectMethods/btComposeMail.4dm": {
@@ -180,8 +180,8 @@
 		"height": 857
 	},
 	"Sources/Methods/Email_Send.4dm": {
-		"left": 130,
-		"top": 109,
+		"left": 227,
+		"top": 110,
 		"width": 1072,
 		"height": 857
 	},
@@ -208,5 +208,65 @@
 		"top": 109,
 		"width": 1772,
 		"height": 857
+	},
+	"Sources/Methods/DisplayEmailAddresses.4dm": {
+		"left": 317,
+		"top": 122,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_Reply.4dm": {
+		"left": 820,
+		"top": 187,
+		"width": 1123,
+		"height": 857
+	},
+	"Sources/Methods/Output_lbInit.4dm": {
+		"left": 820,
+		"top": 187,
+		"width": 1123,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_ReplyAll.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/Email_CleanUp.4dm": {
+		"left": 489,
+		"top": 116,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/UTIL_DropSpaces.4dm": {
+		"left": 605,
+		"top": 159,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_Forward.4dm": {
+		"left": 820,
+		"top": 187,
+		"width": 1123,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/btAttach_Add.4dm": {
+		"left": 433,
+		"top": 151,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/emailSend/ObjectMethods/List Box.4dm": {
+		"left": 181,
+		"top": 301,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/GEN_Listbox_ClickedEmpty.4dm": {
+		"left": 433,
+		"top": 151,
+		"width": 1123,
+		"height": 724
 	}
 }

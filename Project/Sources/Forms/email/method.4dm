@@ -11,7 +11,7 @@ Case of
 		If (voIMAP_Transporter=Null:C1517)
 			ALERT:C41("An error occured.")
 		Else 
-			GEN_Message("update"; "Initializing mailboxes...            ")
+			GEN_Message("update"; "Initializing mailboxes...            "; 1; 2)
 			Email_InitMailboxes(voIMAP_Transporter)
 		End if 
 		
@@ -28,5 +28,15 @@ Case of
 				LISTBOX SELECT ROW:C912(lbBoxNames; $elem)
 			End if 
 		End if 
+		
+		//mail info
+		C_TEXT:C284(vtMail_From; vtMail_To; vtMail_CC; vtMail_DateSend; vtMail_Body; vtMail_Subject; vtMail_BodyType)
+		vtMail_From:=""
+		vtMail_To:=""
+		vtMail_CC:=""
+		vtMail_Subject:=""
+		vtMail_DateSend:=""
+		vtMail_Body:=""
+		vtMail_BodyType:=""
 		
 End case 

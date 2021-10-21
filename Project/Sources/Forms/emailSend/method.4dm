@@ -1,9 +1,40 @@
 Case of 
 	: (Form event code:C388=On Load:K2:1)
-		C_TEXT:C284(vtEmailSend_To; vtEmailSend_CC; vtEmailSend_Subject)
+		C_TEXT:C284(vtEmailSend_To; vtEmailSend_CC; vtEmailSend_Subject; vtEmailSend_Message; vtEmailSend_Type)
+		C_OBJECT:C1216(voMailSendInfo)
 		
 		ARRAY BOOLEAN:C223(Attachmentslb; 0)
 		ARRAY TEXT:C222(atAttachments; 0)
+		ARRAY TEXT:C222(atAttachmentsPath; 0)
 		
 		OBJECT SET ENABLED:C1123(btAttach_Rem; False:C215)
+		vtEmailSend_Message:=""
+		
+		If (OB Is empty:C1297(voMailSendInfo))
+			vtEmailSend_Type:="new"
+		Else 
+			vtEmailSend_Type:=voMailSendInfo.type
+		End if 
+		
+		If (vtEmailSend_Type="new")
+			vtEmailSend_To:=""
+			vtEmailSend_CC:=""
+			vtEmailSend_Subject:=""
+		Else 
+			vtEmailSend_To:=voMailSendInfo.recipient
+			vtEmailSend_CC:=voMailSendInfo.cc
+			vtEmailSend_Subject:="Re: "+voMailSendInfo.subject
+			vtEmailSend_Message:=voMailSendInfo.message
+		End if 
+		
+		If (vtEmailSend_Type="forward") | (vtEmailSend_Type="new")
+			GOTO OBJECT:C206(vtEmailSend_To)
+		Else 
+			GOTO OBJECT:C206(vtEmailSend_Message)
+		End if 
+		
+		If (voMailSendInfo.bodyType="text/html")
+			WA SET PAGE CONTENT:C1037(*; "web area"; voMailSendInfo.message; "file:///")
+			vtEmailSend_Message:=""
+		End if 
 End case 
