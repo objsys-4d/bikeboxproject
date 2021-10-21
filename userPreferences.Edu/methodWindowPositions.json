@@ -12,8 +12,8 @@
 		"height": 889
 	},
 	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
-		"left": 450,
-		"top": 109,
+		"left": 454,
+		"top": 138,
 		"width": 1072,
 		"height": 857
 	},
@@ -30,7 +30,7 @@
 		"height": 857
 	},
 	"Sources/Methods/_EDR_Test01.4dm": {
-		"left": 138,
+		"left": 427,
 		"top": 109,
 		"width": 1650,
 		"height": 857
@@ -84,10 +84,10 @@
 		"height": 857
 	},
 	"Sources/Methods/EMail_LoadEmails.4dm": {
-		"left": 204,
-		"top": 123,
-		"width": 1772,
-		"height": 975
+		"left": 417,
+		"top": 190,
+		"width": 1779,
+		"height": 867
 	},
 	"Sources/Methods/GEN_ListBox_AllItemsSelect.4dm": {
 		"left": 65,
@@ -436,5 +436,71 @@
 		"top": 225,
 		"width": 1103,
 		"height": 857
+	},
+	"Sources/Methods/Email_ExtractPerson.4dm": {
+		"left": 103,
+		"top": 116,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/TableForms/21/eventInput/method.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Methods/ObjForm_NavBtn.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Forms/main/ObjectMethods/navBtn_New.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Methods/ObjForm_ActBtn.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Forms/main/ObjectMethods/actBtn_Save.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/TableForms/15/personInput/ObjectMethods/bttnAdd_Donation.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/TableForms/15/personInput/method.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/TableForms/21/eventInput/ObjectMethods/bttnAdd_Part.4dm": {
+		"left": 138,
+		"top": 109,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Methods/Person_List.4dm": {
+		"left": 177,
+		"top": 119,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Person_Detail.4dm": {
+		"left": 177,
+		"top": 119,
+		"width": 1779,
+		"height": 867
 	}
 }

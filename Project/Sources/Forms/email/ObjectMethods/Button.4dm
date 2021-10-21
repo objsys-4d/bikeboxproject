@@ -1,4 +1,4 @@
-CONFIRM:C162("Mark selected emails as Not Junk and move to Inbox?")
+CONFIRM:C162("Move selected messages to Inbox?")
 If (OK=1)
 	$dEmails:=Form:C1466.receiveMails_lb.curSel
 	$mailIds:=New collection:C1472

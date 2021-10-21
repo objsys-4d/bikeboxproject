@@ -29,6 +29,7 @@ Case of
 			If ($elem#-1)
 				LISTBOX SELECT ROW:C912(lbBoxNames; $elem)
 			End if 
+			
 		End if 
 		
 		//mail info

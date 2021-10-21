@@ -23,8 +23,8 @@ Case of
 				OBJECT SET VISIBLE:C603(btnotJunk; True:C214)
 				OBJECT SET ENABLED:C1123(btnotJunk; False:C215)  //disable by default
 			Else 
-				OBJECT SET VISIBLE:C603(btnotJunk; True:C214)
-			End if 
+				OBJECT SET VISIBLE:C603(btnotJunk; False:C215)
+			End if   //vtCurrentBox
 		End if 
 		OBJECT SET ENABLED:C1123(*; "btMail_@"; False:C215)
 		

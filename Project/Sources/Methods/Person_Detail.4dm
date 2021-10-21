@@ -123,6 +123,7 @@ State_ltgPulldown("person"; $oPerson.state)
 // UPDATE CONNECTION DATA...
 
 oConnection.data.Person:=$oPerson  // PERSON
+//oConnection.data.Person.active:=$oPerson.personObject.active
 //Ltg_JS_Send("ltgObj('Person.company')
 //oConnection.data.Person.company:=$oPerson.Person_Company.companyName
 

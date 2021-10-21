@@ -95,7 +95,8 @@ For each ($oPrn; $oPerson)
 	End if 
 	
 	
-	$oDataTable.push(New collection:C1472(""; $oPrn.UUID; $oPrn.lastName; $oPrn.firstName; $addr; $oPrn.country; $oPrn.email))
+	//$oDataTable.push(New collection(""; $oPrn.UUID; $oPrn.lastName; $oPrn.firstName; $addr; $oPrn.country; $oPrn.email))
+	$oDataTable.push(New collection:C1472(""; $oPrn.UUID; $oPrn.fullName; $addr; $oPrn.country; $oPrn.email))
 	
 End for each 
 

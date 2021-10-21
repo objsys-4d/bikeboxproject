@@ -31,7 +31,8 @@
 					"top": 30,
 					"height": 30,
 					"left": 0,
-					"right": 3650
+					"right": 3660,
+					"width": 3660
 				},
 				"label_UUID": {
 					"type": "text",
@@ -61,7 +62,7 @@
 					"text": "personID",
 					"top": 10,
 					"left": 270,
-					"width": 100,
+					"width": 55,
 					"height": 17
 				},
 				"field_personID": {
@@ -69,7 +70,7 @@
 					"dataSource": "[Person:15]personID:2",
 					"top": 37,
 					"left": 270,
-					"width": 250,
+					"width": 55,
 					"height": 17,
 					"borderStyle": "none"
 				},
@@ -77,13 +78,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 525
+					"left": 825
 				},
 				"label_lastName": {
 					"type": "text",
 					"text": "lastName",
 					"top": 10,
-					"left": 530,
+					"left": 830,
 					"width": 100,
 					"height": 17
 				},
@@ -91,7 +92,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]lastName:3",
 					"top": 37,
-					"left": 530,
+					"left": 830,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -100,13 +101,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 785
+					"left": 1085
 				},
 				"label_firstName": {
 					"type": "text",
 					"text": "firstName",
 					"top": 10,
-					"left": 790,
+					"left": 1090,
 					"width": 100,
 					"height": 17
 				},
@@ -114,7 +115,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]firstName:4",
 					"top": 37,
-					"left": 790,
+					"left": 1090,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -123,22 +124,22 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 1045
+					"left": 1305
 				},
 				"label_dateBirth": {
 					"type": "text",
 					"text": "dateBirth",
 					"top": 10,
-					"left": 1050,
-					"width": 100,
+					"left": 1350,
+					"width": 60,
 					"height": 17
 				},
 				"field_dateBirth": {
 					"type": "input",
 					"dataSource": "[Person:15]dateBirth:5",
 					"top": 37,
-					"left": 1050,
-					"width": 250,
+					"left": 1350,
+					"width": 210,
 					"height": 17,
 					"borderStyle": "none"
 				},
@@ -146,13 +147,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 1305
+					"left": 1565
 				},
 				"label_address1": {
 					"type": "text",
 					"text": "address1",
 					"top": 10,
-					"left": 1310,
+					"left": 1570,
 					"width": 100,
 					"height": 17
 				},
@@ -160,7 +161,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]address1:6",
 					"top": 37,
-					"left": 1310,
+					"left": 1570,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -169,13 +170,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 1565
+					"left": 1825
 				},
 				"label_city": {
 					"type": "text",
 					"text": "city",
 					"top": 10,
-					"left": 1570,
+					"left": 1830,
 					"width": 100,
 					"height": 17
 				},
@@ -183,7 +184,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]city:7",
 					"top": 37,
-					"left": 1570,
+					"left": 1830,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -192,13 +193,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 1825
+					"left": 2085
 				},
 				"label_state": {
 					"type": "text",
 					"text": "state",
 					"top": 10,
-					"left": 1830,
+					"left": 2090,
 					"width": 100,
 					"height": 17
 				},
@@ -206,7 +207,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]state:8",
 					"top": 37,
-					"left": 1830,
+					"left": 2090,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -215,13 +216,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 2085
+					"left": 2345
 				},
 				"label_postalCode": {
 					"type": "text",
 					"text": "postalCode",
 					"top": 10,
-					"left": 2090,
+					"left": 2350,
 					"width": 100,
 					"height": 17
 				},
@@ -229,7 +230,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]postalCode:9",
 					"top": 37,
-					"left": 2090,
+					"left": 2350,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -238,13 +239,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 2345
+					"left": 2605
 				},
 				"label_phone": {
 					"type": "text",
 					"text": "phone",
 					"top": 10,
-					"left": 2350,
+					"left": 2610,
 					"width": 100,
 					"height": 17
 				},
@@ -252,7 +253,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]phone:10",
 					"top": 37,
-					"left": 2350,
+					"left": 2610,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -261,13 +262,13 @@
 					"type": "line",
 					"top": 0,
 					"height": 60,
-					"left": 2605
+					"left": 565
 				},
 				"label_email": {
 					"type": "text",
 					"text": "email",
 					"top": 10,
-					"left": 2610,
+					"left": 570,
 					"width": 100,
 					"height": 17
 				},
@@ -275,7 +276,7 @@
 					"type": "input",
 					"dataSource": "[Person:15]email:11",
 					"top": 37,
-					"left": 2610,
+					"left": 570,
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
@@ -348,9 +349,39 @@
 					"width": 250,
 					"height": 17,
 					"borderStyle": "none"
+				},
+				"line_14": {
+					"type": "line",
+					"top": 0,
+					"height": 60,
+					"left": 328
+				},
+				"Full Name": {
+					"type": "text",
+					"text": "Full Name",
+					"top": 10,
+					"left": 333,
+					"width": 77,
+					"height": 17
+				},
+				"field_lastName1": {
+					"type": "input",
+					"dataSource": "[Person:15]fullName:16",
+					"top": 37,
+					"left": 333,
+					"width": 227,
+					"height": 17,
+					"borderStyle": "none"
 				}
 			}
 		}
 	],
-	"geometryStamp": 1
+	"geometryStamp": 366,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
 }
