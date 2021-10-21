@@ -1,19 +1,5 @@
 ﻿[
 	{
-		"line": 38,
-		"method": {
-			"type": 1,
-			"methodName": "_EDR_Test01"
-		}
-	},
-	{
-		"line": 44,
-		"method": {
-			"type": 1,
-			"methodName": "_EDR_Test01"
-		}
-	},
-	{
 		"line": 92,
 		"method": {
 			"type": 1,
@@ -27,6 +13,20 @@
 			"formName": "email",
 			"objectName": "Bouton2",
 			"methodPath": "/SOURCES/Forms/email/ObjectMethods/Bouton2.4dm"
+		}
+	},
+	{
+		"line": 108,
+		"method": {
+			"type": 1,
+			"methodName": "Email_Send"
+		}
+	},
+	{
+		"line": 83,
+		"method": {
+			"type": 1,
+			"methodName": "Email_Send"
 		}
 	}
 ]

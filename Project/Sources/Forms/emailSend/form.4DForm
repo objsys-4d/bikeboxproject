@@ -173,6 +173,32 @@
 						},
 						{
 							"header": {
+								"name": "Header4",
+								"text": "Header2"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "atAttachmentsPath",
+							"enterable": false,
+							"visibility": "hidden"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Header2"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "atAttachmentsType",
+							"enterable": false,
+							"visibility": "hidden"
+						},
+						{
+							"header": {
 								"name": "Header2",
 								"text": "Header2"
 							},
@@ -180,7 +206,7 @@
 							"footer": {
 								"name": "Footer2"
 							},
-							"dataSource": "atAttachmentsPath",
+							"dataSource": "atAttachmentsBLOB",
 							"enterable": false,
 							"visibility": "hidden"
 						}
@@ -269,7 +295,7 @@
 			"objects": {}
 		}
 	],
-	"geometryStamp": 362,
+	"geometryStamp": 363,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
