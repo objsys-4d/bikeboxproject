@@ -14,5 +14,6 @@ $emailAddrs:=Email_CleanUp($emailAddrs)  //cleanup to remove duplicates
 $oMailInfo.recipient:=$emailAddrs
 $oMailInfo.subject:=vtMail_Subject
 $oMailInfo.type:="reply all"
+$oMailInfo.message:=vtMail_Body
 $oMailInfo.bodyType:=vtMail_BodyType
 emailSendStartProcess($oMailInfo)

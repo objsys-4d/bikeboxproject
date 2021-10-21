@@ -12,11 +12,11 @@ $server:=New object:C1471
 //$server.user:="captjackvm@gmail.com"  //"edureyesjr@gmail.com"
 //$server.password:="cjnc0918"  //<>EDRPwd
 
-$server.host:=<>Email_Hostname  //"outlook.office365.com"
-$server.port:=<>Email_Port  //993
-$server.user:=<>Email_UserName  //"developer@objectivesystems.com"
-$server.password:=<>Email_Password  //"0bjSys4D!"
-$server.acceptUnsecureConnection:=<>Email_Security  //TLS - false  ,  SSL - true
+$server.host:=<>IMAP_Hostname  //"outlook.office365.com"
+$server.port:=<>IMAP_Port  //993
+$server.user:=<>IMAP_UserName  //"developer@objectivesystems.com"
+$server.password:=<>IMAP_Password  //"0bjSys4D!"
+$server.acceptUnsecureConnection:=<>IMAP_Security  //TLS - false  ,  SSL - true
 
 
 // Create a transporter from your server information

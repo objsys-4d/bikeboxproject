@@ -40,8 +40,8 @@ End if
 
 GEN_Message("close")
 
-LISTBOX SELECT ROW:C912(*; "receiveMails_lb"; 0; lk replace selection:K53:1)  //no selection
 Form:C1466.receiveMails_lb.data:=Form:C1466.receiveMails_lb.data.orderBy("receivedAt desc")
 OBJECT SET ENABLED:C1123(*; "btMail_@"; False:C215)
+LISTBOX SELECT ROW:C912(*; "receiveMails_lb"; 0; lk remove from selection:K53:3)  //no selection
 
 

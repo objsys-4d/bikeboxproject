@@ -26,42 +26,42 @@ For ($i; 1; $collctr)
 	
 	Case of 
 		: ($oMailBox.name="Inbox")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 1)
 			
 		: ($oMailBox.name="Sent@")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 2)
 			
 		: ($oMailBox.name="Drafts")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 3)
 			
 		: ($oMailBox.name="Deleted@")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 4)
 			
 		: ($oMailBox.name="Junk@")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 5)
 			
 		: ($oMailBox.name="Spam@")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 6)
 			
 		: ($oMailBox.name="Outbox")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 7)
 			
 		: ($oMailBox.name="Archive")
-			APPEND TO ARRAY:C911(arMailbox; <>Email_UserName)
+			APPEND TO ARRAY:C911(arMailbox; <>IMAP_UserName)
 			APPEND TO ARRAY:C911(arMailboxName; $oMailBox.name)
 			APPEND TO ARRAY:C911(arMailboxPosition; 8)
 	End case 

@@ -1,0 +1,308 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"label_phone1": {
+					"type": "text",
+					"text": "IMAP Hostname :",
+					"top": 112,
+					"left": 10,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_phone1": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.imapHostname",
+					"top": 112,
+					"left": 160,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_phone2": {
+					"type": "text",
+					"text": "IMAP Username :",
+					"top": 139,
+					"left": 10,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_phone2": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.imapUsername",
+					"top": 139,
+					"left": 160,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_fax": {
+					"type": "text",
+					"text": "IMAP Password :",
+					"top": 166,
+					"left": 10,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_fax": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.imapPassword",
+					"top": 166,
+					"left": 160,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"Text": {
+					"type": "text",
+					"text": "<vt_InputTitle>",
+					"top": 9,
+					"left": 10,
+					"width": 197,
+					"height": 21,
+					"fontTheme": "main"
+				},
+				"label_phone3": {
+					"type": "text",
+					"text": "IMAP Security :",
+					"top": 193,
+					"left": 10,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"label_fax1": {
+					"type": "text",
+					"text": "IMAP Port :",
+					"top": 220,
+					"left": 10,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_fax1": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.imapPort",
+					"top": 220,
+					"left": 160,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"Popup Dropdown List": {
+					"type": "dropdown",
+					"left": 159,
+					"top": 191,
+					"width": 253,
+					"height": 21,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "atIMAPSecurity",
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_phone4": {
+					"type": "text",
+					"text": "SMTP Hostname :",
+					"top": 112,
+					"left": 450,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_phone3": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.smtpHostname",
+					"top": 112,
+					"left": 600,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_phone5": {
+					"type": "text",
+					"text": "SMTP Username :",
+					"top": 139,
+					"left": 450,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_phone4": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.smtpUsername",
+					"top": 139,
+					"left": 600,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_fax2": {
+					"type": "text",
+					"text": "SMTP Password :",
+					"top": 166,
+					"left": 450,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_fax2": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.smtpPassword",
+					"top": 166,
+					"left": 600,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"label_phone6": {
+					"type": "text",
+					"text": "SMTP Security :",
+					"top": 193,
+					"left": 450,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"label_fax3": {
+					"type": "text",
+					"text": "SMTP Port :",
+					"top": 220,
+					"left": 450,
+					"width": 140,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"field_fax3": {
+					"type": "input",
+					"dataSource": "Form:C1466.settings.smtpPort",
+					"top": 220,
+					"left": 600,
+					"width": 250,
+					"height": 17,
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"Popup Dropdown List1": {
+					"type": "dropdown",
+					"left": 599,
+					"top": 191,
+					"width": 253,
+					"height": 21,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "atSMTPSecurity",
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"Group Box": {
+					"type": "groupBox",
+					"text": "   Receive Email  ",
+					"top": 82,
+					"left": 14,
+					"width": 412,
+					"height": 172,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"text": "   Send Email  ",
+					"top": 82,
+					"left": 454,
+					"width": 412,
+					"height": 172,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				}
+			}
+		}
+	],
+	"geometryStamp": 174,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

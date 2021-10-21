@@ -179,7 +179,7 @@
 					],
 					"dataSource": "Form:C1466.receiveMails_lb.data",
 					"method": "ObjectMethods/receiveMails_lb.4dm",
-					"selectionMode": "single",
+					"selectionMode": "multiple",
 					"listboxType": "collection",
 					"currentItemSource": "Form:C1466.receiveMails_lb.curItem",
 					"currentItemPositionSource": "Form:C1466.receiveMails_lb.curPos",
@@ -265,7 +265,7 @@
 					"events": [
 						"onDataChange"
 					],
-					"dataSource": "Attachments"
+					"dataSource": "pdAttachments"
 				},
 				"Texte8": {
 					"type": "text",
@@ -430,7 +430,8 @@
 						"onClick"
 					],
 					"fontFamily": "Tahoma",
-					"fontSize": 12
+					"fontSize": 12,
+					"method": "ObjectMethods/btMail_Delete.4dm"
 				},
 				"Text": {
 					"type": "text",
@@ -459,7 +460,7 @@
 			}
 		}
 	],
-	"geometryStamp": 576,
+	"geometryStamp": 578,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

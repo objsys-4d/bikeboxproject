@@ -6,10 +6,10 @@
 		"height": 857
 	},
 	"Sources/Methods/SystemSetting_Load.4dm": {
-		"left": 494,
-		"top": 157,
-		"width": 857,
-		"height": 857
+		"left": 422,
+		"top": 109,
+		"width": 991,
+		"height": 889
 	},
 	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
 		"left": 450,
@@ -84,8 +84,8 @@
 		"height": 857
 	},
 	"Sources/Methods/EMail_LoadEmails.4dm": {
-		"left": 433,
-		"top": 109,
+		"left": 204,
+		"top": 241,
 		"width": 1772,
 		"height": 857
 	},
@@ -96,8 +96,8 @@
 		"height": 857
 	},
 	"Sources/Methods/ShowBody.4dm": {
-		"left": 154,
-		"top": 176,
+		"left": 654,
+		"top": 149,
 		"width": 1072,
 		"height": 857
 	},
@@ -156,8 +156,8 @@
 		"height": 857
 	},
 	"Sources/Forms/emailSend/method.4dm": {
-		"left": 695,
-		"top": 134,
+		"left": 874,
+		"top": 109,
 		"width": 1031,
 		"height": 857
 	},
@@ -180,8 +180,8 @@
 		"height": 857
 	},
 	"Sources/Methods/Email_Send.4dm": {
-		"left": 227,
-		"top": 110,
+		"left": 700,
+		"top": 125,
 		"width": 1072,
 		"height": 857
 	},
@@ -198,10 +198,10 @@
 		"height": 857
 	},
 	"Sources/Forms/emailSend/ObjectMethods/Button.4dm": {
-		"left": 649,
-		"top": 184,
-		"width": 1072,
-		"height": 857
+		"left": 413,
+		"top": 109,
+		"width": 1415,
+		"height": 854
 	},
 	"Sources/Forms/email/ObjectMethods/btCheckMail.4dm": {
 		"left": 170,
@@ -268,5 +268,59 @@
 		"top": 151,
 		"width": 1123,
 		"height": 724
+	},
+	"Sources/Forms/main/ObjectMethods/Button6.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/main/ObjectMethods/Button9.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/TableForms/23/emailSettings/method.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/DatabaseMethods/onStartup.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/emailSend/ObjectMethods/emailHTML_WA.4dm": {
+		"left": 875,
+		"top": 143,
+		"width": 1103,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/btAttach_Rem.4dm": {
+		"left": 181,
+		"top": 301,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/DisplayAttachments.4dm": {
+		"left": 181,
+		"top": 301,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_Delete.4dm": {
+		"left": 153,
+		"top": 225,
+		"width": 1103,
+		"height": 857
+	},
+	"Sources/Methods/FindMailIndex.4dm": {
+		"left": 450,
+		"top": 109,
+		"width": 1072,
+		"height": 857
 	}
 }
