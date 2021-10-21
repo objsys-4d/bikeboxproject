@@ -1,17 +1,14 @@
 //%attributes = {}
+
 // ----------------------------------------------------
 // User name (OS): Edu
-// Date and time: 10/06/21, 19:16:30
+// Date and time: 10/08/21, 21:58:44
 // ----------------------------------------------------
-// Method: SYS_StartUp
+// Method: emailStartProcess
 // Description
-// put here methods needed to Start up the system
+// 
 //
 // Parameters
 // ----------------------------------------------------
 
-SYS_USStates  //US States array
-
-SystemSetting_Load
-
-
+$vlNewProcess:=New process:C317("emailStart"; 0; "emailStart")

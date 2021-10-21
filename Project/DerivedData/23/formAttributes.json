@@ -1,0 +1,16 @@
+﻿{
+	"forms": {
+		"emailSettings": {
+			"timeStamp": "2021-10-12T12:51:27.277Z",
+			"destination": "detailScreen"
+		},
+		"Input": {
+			"timeStamp": "2021-10-12T12:51:27.237Z",
+			"destination": "detailScreen"
+		},
+		"Output": {
+			"timeStamp": "2021-10-08T09:19:56.661Z",
+			"destination": "listScreen"
+		}
+	}
+}

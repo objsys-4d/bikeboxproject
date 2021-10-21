@@ -1,0 +1,421 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Button2": {
+					"type": "button",
+					"text": "Button",
+					"top": 700,
+					"left": 161,
+					"width": 11,
+					"height": 10,
+					"events": [
+						"onClick"
+					],
+					"style": "bevel",
+					"focusable": false,
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Return]",
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Button",
+					"top": 700,
+					"left": 181,
+					"width": 11,
+					"height": 10,
+					"events": [
+						"onClick"
+					],
+					"style": "bevel",
+					"focusable": false,
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Enter]",
+					"method": "ObjectMethods/Button3.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Variable5": {
+					"type": "input",
+					"top": 15,
+					"left": 127,
+					"width": 547,
+					"height": 16,
+					"dataSource": "vtEmailSend_To",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke"
+					],
+					"contextMenu": "none",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"method": "ObjectMethods/Variable5.4dm",
+					"sizingX": "grow"
+				},
+				"Texte6": {
+					"type": "text",
+					"top": 15,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "To:",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 37,
+					"left": 127,
+					"width": 547,
+					"height": 16,
+					"dataSource": "vtEmailSend_CC",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"contextMenu": "none",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"sizingX": "grow"
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 60,
+					"left": 127,
+					"width": 547,
+					"height": 16,
+					"dataSource": "vtEmailSend_Subject",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"contextMenu": "none",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"sizingX": "grow"
+				},
+				"btAttach_Add": {
+					"type": "button",
+					"top": 82,
+					"left": 514,
+					"width": 162,
+					"height": 19,
+					"text": "Attach...",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"method": "ObjectMethods/btAttach_Add.4dm",
+					"sizingX": "move"
+				},
+				"Texte7": {
+					"type": "text",
+					"top": 37,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "CC:",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Texte10": {
+					"type": "text",
+					"top": 60,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "Subject:",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Texte11": {
+					"type": "text",
+					"top": 82,
+					"left": 27,
+					"width": 138,
+					"height": 15,
+					"text": "Attachment(s):",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 128,
+					"top": 84,
+					"width": 380,
+					"height": 61,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"resizingMode": "legacy",
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"dataSource": "Attachmentslb",
+					"scrollbarVertical": "visible",
+					"scrollbarHorizontal": "hidden",
+					"method": "ObjectMethods/List Box.4dm",
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "atAttachments",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Header2"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "atAttachmentsPath",
+							"enterable": false,
+							"visibility": "hidden"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Header2"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "atAttachmentsType",
+							"enterable": false,
+							"visibility": "hidden"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "atAttachmentsBLOB",
+							"enterable": false,
+							"visibility": "hidden"
+						}
+					]
+				},
+				"btAttach_Rem": {
+					"type": "button",
+					"top": 102,
+					"left": 514,
+					"width": 162,
+					"height": 19,
+					"text": "Remove Attachment",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"dataSource": "btAttach_Rem",
+					"method": "ObjectMethods/btAttach_Rem.4dm",
+					"sizingX": "move"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Send",
+					"top": 798,
+					"left": 586,
+					"width": 90,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"action": "",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button.4dm",
+					"sizingX": "move"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 798,
+					"left": 492,
+					"width": 90,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"sizingX": "move"
+				},
+				"emailHTML_WA": {
+					"type": "webArea",
+					"left": 27,
+					"top": 365,
+					"width": 651,
+					"height": 428,
+					"dataSource": "vtEmailSend_WA",
+					"sizingX": "grow"
+				},
+				"objvtEmailSend_Message": {
+					"type": "input",
+					"left": 27,
+					"top": 153,
+					"width": 634,
+					"height": 188,
+					"styledText": true,
+					"allowFontColorPicker": true,
+					"scrollbarVertical": "visible",
+					"dataSource": "vtEmailSend_Message",
+					"sizingX": "grow"
+				},
+				"emailHTML_Text": {
+					"type": "text",
+					"text": "Original Message",
+					"top": 349,
+					"left": 30,
+					"width": 137,
+					"height": 15,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "normal",
+					"fontStyle": "italic"
+				},
+				"emailList_lb": {
+					"type": "listbox",
+					"left": 127,
+					"top": 32,
+					"width": 357,
+					"height": 120,
+					"events": [
+						"onClick",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"showHeaders": false,
+					"resizingMode": "legacy",
+					"rowHeight": "20px",
+					"verticalAlign": "middle",
+					"scrollbarHorizontal": "hidden",
+					"hideFocusRing": true,
+					"borderStyle": "system",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"horizontalLineStroke": "transparent",
+					"visibility": "hidden",
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.emailList_lb.data",
+					"currentItemSource": "Form:C1466.emailList_lb.currentItem",
+					"currentItemPositionSource": "Form:C1466.emailList_lb.currentPosition",
+					"selectedItemsSource": "Form:C1466.emailList_lb.selectedItems",
+					"method": "ObjectMethods/emailList_lb.4dm",
+					"selectionMode": "single",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header5"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"enterable": false,
+							"resizable": false,
+							"dataSource": "This:C1470.value",
+							"alternateFill": "#b1c4dd"
+						}
+					]
+				}
+			},
+			"entryOrder": [
+				"Variable5",
+				"Variable6",
+				"Variable9",
+				"List Box",
+				"btAttach_Add",
+				"btAttach_Rem",
+				"objvtEmailSend_Message",
+				"emailHTML_WA",
+				"Button",
+				"Button1",
+				"emailList_lb"
+			]
+		},
+		{
+			"objects": {}
+		}
+	],
+	"geometryStamp": 492,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Menu Bar #1"
+}

@@ -1,0 +1,416 @@
+﻿{
+	"Sources/Methods/SYS_StartUp.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Methods/SystemSetting_Load.4dm": {
+		"left": 422,
+		"top": 109,
+		"width": 991,
+		"height": 889
+	},
+	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
+		"left": 450,
+		"top": 109,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/Bouton2.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 989,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/Hierarchical List.4dm": {
+		"left": 65,
+		"top": 122,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Methods/_EDR_Test01.4dm": {
+		"left": 309,
+		"top": 140,
+		"width": 1650,
+		"height": 857
+	},
+	"Sources/Forms/email/method.4dm": {
+		"left": 424,
+		"top": 109,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/Email_InitTransporter.4dm": {
+		"left": 875,
+		"top": 143,
+		"width": 1103,
+		"height": 857
+	},
+	"Sources/Methods/Email_InitMailboxes.4dm": {
+		"left": 442,
+		"top": 116,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/GEN_Message.4dm": {
+		"left": 744,
+		"top": 239,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/List Box1.4dm": {
+		"left": 119,
+		"top": 219,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/receiveMails_lb.4dm": {
+		"left": 695,
+		"top": 134,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/TableForms/16/companySubform/method.4dm": {
+		"left": 65,
+		"top": 174,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/BBCompany_List.4dm": {
+		"left": 65,
+		"top": 174,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/EMail_LoadEmails.4dm": {
+		"left": 204,
+		"top": 123,
+		"width": 1772,
+		"height": 975
+	},
+	"Sources/Methods/GEN_ListBox_AllItemsSelect.4dm": {
+		"left": 65,
+		"top": 174,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/ShowBody.4dm": {
+		"left": 654,
+		"top": 149,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/lbBoxNames_obj.4dm": {
+		"left": 119,
+		"top": 219,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Forms/TestForm/method.4dm": {
+		"left": 323,
+		"top": 193,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Forms/TestForm/ObjectMethods/List Box.4dm": {
+		"left": 323,
+		"top": 193,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/mainStartProcess.4dm": {
+		"left": 695,
+		"top": 134,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Forms/main/method.4dm": {
+		"left": 695,
+		"top": 134,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Methods/emailStart.4dm": {
+		"left": 205,
+		"top": 113,
+		"width": 1322,
+		"height": 850
+	},
+	"Sources/Methods/emailStartProcess.4dm": {
+		"left": 372,
+		"top": 142,
+		"width": 857,
+		"height": 618
+	},
+	"Sources/Methods/mainStart.4dm": {
+		"left": 695,
+		"top": 134,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/Bouton2.4dm": {
+		"left": 695,
+		"top": 134,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/method.4dm": {
+		"left": 671,
+		"top": 161,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/Methods/emailSendStart.4dm": {
+		"left": 230,
+		"top": 148,
+		"width": 1123,
+		"height": 857
+	},
+	"Sources/Methods/emailSendStartProcess.4dm": {
+		"left": 695,
+		"top": 134,
+		"width": 1004,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/btComposeMail.4dm": {
+		"left": 695,
+		"top": 134,
+		"width": 857,
+		"height": 857
+	},
+	"Sources/Methods/Email_Send.4dm": {
+		"left": 914,
+		"top": 140,
+		"width": 925,
+		"height": 857
+	},
+	"Sources/Methods/Email_SendGUI.4dm": {
+		"left": 841,
+		"top": 176,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Methods/WebLtg_Email.4dm": {
+		"left": 119,
+		"top": 219,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/Button.4dm": {
+		"left": 157,
+		"top": 121,
+		"width": 1644,
+		"height": 854
+	},
+	"Sources/Forms/email/ObjectMethods/btCheckMail.4dm": {
+		"left": 170,
+		"top": 109,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/DisplayEmailAddresses.4dm": {
+		"left": 317,
+		"top": 122,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_Reply.4dm": {
+		"left": 820,
+		"top": 187,
+		"width": 1123,
+		"height": 857
+	},
+	"Sources/Methods/Output_lbInit.4dm": {
+		"left": 820,
+		"top": 187,
+		"width": 1123,
+		"height": 857
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_ReplyAll.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/Email_CleanUp.4dm": {
+		"left": 489,
+		"top": 116,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/UTIL_DropSpaces.4dm": {
+		"left": 605,
+		"top": 159,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_Forward.4dm": {
+		"left": 300,
+		"top": 173,
+		"width": 1123,
+		"height": 686
+	},
+	"Sources/Forms/emailSend/ObjectMethods/btAttach_Add.4dm": {
+		"left": 433,
+		"top": 151,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/emailSend/ObjectMethods/List Box.4dm": {
+		"left": 181,
+		"top": 301,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/GEN_Listbox_ClickedEmpty.4dm": {
+		"left": 433,
+		"top": 151,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/main/ObjectMethods/Button6.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/main/ObjectMethods/Button9.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/TableForms/23/emailSettings/method.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/DatabaseMethods/onStartup.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/emailSend/ObjectMethods/emailHTML_WA.4dm": {
+		"left": 875,
+		"top": 143,
+		"width": 1103,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/btAttach_Rem.4dm": {
+		"left": 181,
+		"top": 301,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/DisplayAttachments.4dm": {
+		"left": 181,
+		"top": 301,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Forms/email/ObjectMethods/btMail_Delete.4dm": {
+		"left": 153,
+		"top": 225,
+		"width": 1103,
+		"height": 857
+	},
+	"Sources/Methods/FindMailIndex.4dm": {
+		"left": 450,
+		"top": 109,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Methods/EmailSend_Attachments.4dm": {
+		"left": 437,
+		"top": 200,
+		"width": 989,
+		"height": 675
+	},
+	"Sources/Methods/EmailSend_GUI_Init.4dm": {
+		"left": 136,
+		"top": 141,
+		"width": 1368,
+		"height": 803
+	},
+	"Sources/Methods/BLOB_BLOBToVars.4dm": {
+		"left": 481,
+		"top": 189,
+		"width": 989,
+		"height": 675
+	},
+	"Sources/Methods/BLOB_VarsToBLOB.4dm": {
+		"left": 481,
+		"top": 189,
+		"width": 989,
+		"height": 675
+	},
+	"Sources/Forms/emailSend/ObjectMethods/Variable5.4dm": {
+		"left": 506,
+		"top": 190,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/16/companyList/method.4dm": {
+		"left": 390,
+		"top": 111,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/20/donationSubform/method.4dm": {
+		"left": 390,
+		"top": 111,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/20/donationSubform/ObjectMethods/Tab Control.4dm": {
+		"left": 390,
+		"top": 111,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/TableForms/15/personInput/ObjectMethods/Button.4dm": {
+		"left": 65,
+		"top": 174,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/FindEmail.4dm": {
+		"left": 462,
+		"top": 338,
+		"width": 1072,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/emailList_lb.4dm": {
+		"left": 271,
+		"top": 359,
+		"width": 1072,
+		"height": 785
+	},
+	"Sources/Methods/EmailSend_GUI_SelectEmail.4dm": {
+		"left": 385,
+		"top": 163,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/Forms/emailSend/ObjectMethods/Button2.4dm": {
+		"left": 671,
+		"top": 161,
+		"width": 1031,
+		"height": 857
+	},
+	"Sources/Methods/EmailSend_AddressLookAhead.4dm": {
+		"left": 266,
+		"top": 146,
+		"width": 1123,
+		"height": 724
+	},
+	"Sources/Methods/EMailSend_AddressRebuild.4dm": {
+		"left": 296,
+		"top": 204,
+		"width": 1123,
+		"height": 724
+	}
+}

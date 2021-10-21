@@ -1,17 +1,15 @@
 //%attributes = {}
 // ----------------------------------------------------
 // User name (OS): Edu
-// Date and time: 10/06/21, 19:16:30
+// Date and time: 10/15/21, 19:31:51
 // ----------------------------------------------------
-// Method: SYS_StartUp
+// Method: FindEmail
 // Description
-// put here methods needed to Start up the system
+// 
 //
 // Parameters
 // ----------------------------------------------------
 
-SYS_USStates  //US States array
-
-SystemSetting_Load
-
-
+var $1 : Object
+var $2 : Text
+$1.result:=$1.value=$2  //name is a property name of objects in the collection

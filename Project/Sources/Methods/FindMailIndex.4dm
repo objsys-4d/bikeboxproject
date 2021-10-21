@@ -1,17 +1,16 @@
 //%attributes = {}
 // ----------------------------------------------------
 // User name (OS): Edu
-// Date and time: 10/06/21, 19:16:30
+// Date and time: 10/13/21, 00:44:42
 // ----------------------------------------------------
-// Method: SYS_StartUp
+// Method: FindMailIndex
 // Description
-// put here methods needed to Start up the system
+// 
 //
 // Parameters
 // ----------------------------------------------------
 
-SYS_USStates  //US States array
+var $1 : Object
+var $2 : Text
 
-SystemSetting_Load
-
-
+$1.result:=$1.value.id=$2
