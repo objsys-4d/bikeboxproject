@@ -15,11 +15,13 @@ Case of
 			vtMail_Body:=""
 			OBJECT SET VISIBLE:C603(*; "web area"; False:C215)
 			OBJECT SET VISIBLE:C603(*; "input"; True:C214)
+			OBJECT SET ENABLED:C1123(btnotJunk; False:C215)
 			
 		Else 
 			DisplayAttachments(Form:C1466.receiveMails_lb.curItem.attachments)
 			ShowBody(DisplayEmailBody(Form:C1466.receiveMails_lb.curItem))
 			
+			OBJECT SET ENABLED:C1123(btnotJunk; True:C214)
 			OBJECT SET ENABLED:C1123(*; "btMail_@"; True:C214)
 			vtMail_From:=DisplayEmailAddresses(Form:C1466.receiveMails_lb.curItem.from)
 			vtMail_To:=DisplayEmailAddresses(Form:C1466.receiveMails_lb.curItem.to)

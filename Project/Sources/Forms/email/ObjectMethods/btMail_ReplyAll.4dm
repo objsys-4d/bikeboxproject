@@ -1,17 +1,17 @@
-C_TEXT:C284($MailTo; $emailAddrs)
+C_TEXT:C284($MailTo; $emailAddresses)
 
 $MailTo:=Email_CleanUp(vtMail_To; True:C214)  //clean up to remove sender account
 
 $oMailInfo:=New object:C1471
 If (vtMail_CC="")
-	$emailAddrs:=vtMail_From+"; "+$MailTo
+	$emailAddresses:=vtMail_From+"; "+$MailTo
 Else 
-	$emailAddrs:=vtMail_From+"; "+vtMail_CC+"; "+$MailTo
+	$emailAddresses:=vtMail_From+"; "+vtMail_CC+"; "+$MailTo
 End if 
 
-$emailAddrs:=Email_CleanUp($emailAddrs)  //cleanup to remove duplicates
+$emailAddresses:=Email_CleanUp($emailAddresses)  //cleanup to remove duplicates
 
-$oMailInfo.recipient:=$emailAddrs
+$oMailInfo.recipient:=$emailAddresses
 $oMailInfo.subject:=vtMail_Subject
 $oMailInfo.type:="reply all"
 $oMailInfo.message:=vtMail_Body

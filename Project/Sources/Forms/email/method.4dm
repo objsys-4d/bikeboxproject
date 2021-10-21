@@ -18,6 +18,7 @@ Case of
 		
 		GEN_Message("close")
 		
+		OBJECT SET VISIBLE:C603(btnotJunk; False:C215)
 		OBJECT SET ENABLED:C1123(*; "btMail_@"; False:C215)
 		vtMessageCountText:=""
 		

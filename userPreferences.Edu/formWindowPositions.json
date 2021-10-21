@@ -5,16 +5,28 @@
 		"width": 1497,
 		"height": 762
 	},
+	"Sources/TableForms/15/personInput/form.4DForm": {
+		"left": 107,
+		"top": 115,
+		"width": 1458,
+		"height": 753
+	},
+	"Sources/TableForms/20/donationSubform/form.4DForm": {
+		"left": 249,
+		"top": 138,
+		"width": 1458,
+		"height": 753
+	},
 	"Sources/Forms/email/form.4DForm": {
-		"left": 68,
-		"top": 111,
+		"left": 13,
+		"top": 109,
 		"width": 1424,
 		"height": 836
 	},
 	"Sources/Forms/emailSend/form.4DForm": {
-		"left": 261,
-		"top": 216,
-		"width": 1191,
-		"height": 762
+		"left": 290,
+		"top": 115,
+		"width": 1247,
+		"height": 866
 	}
 }

@@ -18,6 +18,13 @@ Case of
 				vtCurrentBox:=arMailboxName{lbBoxNames}
 				EMail_LoadEmails(vtCurrentBox)
 			End if 
+			
+			If (vtCurrentBox="Junk@")
+				OBJECT SET VISIBLE:C603(btnotJunk; True:C214)
+				OBJECT SET ENABLED:C1123(btnotJunk; False:C215)  //disable by default
+			Else 
+				OBJECT SET VISIBLE:C603(btnotJunk; True:C214)
+			End if 
 		End if 
 		OBJECT SET ENABLED:C1123(*; "btMail_@"; False:C215)
 		
