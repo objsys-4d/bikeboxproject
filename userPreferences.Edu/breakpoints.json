@@ -48,5 +48,19 @@
 			"type": 1,
 			"methodName": "_EDR_Test01"
 		}
+	},
+	{
+		"line": 11,
+		"method": {
+			"type": 1,
+			"methodName": "EventParticipant_Delete"
+		}
+	},
+	{
+		"line": 12,
+		"method": {
+			"type": 1,
+			"methodName": "EventParticipant_Attended"
+		}
 	}
 ]

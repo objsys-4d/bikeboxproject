@@ -12,9 +12,9 @@
                 onclick="ltgFormAction('participanteventmod-detail.html?action=new&modal=true');">Add to Event</button>
             </div>
             <div class="col">
-                        <label for=".quickAdd" class="col-form-label">Quick Add</label>
+                        <label for=".PersonIDquickAdd" class="col-form-label">Quick Add</label>
                         <div>
-							<select class="custom-select" id=".quickAdd" name=".quickAdd" tabindex="10"></select>
+							<select class="custom-select" id=".PersonIDquickAdd" name=".PersonIDquickAdd" onchange="ltgExecuteMethod('ParticipantEvent_QuickSelect');"></select>
                         </div>
             </div>
         </div>
@@ -32,7 +32,10 @@
                     <th><!--Edit Button--></th>
                     <th>{{%dateEvent}}</th>
                     <th>{{%eventName}}</th>
+					<th>{{%attended}}</th>
                     <th>{{%amount}}</th>
+                    <th><!--HIDDEN attended--></th>
+					<th> </th>
                 </tr>
             </thead>
         </table>
@@ -51,10 +54,10 @@
                 columnDefs: [
                 {
                     targets: [ 0 ],
-                    visible: false, // CONTACT_ID (HIDDEN)
+                    visible: false, // UUID (HIDDEN)
                 },
                 {
-                    targets: [ 1 ], // CONTACT NAME LINK
+                    targets: [ 1 ], // Edit Button
                      render: function ( data, type, row, meta ) {
                         if(type === 'display'){
                         
@@ -64,7 +67,34 @@
     
                         return data;
                     }
-                }
+                },
+                {
+                    targets: [ 4 ], // Attended
+                    render: function ( data, type, row, meta ) {
+                        if(type === 'display'){
+                        
+                            data = '<input type="checkbox" onclick="ltgExecuteMethod(\'EventParticipant_Attended\',\''+row[1]+'.'+row[6]+'\');">';
+
+                        }
+    
+                        return data;
+                    },
+                    sortable: false,
+                },
+                {
+                    targets: [ 6 ],
+                    visible: false, // attended (HIDDEN)
+                },
+                {
+                    targets: [ 7 ],
+                    orderable: false,
+                    render: function ( data, type, row, meta ) {
+                    if(type === 'display'){ 
+                        data='<a class="text-secondary" href="#" onclick="ltgExecuteMethod(\'EventParticipant_Delete\',\''+row[1]+'\');"><i class="fas fa-trash"></i></a>';
+                    }
+                    return data;
+                    }
+                },                    
             ],
             language: {'lengthMenu': '{{%page_Size}} _MENU_','emptyTable': '{{%records_none}}'},
             order: [[ 1, 'asc' ]],
