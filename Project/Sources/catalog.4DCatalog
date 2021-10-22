@@ -424,11 +424,12 @@
 		<field name="personID" uuid="0C23EBE56C5693458C9A507171CFBD05" type="4" never_null="true" id="4"/>
 		<field name="companyID" uuid="C372E7D1C6945545B247504C0D280942" type="4" never_null="true" id="5"/>
 		<field name="amountDonated" uuid="A9D02AAD43F4F04487CA1DA4E7651BE5" type="6" never_null="true" id="6"/>
+		<field name="attended" uuid="3DF28FCA037A3847AD709A2E57EB6F81" type="1" never_null="true" id="7"/>
 		<primary_key field_name="UUID" field_uuid="AC23F66122E58348AC6B6EF4EA4916CC"/>
 		<table_extra output_form="Output">
-			<editor_table_info displayable_fields_count="6">
+			<editor_table_info displayable_fields_count="8">
 				<color red="255" green="153" blue="63" alpha="255"/>
-				<coordinates left="66" top="1296.984375" width="146" height="187.33203125"/>
+				<coordinates left="66" top="1296.984375" width="141" height="221.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

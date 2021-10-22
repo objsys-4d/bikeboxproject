@@ -520,5 +520,101 @@
 		"top": 109,
 		"width": 1571,
 		"height": 857
+	},
+	"Sources/Methods/Event_Detail.4dm": {
+		"left": 160,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_QuickSelect.4dm": {
+		"left": 143,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_DetailMod.4dm": {
+		"left": 520,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/Donation_Detail.4dm": {
+		"left": 160,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/Participant_Included_List.4dm": {
+		"left": 285,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_Save.4dm": {
+		"left": 509,
+		"top": 134,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_QuickSelSave.4dm": {
+		"left": 124,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/Event_List.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/EventParticipant_Delete.4dm": {
+		"left": 509,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/BBOrder_Save.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantInclude_DataTable.4dm": {
+		"left": 90,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/BBOrderItem_Save.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/EventParticipant_Attended.4dm": {
+		"left": 516,
+		"top": 120,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Event_Save.4dm": {
+		"left": 516,
+		"top": 120,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Web_Router.4dm": {
+		"left": 516,
+		"top": 120,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Navbar_SetActive.4dm": {
+		"left": 516,
+		"top": 120,
+		"width": 1553,
+		"height": 857
 	}
 }
