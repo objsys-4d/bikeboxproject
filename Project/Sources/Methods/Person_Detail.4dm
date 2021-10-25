@@ -143,6 +143,7 @@ Else
 	Ltg_JS_Send("ltgObj('.personDuplicate').prop('checked', false)")
 End if 
 
+
 oConnection.data.personStatus:=$oPerson.personObject.status
 
 //Ltg_JS_Send("ltgObj('Person.company')

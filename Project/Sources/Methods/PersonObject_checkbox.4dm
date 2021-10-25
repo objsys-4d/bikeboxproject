@@ -16,11 +16,6 @@ If ($1#"")
 	$value:=Substring:C12($1; 1; Position:C15("."; $1)-1)
 	$fieldName:=Substring:C12($1; Position:C15("."; $1)+1)
 	
-	If ($value="true")
-		
-	Else 
-		
-	End if 
 	Case of 
 		: ($fieldName="personActive")
 			oConnection.data.personActive:=$value
