@@ -50,10 +50,10 @@
 		}
 	},
 	{
-		"line": 11,
+		"line": 1,
 		"method": {
 			"type": 1,
-			"methodName": "EventParticipant_Delete"
+			"methodName": "BBOrderItem_Delete"
 		}
 	},
 	{

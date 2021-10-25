@@ -1,10 +1,9 @@
 //%attributes = {"shared":true}
-
 // ----------------------------------------------------
 // User name (OS): Edu
-// Date and time: 10/21/21, 19:31:07
+// Date and time: 10/25/21, 21:45:25
 // ----------------------------------------------------
-// Method: PersonObject_checkbox
+// Method: Event_Recurring
 // Description
 // 
 //
@@ -12,22 +11,12 @@
 // ----------------------------------------------------
 
 C_TEXT:C284($1)
+C_BOOLEAN:C305($status)
+
 If ($1#"")
 	$value:=Substring:C12($1; 1; Position:C15("."; $1)-1)
 	$fieldName:=Substring:C12($1; Position:C15("."; $1)+1)
 	
-	Case of 
-		: ($fieldName="personActive")
-			oConnection.data.personActive:=$value
-			
-		: ($fieldName="personValid")
-			oConnection.data.personValid:=$value
-			
-		: ($fieldName="personDuplicate")
-			oConnection.data.personDuplicate:=$value
-			
-	End case 
-	
-	
+	oConnection.data.Event.recurring:=($value="true")
 	
 End if 

@@ -409,6 +409,7 @@
 		<field name="eventName" uuid="9AE0F46804686648B0536F1039497BBD" type="10" limiting_length="255" never_null="true" id="3"/>
 		<field name="dateEvent" uuid="EA5FBC733E27004883AC2C2D74A827E1" type="8" never_null="true" id="4"/>
 		<field name="totalDonation" uuid="DBDD3E4AE785BE46B70967C173FA4457" type="6" never_null="true" id="5"/>
+		<field name="recurring" uuid="6DF944584813C643AF6688B21C0B4488" type="1" never_null="true" id="6"/>
 		<primary_key field_name="UUID" field_uuid="47C5D1593D2CDF4E9D9FE0C5C778BF2D"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="6">

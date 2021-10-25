@@ -32,12 +32,13 @@ End case
 $oDataTable:=New collection:C1472
 C_OBJECT:C1216($oPcpPerson; $oPcpEvent)
 For each ($oParticipant; $oParticipantSelection)
-	If ($oParticipant.attended)
-		$txtAttended:="<input type='checkbox' checked='checked'/>"
-	Else 
-		$txtAttended:="<input type='checkbox' />"
-	End if 
+	$value:="."+$oParticipant.UUID
 	
+	If ($oParticipant.attended)
+		$txtAttended:="<input type='checkbox' checked='checked' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+	Else 
+		$txtAttended:="<input type='checkbox' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+	End if 
 	
 	$oPcpEvent:=$oParticipant.Participant_Event
 	If ($oPcpEvent=Null:C1517)
@@ -58,18 +59,20 @@ For each ($oParticipant; $oParticipantSelection)
 	End if 
 	
 	
-	$oDataTable.push(New collection:C1472(""; $oParticipant.UUID; $eventDate; $eventName; $txtAttended; String:C10($oParticipant.amountDonated; "$###,###,##0.00"); String:C10($oParticipant.attended); ""))
+	//$oDataTable.push(New collection(""; $oParticipant.UUID; $eventDate; $eventName; String($oParticipant.amountDonated; "$###,###,##0.00"); ""))
+	$oDataTable.push(New collection:C1472(""; $oParticipant.UUID; $eventDate; $eventName; $txtAttended; String:C10($oParticipant.amountDonated; "$###,###,##0.00"); ""))
+	//$oDataTable.push(New collection(""; $oParticipant.UUID; $eventDate; $eventName; String($oParticipant.amountDonated; "$###,###,##0.00"); $oParticipant.attended; ""))
 	
 End for each 
 
-// CLEAR THE ORDER ITEMS DATATABLE
+// CLEAR THE DATATABLE
 
-Ltg_JS_Send("ltgObj('participant').dataTable().fnClearTable()")
+Ltg_JS_Send("ltgObj('participant').DataTable().fnClearTable()")
 
 // UPDATE THE ORDER ITEMS DATATABLE
 
 If ($oDataTable.length>0)
 	
-	Ltg_JS_Send("ltgObj('participant').dataTable().fnAddData(JSON.parse('"+JSON Stringify:C1217($oDataTable)+"'))")
+	Ltg_JS_Send("ltgObj('participant').DataTable().fnAddData(JSON.parse('"+JSON Stringify:C1217($oDataTable)+"'))")
 	
 End if 

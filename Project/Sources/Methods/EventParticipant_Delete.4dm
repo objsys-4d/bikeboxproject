@@ -20,6 +20,13 @@ If ($oParticipant#Null:C1517)
 	
 	$oParticipant.drop()
 	
+	//$oEvent:=ds.Event.get(oConnection.data.Event.UUID)
+	//$oEventParticipants:=$oEvent.Event_Participant
+	//$status:=$oEvent.save()
+	
+	//oConnection.form:="events-detail.html"
+	//oConnection.action:="index"
+	
 	ParticipantEvent_QuickSelSave
 	
 End if 
