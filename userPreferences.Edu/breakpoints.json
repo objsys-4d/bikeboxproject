@@ -18,13 +18,6 @@
 		}
 	},
 	{
-		"line": 56,
-		"method": {
-			"type": 1,
-			"methodName": "_EDR_Test01"
-		}
-	},
-	{
 		"line": 3,
 		"method": {
 			"type": 2,
@@ -43,13 +36,6 @@
 		}
 	},
 	{
-		"line": 20,
-		"method": {
-			"type": 1,
-			"methodName": "_EDR_Test01"
-		}
-	},
-	{
 		"line": 1,
 		"method": {
 			"type": 1,
@@ -60,7 +46,7 @@
 		"line": 12,
 		"method": {
 			"type": 1,
-			"methodName": "EventParticipant_Attended"
+			"methodName": "PersonObject_checkbox"
 		}
 	}
 ]

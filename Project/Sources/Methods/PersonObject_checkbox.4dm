@@ -19,6 +19,7 @@ If ($1#"")
 	Case of 
 		: ($fieldName="personActive")
 			oConnection.data.personActive:=$value
+			oConnection.data.Person.personObject.active:=($value="true")
 			
 		: ($fieldName="personValid")
 			oConnection.data.personValid:=$value

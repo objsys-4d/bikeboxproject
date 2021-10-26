@@ -21,17 +21,27 @@ Case of
 End case 
 // *** DATATABLES ***
 $oDataTable:=New collection:C1472
+$dq:=Char:C90(Double quote:K15:41)
 
 C_OBJECT:C1216($oPcpPerson; $oPcpEvent)
 C_TEXT:C284($personName; $eventName; $txtAttended)
 For each ($oPcp; $oParticipant)
 	$value:="."+$oPcp.UUID
 	If ($oPcp.attended)
-		$txtAttended:="<input type='checkbox' checked='checked' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+		$txtAttended:="<input type='checkbox' checked='checked' onclick="+$dq+"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')"+$dq+"/>"
 	Else 
-		$txtAttended:="<input type='checkbox' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+		$txtAttended:="<input type='checkbox' onclick="+$dq+"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')"+$dq+"/>"
 	End if 
-	
+	//If ($oPcp.attended)
+	//$txtAttended:="<input type='checkbox' checked='checked' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+	//Else 
+	//$txtAttended:="<input type='checkbox' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+	//End if 
+	//If ($oPcp.attended)
+	//$txtAttended:="<input type='checkbox' checked='checked' />"
+	//Else 
+	//$txtAttended:="<input type='checkbox'/>"
+	//End if 
 	// ADD TO DATATABLES (JSON)
 	Case of 
 		: (oConnection.referer="event")
@@ -44,7 +54,6 @@ For each ($oPcp; $oParticipant)
 			End if 
 			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $eventDate; $personName; $txtAttended; String:C10($oPcp.amountDonated; "$###,###,##0.00"); ""))
 			//$oDataTable.push(New collection(""; $oPcp.UUID; $eventDate; $personName; String($oPcp.amountDonated; "$###,###,##0.00"); ""))
-			//$oDataTable.push(New collection(""; $oPcp.UUID; $eventDate; $personName; $oPcp.attended; String($oPcp.amountDonated; "$###,###,##0.00"); $oPcp.attended; ""))
 			
 		: (oConnection.referer="donation")
 			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $oPcp.dateEvent; $oPcp.eventName; $txtAttended; String:C10($oPcp.totalDonation; "$###,###,##0.00"); $oPcp.attended; ""))

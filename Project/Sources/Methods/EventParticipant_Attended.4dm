@@ -24,15 +24,19 @@ $oParticipant:=ds:C1482.Participant.get($UUID)
 
 If ($oParticipant#Null:C1517)
 	
-	If ($value="false")  //current record is False, so the checkbox was checked
-		$oParticipant.attended:=($value="True")
-	Else 
-		//current record is True, so the check box was unchecked
-		$oParticipant.attended:=($value="False")
-	End if 
+	$oParticipant.attended:=($value="True")
 	$status:=$oParticipant.save()
-	If ($status.success)
-		//ParticipantEvent_QuickSelSave
-	End if 
+	
+	
+	//If ($value="false")  //current record is False, so the checkbox was checked
+	//$oParticipant.attended:=($value="True")
+	//Else 
+	////current record is True, so the check box was unchecked
+	//$oParticipant.attended:=($value="False")
+	//End if 
+	//$status:=$oParticipant.save()
+	//If ($status.success)
+	////ParticipantEvent_QuickSelSave
+	//End if 
 	
 End if 
