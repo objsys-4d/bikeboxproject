@@ -46,7 +46,7 @@ Else
 	$oPerson.personObject.duplicateName:="No"
 End if 
 
-//$oPerson.personObject.status
+$oPerson.personObject.status:=oConnection.data.Person.personObject.status
 
 $oPerson.save()
 
