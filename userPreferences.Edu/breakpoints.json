@@ -48,5 +48,40 @@
 			"type": 1,
 			"methodName": "PersonObject_checkbox"
 		}
+	},
+	{
+		"line": 11,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantEvent_Select"
+		}
+	},
+	{
+		"line": 16,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantEvent_Select"
+		}
+	},
+	{
+		"line": 52,
+		"method": {
+			"type": 1,
+			"methodName": "Donation_Delete"
+		}
+	},
+	{
+		"line": 13,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantSelect_Modal2"
+		}
+	},
+	{
+		"line": 24,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantSelect_Modal2"
+		}
 	}
 ]
