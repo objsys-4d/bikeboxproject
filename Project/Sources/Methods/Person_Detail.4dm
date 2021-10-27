@@ -127,8 +127,10 @@ oConnection.data.Person:=$oPerson  // PERSON
 //oConnection.data.personActive:=$oPerson.personObject.active
 If ($oPerson.personObject.active="Yes")
 	Ltg_JS_Send("ltgObj('.personActive').prop('checked', true)")
+	Ltg_JS_Send("ltgObj('Person.personObject.active').prop('checked', true)")
 Else 
 	Ltg_JS_Send("ltgObj('.personActive').prop('checked', false)")
+	Ltg_JS_Send("ltgObj('Person.personObject.active').prop('checked', false)")
 End if 
 
 If ($oPerson.personObject.valid="Yes")
@@ -143,7 +145,7 @@ Else
 	Ltg_JS_Send("ltgObj('.personDuplicate').prop('checked', false)")
 End if 
 
-oConnection.data.personStatus:=$oPerson.personObject.status
+//oConnection.data.personStatus:=$oPerson.personObject.status
 
 //Ltg_JS_Send("ltgObj('Person.company')
 //oConnection.data.Person.company:=$oPerson.Person_Company.companyName
