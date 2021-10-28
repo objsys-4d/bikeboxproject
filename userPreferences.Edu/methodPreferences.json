@@ -856,9 +856,9 @@
 	},
 	"Sources/Methods/EventParticipant_Delete.4dm": {
 		"startSelection": 0,
-		"endSelection": 29,
-		"firstSelectedLine": 28,
-		"lastSelectedLine": 28,
+		"endSelection": 0,
+		"firstSelectedLine": 18,
+		"lastSelectedLine": 18,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-25T12:49:28.760Z"
@@ -974,8 +974,8 @@
 	"Sources/Methods/ParticipantSelect_Modal.4dm": {
 		"startSelection": 0,
 		"endSelection": 0,
-		"firstSelectedLine": 26,
-		"lastSelectedLine": 26,
+		"firstSelectedLine": 29,
+		"lastSelectedLine": 29,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-27T17:03:25.434Z"
@@ -1008,13 +1008,13 @@
 		"stamp": "2021-10-06T15:41:58.671Z"
 	},
 	"Sources/Methods/ParticipantEvent_Select.4dm": {
-		"startSelection": 14,
-		"endSelection": 14,
-		"firstSelectedLine": 5,
-		"lastSelectedLine": 5,
+		"startSelection": 27,
+		"endSelection": 27,
+		"firstSelectedLine": 32,
+		"lastSelectedLine": 32,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-10-27T14:12:26.120Z"
+		"stamp": "2021-10-28T12:58:58.694Z"
 	},
 	"Sources/Methods/Donation_Delete.4dm": {
 		"startSelection": 0,
@@ -1033,5 +1033,32 @@
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2021-10-27T17:09:01.288Z"
+	},
+	"Sources/Methods/Person_Dialog.4dm": {
+		"startSelection": 105,
+		"endSelection": 105,
+		"firstSelectedLine": 98,
+		"lastSelectedLine": 98,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-28T10:50:12.051Z"
+	},
+	"Sources/Methods/Person_Delete.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 62,
+		"lastSelectedLine": 65,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.797Z"
+	},
+	"Sources/Methods/OrderItem_Save.4dm": {
+		"startSelection": 0,
+		"endSelection": 10,
+		"firstSelectedLine": 33,
+		"lastSelectedLine": 33,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-10-06T15:41:58.777Z"
 	}
 }

@@ -672,7 +672,7 @@
 		"height": 857
 	},
 	"Sources/Methods/ParticipantEvent_Select.4dm": {
-		"left": 71,
+		"left": 276,
 		"top": 109,
 		"width": 1665,
 		"height": 857
@@ -688,5 +688,23 @@
 		"top": 109,
 		"width": 1258,
 		"height": 857
+	},
+	"Sources/Methods/Person_Dialog.4dm": {
+		"left": 35,
+		"top": 204,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Person_Delete.4dm": {
+		"left": 35,
+		"top": 204,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/OrderItem_Save.4dm": {
+		"left": 35,
+		"top": 204,
+		"width": 1779,
+		"height": 867
 	}
 }
