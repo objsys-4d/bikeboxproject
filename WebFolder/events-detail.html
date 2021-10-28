@@ -53,10 +53,14 @@
                     				<div class="input-group-append" data-target="#eventDatePicker" data-toggle="datetimepicker">
                         				 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                     				</div>
-                				</div>   
+                				</div>
        		</div>
             <div class="col">
-       		</div>
+                        <label for="Event.recurring" class="col-form-label">Recurring Event?</label>
+                        <div>
+                        <input type="checkbox" id="Event.recurring" name="Event.recurring" onclick="ltgExecuteMethod('Event_Recurring',this.checked+this.id)" /> Yes
+                        </div>
+            </div>
           </div>      
         <div class="row">
             <div class="col">
@@ -147,6 +151,12 @@
         <!--/BODY-->
 		
 <script>
+        // REMOVES A ROW WHEN THE DELETE ICON IS CLICKED...
+        
+        ltgObj('items tbody').on( 'click', 'i.fa-trash', function () {
+            
+            table.row($(this).parents('tr')).remove().draw();
+        } );
 
         $(function () {
             $('#eventDatePicker').datetimepicker({

@@ -21,11 +21,27 @@ Case of
 End case 
 // *** DATATABLES ***
 $oDataTable:=New collection:C1472
+$dq:=Char:C90(Double quote:K15:41)
 
 C_OBJECT:C1216($oPcpPerson; $oPcpEvent)
-C_TEXT:C284($personName; $eventName)
+C_TEXT:C284($personName; $eventName; $txtAttended)
 For each ($oPcp; $oParticipant)
-	
+	$value:="."+$oPcp.UUID
+	If ($oPcp.attended)
+		$txtAttended:="<input type='checkbox' checked='checked' onclick="+$dq+"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')"+$dq+"/>"
+	Else 
+		$txtAttended:="<input type='checkbox' onclick="+$dq+"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')"+$dq+"/>"
+	End if 
+	//If ($oPcp.attended)
+	//$txtAttended:="<input type='checkbox' checked='checked' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+	//Else 
+	//$txtAttended:="<input type='checkbox' onclick=\"ltgExecuteMethod('EventParticipant_Attended',this.checked+'"+$value+"')\"/>"
+	//End if 
+	//If ($oPcp.attended)
+	//$txtAttended:="<input type='checkbox' checked='checked' />"
+	//Else 
+	//$txtAttended:="<input type='checkbox'/>"
+	//End if 
 	// ADD TO DATATABLES (JSON)
 	Case of 
 		: (oConnection.referer="event")
@@ -36,10 +52,11 @@ For each ($oPcp; $oParticipant)
 			Else 
 				$personName:=$oPcpEvent.lastName+", "+$oPcpEvent.firstName
 			End if 
-			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $eventDate; $personName; String:C10($oPcp.amountDonated; "$###,###,##0.00")))
+			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $eventDate; $personName; $txtAttended; String:C10($oPcp.amountDonated; "$###,###,##0.00"); ""))
+			//$oDataTable.push(New collection(""; $oPcp.UUID; $eventDate; $personName; String($oPcp.amountDonated; "$###,###,##0.00"); ""))
 			
 		: (oConnection.referer="donation")
-			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $oPcp.dateEvent; $oPcp.eventName; String:C10($oPcp.totalDonation; "$###,###,##0.00")))
+			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $oPcp.dateEvent; $oPcp.eventName; $txtAttended; String:C10($oPcp.totalDonation; "$###,###,##0.00"); $oPcp.attended; ""))
 			
 		Else 
 			$oPcpEvent:=$oPcp.Participant_Event
@@ -51,10 +68,24 @@ For each ($oPcp; $oParticipant)
 				$eventDate:=$oPcpEvent.dateEvent
 			End if 
 			
-			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $eventDate; $eventName; String:C10($oPcp.amountDonated; "$###,###,##0.00")))
+			$oDataTable.push(New collection:C1472(""; $oPcp.UUID; $eventDate; $eventName; $txtAttended; String:C10($oPcp.amountDonated; "$###,###,##0.00"); $oPcp.attended; ""))
 	End case 
 	
 End for each 
+
+If (oConnection.referer="event")
+	$personName:=""
+	C_TEXT:C284($personName)
+	Ltg_JS_Send("ltgSelectDeleteOptions('.PersonIDquickAdd')")
+	C_OBJECT:C1216($oPerson; $oPersonSelection)
+	$oPersonSelection:=ds:C1482.Person.all().orderBy("lastName asc")
+	Ltg_JS_Send("ltgSelectAddOption('.PersonIDquickAdd','0','"+$personName+"')")  //to clear
+	For each ($oPerson; $oPersonSelection)
+		$personName:=$oPerson.lastName+", "+$oPerson.firstName
+		Ltg_JS_Send("ltgSelectAddOption('.PersonIDquickAdd','"+String:C10($oPerson.personID)+"','"+$personName+"')")
+	End for each 
+	Ltg_JS_Send("ltgSelectSetValue('.PersonIDquickAdd','0')")
+End if 
 
 // UPDATE CONNECTION DATA...
 oConnection.data.Participant:=$oParticipant

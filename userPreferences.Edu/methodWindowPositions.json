@@ -30,8 +30,8 @@
 		"height": 857
 	},
 	"Sources/Methods/_EDR_Test01.4dm": {
-		"left": 427,
-		"top": 109,
+		"left": 120,
+		"top": 180,
 		"width": 1650,
 		"height": 857
 	},
@@ -492,8 +492,8 @@
 		"height": 857
 	},
 	"Sources/Methods/Person_List.4dm": {
-		"left": 177,
-		"top": 119,
+		"left": 35,
+		"top": 204,
 		"width": 1779,
 		"height": 867
 	},
@@ -504,14 +504,14 @@
 		"height": 867
 	},
 	"Sources/Methods/PersonObject_checkbox.4dm": {
-		"left": 177,
-		"top": 119,
+		"left": 443,
+		"top": 116,
 		"width": 1779,
 		"height": 867
 	},
 	"Sources/Methods/Person_Save.4dm": {
-		"left": 177,
-		"top": 119,
+		"left": 38,
+		"top": 231,
 		"width": 1779,
 		"height": 867
 	},
@@ -520,5 +520,191 @@
 		"top": 109,
 		"width": 1571,
 		"height": 857
+	},
+	"Sources/Methods/Event_Detail.4dm": {
+		"left": 254,
+		"top": 122,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_QuickSelect.4dm": {
+		"left": 143,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_DetailMod.4dm": {
+		"left": 520,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/Donation_Detail.4dm": {
+		"left": 160,
+		"top": 109,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/Participant_Included_List.4dm": {
+		"left": 71,
+		"top": 109,
+		"width": 1665,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_Save.4dm": {
+		"left": 509,
+		"top": 134,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_QuickSelSave.4dm": {
+		"left": 478,
+		"top": 118,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/Event_List.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/EventParticipant_Delete.4dm": {
+		"left": 116,
+		"top": 111,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/BBOrder_Save.4dm": {
+		"left": 9,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantInclude_DataTable.4dm": {
+		"left": 71,
+		"top": 190,
+		"width": 1391,
+		"height": 842
+	},
+	"Sources/Methods/BBOrderItem_Save.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/EventParticipant_Attended.4dm": {
+		"left": 516,
+		"top": 120,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Event_Save.4dm": {
+		"left": 117,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Web_Router.4dm": {
+		"left": 348,
+		"top": 121,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Navbar_SetActive.4dm": {
+		"left": 516,
+		"top": 120,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/BBOrderItem_Delete.4dm": {
+		"left": 21,
+		"top": 198,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Event_Recurring.4dm": {
+		"left": 9,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/OrderItem_DataTable.4dm": {
+		"left": 478,
+		"top": 118,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/BBOrderItem_DataTable.4dm": {
+		"left": 266,
+		"top": 109,
+		"width": 1571,
+		"height": 857
+	},
+	"Sources/Methods/BBOrder_Detail.4dm": {
+		"left": 266,
+		"top": 109,
+		"width": 1571,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantSelect_Modal.4dm": {
+		"left": 214,
+		"top": 117,
+		"width": 1571,
+		"height": 857
+	},
+	"Sources/Methods/Donation_List.4dm": {
+		"left": 476,
+		"top": 131,
+		"width": 1391,
+		"height": 842
+	},
+	"Sources/Methods/Order_Detail.4dm": {
+		"left": 439,
+		"top": 221,
+		"width": 1391,
+		"height": 842
+	},
+	"Sources/Methods/BBOrder_Delete.4dm": {
+		"left": 638,
+		"top": 109,
+		"width": 1258,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_Select.4dm": {
+		"left": 276,
+		"top": 109,
+		"width": 1665,
+		"height": 857
+	},
+	"Sources/Methods/Donation_Delete.4dm": {
+		"left": 638,
+		"top": 109,
+		"width": 1258,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantSelect_Modal2.4dm": {
+		"left": 325,
+		"top": 109,
+		"width": 1258,
+		"height": 857
+	},
+	"Sources/Methods/Person_Dialog.4dm": {
+		"left": 35,
+		"top": 204,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Person_Delete.4dm": {
+		"left": 35,
+		"top": 204,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/OrderItem_Save.4dm": {
+		"left": 35,
+		"top": 204,
+		"width": 1779,
+		"height": 867
 	}
 }

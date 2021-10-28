@@ -95,6 +95,12 @@ End case
 
 oConnection.data.Event:=$oEvt  // Event
 
+If ($oEvt.recurring)
+	Ltg_JS_Send("ltgObj('Event.recurring').prop('checked', true)")
+Else 
+	Ltg_JS_Send("ltgObj('Event.recurring').prop('checked', false)")
+End if 
+
 oConnection.data.userLanguage:=oConnection.session.userLanguage  // DATEPICKER LOCALE
 
 oConnection.data.eventPageCount:=String:C10(oUser.eventDetail.pageCount)

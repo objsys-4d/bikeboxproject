@@ -10,11 +10,15 @@
             <div class="col">
             <button type="button" class="btn btn-primary" 
                 onclick="ltgFormAction('participanteventmod-detail.html?action=new&modal=true');">Add to Event</button>
+ 
+            <button type="button" class="btn btn-primary" 
+                onclick="ltgFormAction('person-dialog.html?action=new&modal=true');">Add to Participants</button>
+
             </div>
             <div class="col">
-                        <label for=".quickAdd" class="col-form-label">Quick Add</label>
+                        <label for=".PersonIDquickAdd" class="col-form-label">Quick Add</label>
                         <div>
-							<select class="custom-select" id=".quickAdd" name=".quickAdd" tabindex="10"></select>
+							<select class="custom-select" id=".PersonIDquickAdd" name=".PersonIDquickAdd" onchange="ltgExecuteMethod('ParticipantEvent_QuickSelect');"></select>
                         </div>
             </div>
         </div>
@@ -32,7 +36,9 @@
                     <th><!--Edit Button--></th>
                     <th>{{%dateEvent}}</th>
                     <th>{{%eventName}}</th>
+                    <th>{{%attended}}</th>
                     <th>{{%amount}}</th>
+					<th> </th>
                 </tr>
             </thead>
         </table>
@@ -51,10 +57,10 @@
                 columnDefs: [
                 {
                     targets: [ 0 ],
-                    visible: false, // CONTACT_ID (HIDDEN)
+                    visible: false, // UUID (HIDDEN)
                 },
                 {
-                    targets: [ 1 ], // CONTACT NAME LINK
+                    targets: [ 1 ], // Edit Button
                      render: function ( data, type, row, meta ) {
                         if(type === 'display'){
                         
@@ -64,7 +70,17 @@
     
                         return data;
                     }
-                }
+                },
+                {
+                    targets: [ 6 ],
+                    orderable: false,
+                    render: function ( data, type, row, meta ) {
+                    if(type === 'display'){ 
+                        data='<a class="text-secondary" href="#" onclick="ltgExecuteMethod(\'EventParticipant_Delete\',\''+row[1]+'\');"><i class="fas fa-trash"></i></a>';
+                    }
+                    return data;
+                    }
+                },                    
             ],
             language: {'lengthMenu': '{{%page_Size}} _MENU_','emptyTable': '{{%records_none}}'},
             order: [[ 1, 'asc' ]],
@@ -74,4 +90,13 @@
             searching: false
             }
         );
+
+        // REMOVES A ROW WHEN THE DELETE ICON IS CLICKED...
+        
+        ltgObj('items tbody').on( 'click', 'i.fa-trash', function () {
+            
+            table.row($(this).parents('tr')).remove().draw();
+        } );
+		
+		
     </script>
