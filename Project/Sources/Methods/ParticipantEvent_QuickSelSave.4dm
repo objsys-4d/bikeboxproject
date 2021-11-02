@@ -33,7 +33,7 @@ End if
 
 Case of 
 	: (oConnection.referer="person")
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="index"
 		
 		ParticipantInclude_DataTable
@@ -41,7 +41,7 @@ Case of
 		
 		
 	: (oConnection.referer="company")
-		oConnection.form:="bbcompany-detail.html"
+		oConnection.form:="companydetail.html"
 		oConnection.action:="index"
 		
 		ParticipantInclude_DataTable

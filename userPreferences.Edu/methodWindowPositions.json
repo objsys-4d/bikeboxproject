@@ -522,8 +522,8 @@
 		"height": 857
 	},
 	"Sources/Methods/Event_Detail.4dm": {
-		"left": 254,
-		"top": 122,
+		"left": 78,
+		"top": 109,
 		"width": 1364,
 		"height": 857
 	},
@@ -582,8 +582,8 @@
 		"height": 857
 	},
 	"Sources/Methods/ParticipantInclude_DataTable.4dm": {
-		"left": 71,
-		"top": 190,
+		"left": 104,
+		"top": 141,
 		"width": 1391,
 		"height": 842
 	},
@@ -672,8 +672,8 @@
 		"height": 857
 	},
 	"Sources/Methods/ParticipantEvent_Select.4dm": {
-		"left": 276,
-		"top": 109,
+		"left": 301,
+		"top": 118,
 		"width": 1665,
 		"height": 857
 	},
@@ -706,5 +706,41 @@
 		"top": 204,
 		"width": 1779,
 		"height": 867
+	},
+	"Sources/Methods/Participant_Included_List2.4dm": {
+		"left": 168,
+		"top": 112,
+		"width": 1492,
+		"height": 1035
+	},
+	"Sources/TableForms/21/eventInput/ObjectMethods/bttnDel_Part.4dm": {
+		"left": 105,
+		"top": 109,
+		"width": 1492,
+		"height": 1035
+	},
+	"Sources/TableForms/21/eventInput/ObjectMethods/Column6.4dm": {
+		"left": 105,
+		"top": 109,
+		"width": 1492,
+		"height": 1035
+	},
+	"Sources/Methods/Person_Cancel.4dm": {
+		"left": 509,
+		"top": 134,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/Donation_Save.4dm": {
+		"left": 348,
+		"top": 121,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/BBCompany_Cancel.4dm": {
+		"left": 348,
+		"top": 121,
+		"width": 1553,
+		"height": 857
 	}
 }

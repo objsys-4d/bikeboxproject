@@ -24,12 +24,12 @@ For each ($oPerson; $oPersonSelection)
 End for each 
 
 // CLEAR THE DATATABLE
-//Ltg_JS_Send("ltgObj('participantSelect').dataTable().fnClearTable()")
+Ltg_JS_Send("ltgObj('participantSelect').dataTable().fnClearTable()")
 
 // UPDATE THE ITEMS DATATABLE
-//If ($oDataTable.length>0)
-//Ltg_JS_Send("ltgObj('participantSelect').dataTable().fnAddData(JSON.parse('"+JSON Stringify($oDataTable)+"'))")
-//End if 
+If ($oDataTable.length>0)
+	Ltg_JS_Send("ltgObj('participantSelect').dataTable().fnAddData(JSON.parse('"+JSON Stringify:C1217($oDataTable)+"'))")
+End if 
 
 //oConnection.data.Person:=$oPersonSelection
-oConnection.data.personDataTable:=JSON Stringify:C1217($oDataTable)
+//oConnection.data.personDataTable:=JSON Stringify($oDataTable)

@@ -42,7 +42,7 @@ Case of
 		
 	: (oConnection.referer="person")
 		
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"

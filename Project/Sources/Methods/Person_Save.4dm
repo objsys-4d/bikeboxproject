@@ -56,7 +56,7 @@ Case of
 		
 	: (oConnection.referer="person")
 		
-		oConnection.form:="person-list.html"
+		oConnection.form:="personlist.html"
 		oConnection.action:="index"
 		
 		

@@ -50,13 +50,6 @@
 		}
 	},
 	{
-		"line": 11,
-		"method": {
-			"type": 1,
-			"methodName": "ParticipantEvent_Select"
-		}
-	},
-	{
 		"line": 52,
 		"method": {
 			"type": 1,
@@ -78,10 +71,17 @@
 		}
 	},
 	{
-		"line": 33,
+		"line": 14,
 		"method": {
 			"type": 1,
-			"methodName": "ParticipantEvent_Select"
+			"methodName": "ParticipantEvent_Save"
+		}
+	},
+	{
+		"line": 35,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantEvent_Save"
 		}
 	}
 ]

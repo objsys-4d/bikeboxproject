@@ -13,7 +13,7 @@
 oConnection.data.Person.company:="0"
 oConnection.data.Person.companyID:=0
 
-oConnection.form:="person-detail.html"
+oConnection.form:="persondetail.html"
 oConnection.action:="index"
 
 oConnection.responseType:="javascript"
