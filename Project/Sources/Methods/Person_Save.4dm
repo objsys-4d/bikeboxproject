@@ -46,7 +46,7 @@ Else
 	$oPerson.personObject.duplicateName:="No"
 End if 
 
-//$oPerson.personObject.status
+$oPerson.personObject.status:=oConnection.data.Person.personObject.status
 
 $oPerson.save()
 
@@ -56,7 +56,7 @@ Case of
 		
 	: (oConnection.referer="person")
 		
-		oConnection.form:="person-list.html"
+		oConnection.form:="personlist.html"
 		oConnection.action:="index"
 		
 		

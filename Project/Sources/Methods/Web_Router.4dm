@@ -157,11 +157,11 @@ Case of
 		
 		Navbar_SetActive("nav-person")
 		
-	: ((oConnection.url="/person") | (oConnection.form="person-list.html"))  // LIST
+	: ((oConnection.url="/person") | (oConnection.form="personlist.html"))  // LIST
 		
 		If (oConnection.form="")
 			
-			oConnection.form:="person-list.html"
+			oConnection.form:="personlist.html"
 			oConnection.action:="tab"
 		End if 
 		
@@ -172,17 +172,17 @@ Case of
 		
 	: (oConnection.url="/person?@")  // DETAIL
 		
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="edit"
 		
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-person")
 		
-	: ((oConnection.url="/company") | (oConnection.form="bbcompany-list.html"))  // LIST
+	: ((oConnection.url="/company") | (oConnection.form="companylist.html"))  // LIST
 		
 		If (oConnection.form="")
 			
-			oConnection.form:="bbcompany-list.html"
+			oConnection.form:="companylist.html"
 			oConnection.action:="tab"
 		End if 
 		oConnection.url:="/company"
@@ -192,7 +192,7 @@ Case of
 		
 	: (oConnection.url="/company?@")  // DETAIL
 		
-		oConnection.form:="bbcompany-detail.html"
+		oConnection.form:="companydetail.html"
 		oConnection.action:="edit"
 		
 		// SET ACTIVE NAVBAR ITEM
@@ -312,7 +312,7 @@ Case of
 					
 				: (oConnection.referer="person")
 					
-					oConnection.form:="person-list.html"
+					oConnection.form:="personlist.html"
 					
 				: (oConnection.referer="companies")
 					

@@ -15,6 +15,7 @@ End if
 
 $oEvent.dateEvent:=Date:C102(oConnection.data.Event.dateEvent)
 $oEvent.eventName:=oConnection.data.Event.eventName
+$oEvent.recurring:=oConnection.data.Event.recurring
 $oEvent.totalDonation:=oConnection.data.Event.totalDonation
 $oEvent.save()
 
@@ -41,7 +42,7 @@ Case of
 		
 	: (oConnection.referer="person")
 		
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"
