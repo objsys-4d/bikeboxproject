@@ -198,10 +198,10 @@ Case of
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-company")
 		
-	: ((oConnection.url="/donation") | (oConnection.form="donations-list.html"))  // DETAIL
+	: ((oConnection.url="/donation") | (oConnection.form="donationlist.html"))  // DETAIL
 		
 		If (oConnection.form="")
-			oConnection.form:="donations-list.html"
+			oConnection.form:="donationlist.html"
 			oConnection.action:="tab"
 		End if 
 		
@@ -210,10 +210,10 @@ Case of
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-donation")
 		
-	: ((oConnection.url="/event") | (oConnection.form="events-list.html"))  // DETAIL
+	: ((oConnection.url="/event") | (oConnection.form="eventlist.html"))  // DETAIL
 		
 		If (oConnection.form="")
-			oConnection.form:="events-list.html"
+			oConnection.form:="eventlist.html"
 			oConnection.action:="tab"
 		End if 
 		
@@ -222,10 +222,10 @@ Case of
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-event")
 		
-	: ((oConnection.url="/merch") | (oConnection.form="merch-list.html"))  // DETAIL
+	: ((oConnection.url="/merch") | (oConnection.form="merchlist.html"))  // DETAIL
 		
 		If (oConnection.form="")
-			oConnection.form:="merch-list.html"
+			oConnection.form:="merchlist.html"
 			oConnection.action:="tab"
 		End if 
 		

@@ -498,8 +498,8 @@
 		"height": 867
 	},
 	"Sources/Methods/Person_Detail.4dm": {
-		"left": 128,
-		"top": 112,
+		"left": 60,
+		"top": 169,
 		"width": 1779,
 		"height": 867
 	},
@@ -742,5 +742,59 @@
 		"top": 121,
 		"width": 1553,
 		"height": 857
+	},
+	"Sources/Methods/Donation_Cancel.4dm": {
+		"left": 38,
+		"top": 231,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/BBCompany_Detail.4dm": {
+		"left": 166,
+		"top": 159,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Donation_Included_List.4dm": {
+		"left": 348,
+		"top": 121,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Web_Publish.4dm": {
+		"left": 71,
+		"top": 109,
+		"width": 1665,
+		"height": 857
+	},
+	"Sources/Methods/BBCompany_Save.4dm": {
+		"left": 443,
+		"top": 116,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Event_Cancel.4dm": {
+		"left": 443,
+		"top": 116,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Event_Delete.4dm": {
+		"left": 443,
+		"top": 116,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Merch_Delete.4dm": {
+		"left": 443,
+		"top": 116,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Merch_Cancel.4dm": {
+		"left": 443,
+		"top": 116,
+		"width": 1779,
+		"height": 867
 	}
 }

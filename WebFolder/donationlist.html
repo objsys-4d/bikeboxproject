@@ -1,25 +1,25 @@
 <!--FORM METHOD-->
-{{Merch_List}}
+{{Donation_List}}
 <!--/FORM METHOD-->
 
     <!--HEADER-->
     <div class="float-left">
         <!--TITLE-->
-        <h1 class="h3 mb-4 text-gray-800">{{%merch}} ({{.merchTotal}})</h1>
+        <h1 class="h3 mb-4 text-gray-800">{{%donation}} ({{.donationTotal}})</h1>
         <!--/TITLE-->
     </div>
         
     <div class="float-right">
         <!--ACTIONS-->
         <div class="btn-group">
-            <button type="button" class="btn btn-primary"  onclick="ltgFormAction('merch-detail.html?action=new');">{{%new}}</button>
+            <button type="button" class="btn btn-primary"  onclick="ltgFormAction('donations-detail.html?action=new');">{{%new}}</button>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <div class="dropdown-menu">
-				<a class="dropdown-item" onclick="ltgFormAction('merch-detail.html?action=new');" href="#">{{%new}} {{%merch}}</a>
-                <a class="dropdown-item" onclick="ltgFormAction('?action=delete-confirm&method=Merch_Delete');" href="#">{{%delete}} {{%merch}}</a>
-                <a class="dropdown-item" onclick="ltgFormAction('?action=file&method=Merch_Export');" href="#">{{%export}} {{%merch}}</a>
+                <a class="dropdown-item" onclick="ltgFormAction('?action=new');" href="#">{{%new}} {{%company}}</a>
+                <a class="dropdown-item" onclick="ltgFormAction('?action=delete-confirm&method=Donation_Delete');" href="#">{{%delete}} {{%donations}}</a>
+                <a class="dropdown-item" onclick="ltgFormAction('?action=file&method=Donation_Export');" href="#">{{%export}} {{%donations}}</a>
             </div>
         </div>
         <!--/ACTIONS-->
@@ -29,16 +29,15 @@
     <!--BODY-->
     <div class="mt-3 clearboth">
         <!--DATATABLE-->
-        <table class="table table-hover mt-2" id="merch" style="width:100%;">
+        <table class="table table-hover mt-2" id="donation" style="width:100%;">
             <thead>
                 <!--COLUMNS-->
                 <tr>
                     <th><!--SELECT RECORD--></th>
-                    <th><!--HIDDEN MerchUUID--></th>
-                    <th>{{%merchName}}</th>
-                    <th>{{%variant}}</th>
-                    <th>{{%stock}}</th>
-                    <th>{{%price}}</th>
+                    <th><!--HIDDEN COMPANY_UUID--></th>
+                    <th>{{%dateDonation}}</th>
+                    <th>{{%nameName}}</th>
+                    <th>{{%eventName}}</th>
                  </tr>
                  <!--/COLUMNS-->
             </thead>
@@ -48,7 +47,7 @@
     <!--/BODY-->
 
         <!--DELETE RECORD DIALOG-->
-        <div class="modal" id="merch-delete" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal" id="donation-delete" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -63,7 +62,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal"
-                            onclick="ltgFormAction('?action=delete&method=Merch_Delete');">{{%delete}}</button>
+                            onclick="ltgFormAction('?action=delete&method=Donation_Delete');">{{%delete}}</button>
                     </div>
                 </div>
             </div>
@@ -74,9 +73,9 @@
 
         // DATATABLES...
         
-        var data = {{.merchDataTable}};
+        var data = {{.donationDataTable}};
         
-        var table = ltgObj('merch').DataTable(
+        var table = ltgObj('donation').DataTable(
             {
                 data: data,
                 columnDefs: [
@@ -93,15 +92,15 @@
                     sortable: false,
                 },
                   {
-                    targets: [ 1 ],// UUID (HIDDEN)
+                    targets: [ 1 ],// DONATION_UUID (HIDDEN)
                     visible: false, 
                 },
                 {
-                    targets: [ 2 ], // MEMBER DETAIL FORM LINK
+                    targets: [ 2 ], // DONATION DETAIL FORM LINK
                     render: function ( data, type, row, meta ) {
                         if(type === 'display'){
                         
-                            data = '<a href="#" onclick="ltgFormAction(\'merch-detail.html?action=edit&record='+row[1]+'\');">'+data+'</a>';
+                            data = '<a href="#" onclick="ltgFormAction(\'donationdetail.html?action=edit&record='+row[1]+'\');">'+data+'</a>';
                         }
     
                         return data;
@@ -122,6 +121,6 @@
 
        // GOTO THE CORRECT LISTING PAGE AFTER RETURNING FROM DETAIL FORM WHICH IS ALSO PAGINATED
        
-       table.page({{.merchPageNumber}}).draw('page');
+       table.page({{.donationPageNumber}}).draw('page');
         
     </script>

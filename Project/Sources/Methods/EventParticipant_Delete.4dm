@@ -24,7 +24,7 @@ If ($oParticipant#Null:C1517)
 	//$oEventParticipants:=$oEvent.Event_Participant
 	//$status:=$oEvent.save()
 	
-	//oConnection.form:="events-detail.html"
+	//oConnection.form:="eventdetail.html"
 	//oConnection.action:="index"
 	
 	ParticipantEvent_QuickSelSave

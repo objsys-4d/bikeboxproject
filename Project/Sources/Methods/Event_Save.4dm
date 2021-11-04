@@ -25,7 +25,7 @@ Case of
 		
 	: (oConnection.referer="event")
 		
-		oConnection.form:="events-list.html"
+		oConnection.form:="eventlist.html"
 		oConnection.action:="index"
 		
 		//: (oConnection.referer="contacts")
@@ -35,7 +35,7 @@ Case of
 		Ltg_JS_Send("ltgSelectAddOption('Donation.event','"+String:C10($oEvent.eventID)+"','"+$oEvent.eventName+"')")
 		Ltg_JS_Send("ltgSelectSetValue('Donation.event','"+String:C10($oEvent.eventID)+"')")
 		
-		oConnection.form:="donations-detail.html"
+		oConnection.form:="donationdetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"

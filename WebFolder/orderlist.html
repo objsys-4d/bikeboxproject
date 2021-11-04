@@ -12,12 +12,12 @@
     <div class="float-right">
         <!--ACTIONS-->
         <div class="btn-group">
-            <button type="button" class="btn btn-primary"  onclick="ltgFormAction('order-detail.html?action=new');">{{%new}}</button>
+            <button type="button" class="btn btn-primary"  onclick="ltgFormAction('orderdetail.html?action=new');">{{%new}}</button>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <div class="dropdown-menu">
-				<a class="dropdown-item" onclick="ltgFormAction('order-detail.html?action=new');" href="#">{{%new}} {{%order}}</a>
+				<a class="dropdown-item" onclick="ltgFormAction('orderdetail.html?action=new');" href="#">{{%new}} {{%order}}</a>
                 <a class="dropdown-item" onclick="ltgFormAction('?action=delete-confirm&method=BBOrder_Delete');" href="#">{{%delete}} {{%orders}}</a>
                 <a class="dropdown-item" onclick="ltgFormAction('?action=file&method=BBOrder_Export');" href="#">{{%export}} {{%orders}}</a>
             </div>
@@ -103,7 +103,7 @@
                     render: function ( data, type, row, meta ) {
                         if(type === 'display'){
                         
-                            data = '<a href="#" onclick="ltgFormAction(\'order-detail.html?action=edit&record='+row[1]+'\');">'+data+'</a>';
+                            data = '<a href="#" onclick="ltgFormAction(\'orderdetail.html?action=edit&record='+row[1]+'\');">'+data+'</a>';
                         }
     
                         return data;

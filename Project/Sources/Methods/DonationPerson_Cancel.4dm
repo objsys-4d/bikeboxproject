@@ -16,7 +16,7 @@
 oConnection.data.Donation.person:="0"
 oConnection.data.Donation.personID:=0
 
-oConnection.form:="donations-detail.html"
+oConnection.form:="donationdetail.html"
 oConnection.action:="index"
 
 oConnection.responseType:="javascript"

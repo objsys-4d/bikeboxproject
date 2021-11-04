@@ -5,7 +5,7 @@ Case of
 		
 	: (oConnection.referer="event?@")  // VIA URL
 		
-		oConnection.form:="events-list.html"
+		oConnection.form:="eventlist.html"
 		oConnection.action:="tab"
 		
 	: (oConnection.referer="event")
@@ -14,7 +14,7 @@ Case of
 		
 		oUser.eventList.pageNumber:=Abs:C99(Int:C8(-(oUser.eventDetail.pageNumber/(oUser.eventList.pageSize))))
 		
-		oConnection.form:="events-list.html"
+		oConnection.form:="eventlist.html"
 		oConnection.action:="index"
 		
 		//: (oConnection.referer="contacts")

@@ -48,7 +48,7 @@ Case of
 		oConnection.responseType:="javascript"
 		
 	: (oConnection.referer="event")
-		oConnection.form:="events-detail.html"
+		oConnection.form:="eventdetail.html"
 		oConnection.action:="index"
 		
 		ParticipantInclude_DataTable

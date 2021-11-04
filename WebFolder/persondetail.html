@@ -155,37 +155,33 @@
 
 		
 		<div class="row">
-            <div class="col">
-                        <label for="Person.personObject.active" class="col-form-label">Active</label>
+ 			<div class="col">
+                        <label for="Person.personObject.status" class="col-form-label">Status</label>
                         <div>
-                            <input type="text" class="form-control" id="Person.personObject.active" tabindex="14"
-                                name="Person.personObject.active" value="{{Person.personObject.active}}" />
+                            <input type="text" class="form-control" id="Person.personObject.status" tabindex="16"
+                                name="Person.personObject.status" value="{{Person.personObject.status}}" />
                         </div>
             </div>
-
             <div class="col">
                         <label for=".personActive" class="col-form-label">Active</label>
                         <div>
-                        <input type="checkbox" id=".personActive" name=".personActive" tabindex="15" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
+                        <input type="checkbox" id=".personActive" name=".personActive" tabindex="14" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
+                        <input type="hidden" class="form-control" id="Person.personObject.active" name="Person.personObject.active" value="{{Person.personObject.active}}" />
+
                         </div>
             </div>
             <div class="col">
                         <label for=".personValid" class="col-form-label">Valid</label>
                         <div>
-                        <input type="checkbox" id=".personValid" name=".personValid" tabindex="16" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
-                        </div>
-            </div>
-            <div class="col">
-                        <label for="Person.personObject.status" class="col-form-label">Status</label>
-                        <div>
-                            <input type="text" class="form-control" id="Person.personObject.status" tabindex="17"
-                                name="Person.personObject.status" value="{{Person.personObject.status}}" />
+                        <input type="checkbox" id=".personValid" name=".personValid" tabindex="15" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
+                        <input type="hidden" class="form-control" id="Person.personObject.valid" name="Person.personObject.valid" value="{{Person.personObject.valid}}" />
                         </div>
             </div>
             <div class="col">
                         <label for=".personDuplicate" class="col-form-label">Duplicate Name</label>
                         <div>
-                        <input type="checkbox" id=".personDuplicate" name=".personDuplicate" tabindex="18" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
+                        <input type="checkbox" id=".personDuplicate" name=".personDuplicate" tabindex="17" onclick="ltgExecuteMethod('PersonObject_checkbox',this.checked+this.id)" /> Yes
+                        <input type="hidden" class="form-control" id="Person.personObject.duplicate" name="Person.personObject.duplicate" value="{{Person.personObject.duplicate}}" />
                         </div>
             </div>
         </div>
@@ -211,7 +207,7 @@
 
                 <!--EVENTS TAB-->
                 <div class="tab-pane fade" id="tabs-events" role="tabpanel" aria-labelledby="tabs-events-tab">
-                    {{include events-included.html}}
+                    {{include events-included2.html}}
                 </div>
                 <!--/EVENTS TAB-->
             </div>

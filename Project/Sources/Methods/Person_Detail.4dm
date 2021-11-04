@@ -56,9 +56,14 @@ Case of
 		
 		// UPDATE LIGHTNING WITH THE UUID OF THE NEW RECORD
 		
-		oConnection.record:=[Person:15]UUID:1
+		oConnection.record:=[Person:15]UUID:1  //$oPerson.UUID
 		//oConnection.data.Person.country:="USA"  //by default
 		$oPerson.country:="USA"
+		$oPerson.personObject:=New object:C1471
+		$oPerson.personObject.status:="Review"
+		$oPerson.personObject.active:="No"
+		$oPerson.personObject.valid:="No"
+		$oPerson.personObject.duplicateName:="No"
 		// *** EDIT
 		
 	: (oConnection.action="edit")
@@ -92,6 +97,7 @@ Case of
 		
 End case 
 
+//For Company Name pulldown
 C_OBJECT:C1216($oPsn)  //to set the default value of the person pulldown
 If ($oPerson.companyID=0)  //blank if new
 	$oPsn:=New object:C1471
@@ -124,13 +130,10 @@ State_ltgPulldown("person"; $oPerson.state)
 
 oConnection.data.Person:=$oPerson  // PERSON
 
-//oConnection.data.personActive:=$oPerson.personObject.active
 If ($oPerson.personObject.active="Yes")
 	Ltg_JS_Send("ltgObj('.personActive').prop('checked', true)")
-	Ltg_JS_Send("ltgObj('Person.personObject.active').prop('checked', true)")
 Else 
 	Ltg_JS_Send("ltgObj('.personActive').prop('checked', false)")
-	Ltg_JS_Send("ltgObj('Person.personObject.active').prop('checked', false)")
 End if 
 
 If ($oPerson.personObject.valid="Yes")
