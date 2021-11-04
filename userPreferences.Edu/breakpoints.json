@@ -104,5 +104,33 @@
 			"type": 1,
 			"methodName": "PersonObject_checkbox"
 		}
+	},
+	{
+		"line": 20,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantInclude_DataTable"
+		}
+	},
+	{
+		"line": 40,
+		"method": {
+			"type": 1,
+			"methodName": "PersonEventInc_JS_Send"
+		}
+	},
+	{
+		"line": 14,
+		"method": {
+			"type": 1,
+			"methodName": "DonationPerson_Modal"
+		}
+	},
+	{
+		"line": 12,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantEvent_Select"
+		}
 	}
 ]

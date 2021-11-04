@@ -1,5 +1,5 @@
 <!--FORM METHOD-->
-{{Participant_Included_List2}}
+{{PersonEvent_Included}}
 <!--/FORM METHOD-->
 
     <!--BODY-->
@@ -10,16 +10,6 @@
             <div class="col">
             <button type="button" class="btn btn-primary" 
                 onclick="ltgFormAction('participanteventmod-detail.html?action=new&modal=true');">Add to Event</button>
- 
-            <button type="button" class="btn btn-primary" 
-                onclick="ltgFormAction('person-dialog.html?action=new&modal=true');">Add Participants</button>
-
-            </div>
-            <div class="col">
-                        <label for=".PersonIDquickAdd" class="col-form-label">Quick Add Participant</label>
-                        <div>
-							<select class="custom-select" id=".PersonIDquickAdd" name=".PersonIDquickAdd" onchange="ltgExecuteMethod('ParticipantEvent_QuickSelect');"></select>
-                        </div>
             </div>
         </div>
 				
@@ -38,7 +28,6 @@
                     <th>{{%dateEvent}}</th>
                     <th>{{%eventName}}</th>
                     <th>{{%attended}}</th>
-                    <th>{{%amount}}</th>
 					<th> </th>
                 </tr>
             </thead>
@@ -81,13 +70,13 @@
                      render: function ( data, type, row, meta ) {
                      if(type === 'display'){ 
                      
-                      data = '<input type="checkbox" '+row[2]+' onclick="ltgExecuteMethod(\'EventParticipant_Attended\',this.checked+\'.'+row[0]+'\');"/>';
+                      data = '<input type="checkbox" '+row[2]+' disabled onclick="ltgExecuteMethod(\'EventParticipant_Attended\',this.checked+\'.'+row[0]+'\');"/>';
                      }
                      return data;
                     }                    
                 },				
 				{
-                    targets: [ 7 ],
+                    targets: [ 6 ],
                     orderable: false,
                     render: function ( data, type, row, meta ) {
                     if(type === 'display'){ 

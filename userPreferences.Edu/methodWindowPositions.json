@@ -6,10 +6,10 @@
 		"height": 857
 	},
 	"Sources/Methods/SystemSetting_Load.4dm": {
-		"left": 422,
-		"top": 109,
+		"left": 201,
+		"top": 148,
 		"width": 991,
-		"height": 889
+		"height": 750
 	},
 	"Sources/Forms/email/ObjectMethods/List Box.4dm": {
 		"left": 454,
@@ -582,8 +582,8 @@
 		"height": 857
 	},
 	"Sources/Methods/ParticipantInclude_DataTable.4dm": {
-		"left": 104,
-		"top": 141,
+		"left": 32,
+		"top": 114,
 		"width": 1391,
 		"height": 842
 	},
@@ -708,8 +708,8 @@
 		"height": 867
 	},
 	"Sources/Methods/Participant_Included_List2.4dm": {
-		"left": 168,
-		"top": 112,
+		"left": 42,
+		"top": 113,
 		"width": 1492,
 		"height": 1035
 	},
@@ -796,5 +796,41 @@
 		"top": 116,
 		"width": 1779,
 		"height": 867
+	},
+	"Sources/Methods/PersonEvent_Included.4dm": {
+		"left": 534,
+		"top": 109,
+		"width": 1362,
+		"height": 857
+	},
+	"Sources/Methods/CompanyEvent_Included.4dm": {
+		"left": 213,
+		"top": 110,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/EventParticipant_Included.4dm": {
+		"left": 408,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/PersonEventInc_JS_Send.4dm": {
+		"left": 451,
+		"top": 201,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/DonationPerson_Modal.4dm": {
+		"left": 534,
+		"top": 109,
+		"width": 1362,
+		"height": 857
+	},
+	"Sources/Methods/ParticipantEvent_PulldownSelect.4dm": {
+		"left": 534,
+		"top": 109,
+		"width": 1362,
+		"height": 857
 	}
 }

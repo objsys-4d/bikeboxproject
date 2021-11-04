@@ -14,12 +14,12 @@ C_COLLECTION:C1488($oDataTable)
 C_OBJECT:C1216($oParticipant)  // CURRENT ORDER ITEM
 C_OBJECT:C1216($oParticipantSelection)  // ORDER ITEM SELECTION
 
-//C_OBJECT($oProduct)  // PRODUCT RECORD
 C_TEXT:C284($txtActive; $eventName)
 
 Case of 
 	: (oConnection.referer="person")
-		$oParticipantSelection:=ds:C1482.Participant.query("personID = :1"; oConnection.data.Person.personID)
+		PersonEventInc_JS_Send
+		//$oParticipantSelection:=ds.Participant.query("personID = :1"; oConnection.data.Person.personID)
 		
 	: (oConnection.referer="company")
 		$oParticipantSelection:=ds:C1482.Participant.query("companyID = :1"; oConnection.data.Company.companyID)
