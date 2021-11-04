@@ -5,7 +5,7 @@ Case of
 		
 	: (oConnection.referer="donation?@")  // VIA URL
 		
-		oConnection.form:="donations-list.html"
+		oConnection.form:="donationlist.html"
 		oConnection.action:="tab"
 		
 	: (oConnection.referer="donation")
@@ -14,7 +14,7 @@ Case of
 		
 		oUser.donationList.pageNumber:=Abs:C99(Int:C8(-(oUser.donationDetail.pageNumber/(oUser.donationList.pageSize))))
 		
-		oConnection.form:="donations-list.html"
+		oConnection.form:="donationlist.html"
 		oConnection.action:="index"
 		
 		//: (oConnection.referer="contacts")

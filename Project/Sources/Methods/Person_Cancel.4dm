@@ -5,13 +5,13 @@ Case of
 		
 		oUser.personList.pageNumber:=Abs:C99(Int:C8(-(oUser.personDetail.pageNumber/(oUser.personList.pageSize))))
 		
-		oConnection.form:="person-list.html"
+		oConnection.form:="personlist.html"
 		oConnection.action:="index"
 		
 		
 		// UPDATE CONNECTION...
 		
-		//oConnection.form:="person-list.html"
+		//oConnection.form:="personlist.html"
 		//oConnection.action:="tab"
 		
 		//oConnection.responseType:="javascript"

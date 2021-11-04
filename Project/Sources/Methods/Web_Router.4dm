@@ -157,11 +157,11 @@ Case of
 		
 		Navbar_SetActive("nav-person")
 		
-	: ((oConnection.url="/person") | (oConnection.form="person-list.html"))  // LIST
+	: ((oConnection.url="/person") | (oConnection.form="personlist.html"))  // LIST
 		
 		If (oConnection.form="")
 			
-			oConnection.form:="person-list.html"
+			oConnection.form:="personlist.html"
 			oConnection.action:="tab"
 		End if 
 		
@@ -172,17 +172,17 @@ Case of
 		
 	: (oConnection.url="/person?@")  // DETAIL
 		
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="edit"
 		
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-person")
 		
-	: ((oConnection.url="/company") | (oConnection.form="bbcompany-list.html"))  // LIST
+	: ((oConnection.url="/company") | (oConnection.form="companylist.html"))  // LIST
 		
 		If (oConnection.form="")
 			
-			oConnection.form:="bbcompany-list.html"
+			oConnection.form:="companylist.html"
 			oConnection.action:="tab"
 		End if 
 		oConnection.url:="/company"
@@ -192,16 +192,16 @@ Case of
 		
 	: (oConnection.url="/company?@")  // DETAIL
 		
-		oConnection.form:="bbcompany-detail.html"
+		oConnection.form:="companydetail.html"
 		oConnection.action:="edit"
 		
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-company")
 		
-	: ((oConnection.url="/donation") | (oConnection.form="donations-list.html"))  // DETAIL
+	: ((oConnection.url="/donation") | (oConnection.form="donationlist.html"))  // DETAIL
 		
 		If (oConnection.form="")
-			oConnection.form:="donations-list.html"
+			oConnection.form:="donationlist.html"
 			oConnection.action:="tab"
 		End if 
 		
@@ -210,10 +210,10 @@ Case of
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-donation")
 		
-	: ((oConnection.url="/event") | (oConnection.form="events-list.html"))  // DETAIL
+	: ((oConnection.url="/event") | (oConnection.form="eventlist.html"))  // DETAIL
 		
 		If (oConnection.form="")
-			oConnection.form:="events-list.html"
+			oConnection.form:="eventlist.html"
 			oConnection.action:="tab"
 		End if 
 		
@@ -222,10 +222,10 @@ Case of
 		// SET ACTIVE NAVBAR ITEM
 		Navbar_SetActive("nav-event")
 		
-	: ((oConnection.url="/merch") | (oConnection.form="merch-list.html"))  // DETAIL
+	: ((oConnection.url="/merch") | (oConnection.form="merchlist.html"))  // DETAIL
 		
 		If (oConnection.form="")
-			oConnection.form:="merch-list.html"
+			oConnection.form:="merchlist.html"
 			oConnection.action:="tab"
 		End if 
 		
@@ -312,7 +312,7 @@ Case of
 					
 				: (oConnection.referer="person")
 					
-					oConnection.form:="person-list.html"
+					oConnection.form:="personlist.html"
 					
 				: (oConnection.referer="companies")
 					

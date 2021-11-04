@@ -31,7 +31,7 @@ Case of
 		
 	: (oConnection.referer="company")
 		
-		oConnection.form:="bbcompany-list.html"
+		oConnection.form:="companylist.html"
 		oConnection.action:="index"
 		
 		
@@ -41,7 +41,7 @@ Case of
 		Ltg_JS_Send("ltgSelectAddOption('Person.company','"+String:C10($oCompany.companyID)+"','"+$oCompany.companyName+"')")
 		Ltg_JS_Send("ltgSelectSetValue('Person.company','"+String:C10($oCompany.companyID)+"')")
 		
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"

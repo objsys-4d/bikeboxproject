@@ -5,7 +5,7 @@ Case of
 		
 	: (oConnection.referer="merch?@")  // VIA URL
 		
-		oConnection.form:="merch-list.html"
+		oConnection.form:="merchlist.html"
 		oConnection.action:="tab"
 		
 	: (oConnection.referer="merch")
@@ -14,7 +14,7 @@ Case of
 		
 		oUser.merchList.pageNumber:=Abs:C99(Int:C8(-(oUser.merchDetail.pageNumber/(oUser.merchList.pageSize))))
 		
-		oConnection.form:="merch-list.html"
+		oConnection.form:="merchlist.html"
 		oConnection.action:="index"
 		
 		//: (oConnection.referer="contacts")

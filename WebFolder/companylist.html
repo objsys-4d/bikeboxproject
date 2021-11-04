@@ -1,0 +1,128 @@
+<!--FORM METHOD-->
+{{BBCompany_List}}
+<!--/FORM METHOD-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%company}} ({{.companyTotal}})</h1>
+        <!--/TITLE-->
+    </div>
+        
+    <div class="float-right">
+        <!--ACTIONS-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary"  onclick="ltgFormAction('companydetail.html?action=new');">{{%new}}</button>
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="ltgFormAction('companydetail.html?action=new');" href="#">{{%new}} {{%company}}</a>
+                <a class="dropdown-item" onclick="ltgFormAction('?action=delete-confirm&method=BBCompany_Delete');" href="#">{{%delete}} {{%companies}}</a>
+                <a class="dropdown-item" onclick="ltgFormAction('?action=file&method=BBCompany_Export');" href="#">{{%export}} {{%companies}}</a>
+            </div>
+        </div>
+        <!--/ACTIONS-->
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+        <!--DATATABLE-->
+        <table class="table table-hover mt-2" id="company" style="width:100%;">
+            <thead>
+                <!--COLUMNS-->
+                <tr>
+                    <th><!--SELECT RECORD--></th>
+                    <th><!--HIDDEN COMPANY_UUID--></th>
+                    <th>{{%companyName}}</th>
+                    <th>{{%address}}</th>
+                    <th>{{%city}}</th>
+                    <th>{{%state}}</th>
+                    <th>{{%email}}</th>
+                 </tr>
+                 <!--/COLUMNS-->
+            </thead>
+        </table>
+        <!--/DATATABLE-->
+    </div>
+    <!--/BODY-->
+
+        <!--DELETE RECORD DIALOG-->
+        <div class="modal" id="company-delete" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{%delete}}</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="dialog-content"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"
+                            onclick="ltgFormAction('?action=delete&method=BBCompany_Delete');">{{%delete}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/DELETE RECORD DIALOG-->
+
+        <script>
+
+        // DATATABLES...
+        
+        var data = {{.companyDataTable}};
+        
+        var table = ltgObj('company').DataTable(
+            {
+                data: data,
+                columnDefs: [
+                {
+                    targets: [ 0 ], // SELECT RECORD
+                    render: function ( data, type, row, meta ) {
+                        if(type === 'display'){
+                        
+                            data = '<input type="checkbox" onclick="ltgFormAction(\'?action=select&record='+row[1]+'\');">';
+                        }
+    
+                        return data;
+                    },
+                    sortable: false,
+                },
+                  {
+                    targets: [ 1 ],// COMPANY_UUID (HIDDEN)
+                    visible: false, 
+                },
+                {
+                    targets: [ 2 ], // COMPANY DETAIL FORM LINK
+                    render: function ( data, type, row, meta ) {
+                        if(type === 'display'){
+                        
+                            data = '<a href="#" onclick="ltgFormAction(\'companydetail.html?action=edit&record='+row[1]+'\');">'+data+'</a>';
+                        }
+    
+                        return data;
+                    }
+                }
+            ],
+            language: {'lengthMenu': '{{%page_Size}} _MENU_',
+                       'emptyTable': '{{%records_none}}',
+                       'paginate': {'previous': '{{%previous}}','next': '{{%next}}'}
+            },
+            order: [[ 2, 'asc' ]],
+            info: false,
+            responsive: true,
+            searching: false,
+            pageLength: 10
+            }
+        );
+
+       // GOTO THE CORRECT LISTING PAGE AFTER RETURNING FROM DETAIL FORM WHICH IS ALSO PAGINATED
+       
+       table.page({{.companyPageNumber}}).draw('page');
+        
+    </script>

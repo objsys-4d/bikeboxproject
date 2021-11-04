@@ -15,6 +15,7 @@ End if
 
 $oEvent.dateEvent:=Date:C102(oConnection.data.Event.dateEvent)
 $oEvent.eventName:=oConnection.data.Event.eventName
+$oEvent.recurring:=oConnection.data.Event.recurring
 $oEvent.totalDonation:=oConnection.data.Event.totalDonation
 $oEvent.save()
 
@@ -24,7 +25,7 @@ Case of
 		
 	: (oConnection.referer="event")
 		
-		oConnection.form:="events-list.html"
+		oConnection.form:="eventlist.html"
 		oConnection.action:="index"
 		
 		//: (oConnection.referer="contacts")
@@ -34,14 +35,14 @@ Case of
 		Ltg_JS_Send("ltgSelectAddOption('Donation.event','"+String:C10($oEvent.eventID)+"','"+$oEvent.eventName+"')")
 		Ltg_JS_Send("ltgSelectSetValue('Donation.event','"+String:C10($oEvent.eventID)+"')")
 		
-		oConnection.form:="donations-detail.html"
+		oConnection.form:="donationdetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"
 		
 	: (oConnection.referer="person")
 		
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"

@@ -27,12 +27,12 @@ Case of
 		
 	: (oConnection.referer="donation")
 		
-		oConnection.form:="donations-list.html"
+		oConnection.form:="donationlist.html"
 		oConnection.action:="index"
 		
 	: (oConnection.referer="person")
 		
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="index"
 		
 		DonationInclude_DataTable

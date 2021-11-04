@@ -8,7 +8,7 @@ C_TEXT:C284($txtDialog_Content)  // DIALOG CONTENT
 Case of 
 		// *** LIST FORM...
 		
-	: (oConnection.form="merch-list.html")
+	: (oConnection.form="merchlist.html")
 		
 		Case of 
 			: (oConnection.selected.length=0)
@@ -73,7 +73,7 @@ Case of
 		
 		// *** DETAIL FORM...
 		
-	: (oConnection.form="merch-detail.html")
+	: (oConnection.form="merchdetail.html")
 		
 		Case of 
 				
@@ -104,7 +104,7 @@ Case of
 				
 				// PUBLISH THE MERCH LIST FORM...
 				
-				oConnection.form:="merch-list.html"
+				oConnection.form:="merchlist.html"
 				oConnection.action:="index"
 				
 		End case 

@@ -1,0 +1,77 @@
+<!--FORM METHOD-->
+{{ParticipantSelect_Modal}}
+
+<!--HIDDEN VALUES-->
+<input type="hidden" name="Participant.UUID" value="{{Participant.UUID}}" />
+<!--/HIDDEN VALUES-->
+
+<!--MODAL FORM-->
+<div class="modal" id="participants_select.html" tabindex="-1" role="dialog" aria-labelledby="participants_select.html" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">Select Participants</h5>
+            </div>
+
+
+    <div class="mt-3">
+    
+        <!--THIS DATATABLE HAS INLINE STYLE ADDITIONS = DISPLAYED IN A BOOTSTRAP TAB-->
+        <table class="table table-hover mt-2" style="border-top:0px;width:100% !important" id="person">
+            <thead>
+                <tr>
+                    <th><!--HIDDEN UUID--></th>
+                    <th><!--checkbox--></th>
+                    <th>{{%participants}}</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+
+
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Participant.UUID}}&method=ParticipantEvent_Select');">{{%save}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+
+        // DATATABLES...
+            
+        var table = ltgObj('person').DataTable(
+            {
+                columnDefs: [
+                  {
+                    targets: [ 0 ],// UUID (HIDDEN)
+                    visible: false, 
+                },
+                {
+                    targets: [ 1 ], // SELECT RECORD
+                    render: function ( data, type, row, meta ) {
+                        if(type === 'display'){
+                        
+                            data = '<input type="checkbox" onclick="ltgFormAction(\'?action=select&record='+row[1]+'\');">';
+                        }
+    
+                        return data;
+                    },
+                    sortable: false,
+                }
+            ],
+            }
+        );
+
+
+
+   /* DESTROY MODAL AFTER DISMISSING */
+   ltgObj('participants_select.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('participants_select.html')
+    })
+</script>
