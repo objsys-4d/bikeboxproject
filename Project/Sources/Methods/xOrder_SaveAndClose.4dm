@@ -1,7 +1,7 @@
 //%attributes = {"shared":true}
-BBOrder_Save
+Order_Save
 
 // RETURN TO THE ORDERS LIST FORM...
 
-oConnection.form:="order-list.html"
+oConnection.form:="orders-list.html"
 oConnection.action:="index"

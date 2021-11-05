@@ -1,100 +1,57 @@
-//%attributes = {}
-C_OBJECT:C1216($oOrder)  // ORDER RECORD
-
-C_OBJECT:C1216($oItem)  // ORDER ITEM RECORD
-C_OBJECT:C1216($oItems)  // ORDER ITEMS SELECTION
-
-C_OBJECT:C1216($oNotification)  // NOTIFICATION
-
-C_OBJECT:C1216($oPrefs)  // PREFERENCES RECORD (FOR ORDER_NUMBER)
-
-// GET THE ORDER ITEMS
-
-$oItems:=ds:C1482.Order_Items.query("Order_ID = :1";oConnection.data.Order.Order_ID)
+//%attributes = {"shared":true}
+C_OBJECT:C1216($oOrder; $oOrdItem)  // ORDER RECORD
 
 // GET THE (PHYSICAL) ORDER RECORD FROM THE DATASTORE
 
-$oOrder:=ds:C1482.Orders.get(oConnection.data.Order.Order_ID)
-
+$oOrder:=ds:C1482.Order.get(oConnection.data.Order.UUID)
+//$oOrder:=ds.Order.query("UUID = :1"; oConnection.data.Order.UUID)
+$oOrdItem:=$oOrder.Order_OrderItem
+If ($oOrdItem=Null:C1517)
+	$nbItems:=0
+	oConnection.data.Order.totalAmount:=0
+Else 
+	$nbItems:=$oOrdItem.length
+	oConnection.data.Order.totalAmount:=$oOrdItem.sum("amount")
+End if 
+oConnection.data.totalAmount:=String:C10(oConnection.data.Order.totalAmount; oConnection.session.userCurrency)
 // NEW RECORD TO BE SAVED FROM DATA?
 
 If ($oOrder=Null:C1517)
 	
-	// GET THE APPLICATION PREFERENCES RECORD
+	$oOrder:=ds:C1482.Order.new()
 	
-	$oPrefs:=ds:C1482.Preferences.all().first()
-	
-	// INCREMENT ORDER NUMBER
-	
-	$oPrefs.Order_Number:=$oPrefs.Order_Number+1
-	
-	$oPrefs.save()
-	
-	// CREATE ORDER RECORD
-	
-	$oOrder:=ds:C1482.Orders.new()
-	
-	$oOrder.Order_Number:=String:C10($oPrefs.Order_Number;"SO00000")
-	
-	// NOTIFY USER OF THE SAVED ORDER NUMBER...
-	
-	$oNotification:=New object:C1471
-	
-	$oNotification.type:="success"
-	
-	$oNotification.icon:="fas fa-save text-white"
-	
-	$oNotification.description:=Ltg_Str_Escape(Ltg_Str_Localise("%order_saved")+"<br/>"+$oOrder.Order_Number)
-	
-	Notification_New($oNotification)
 End if 
 
-$oOrder.Company_ID:=oConnection.data.Order.Company_ID
-
-$oOrder.Company_Name:=oConnection.data.Order.Company_Name
-
-$oOrder.Contact_ID:=oConnection.data.Order.Contact_ID
-
-$oOrder.Order_Date:=Date:C102(String:C10(oConnection.data.Order.Order_Date;oConnection.session.userDateFormat))
-
-$oOrder.Month:=Month of:C24($oOrder.Order_Date)
-
-$oOrder.Status:=oConnection.data.Order.Status
-
-$oOrder.PO_Reference:=oConnection.data.Order.PO_Reference
-
-$oOrder.Salesperson:=oConnection.data.Order.Salesperson
-
-$oOrder.Subtotal:=$oItems.sum("Amount")
-
-$oOrder.Tax:=$oOrder.Subtotal*0.2
-
-$oOrder.Total:=$oOrder.Subtotal+$oOrder.Tax
-
+$oOrder.dateOrder:=Date:C102(oConnection.data.Order.dateOrder)
+$oOrder.status:=oConnection.data.Order.status
+$oOrder.personID:=oConnection.data.Order.person
+$oOrder.address:=oConnection.data.Order.address
+$oOrder.city:=oConnection.data.Order.city
+$oOrder.state:=oConnection.data.Order.state
+$oOrder.zip:=oConnection.data.Order.postalCode
+$oOrder.phone1:=oConnection.data.Order.phone1
+$oOrder.phone2:=oConnection.data.Order.phone2
+$oOrder.email:=oConnection.data.Order.email
+$oOrder.totalItems:=$nbItems
+$oOrder.totalAmount:=oConnection.data.Order.totalAmount
 $oOrder.save()
 
-// UPDATE ORDER ITEMS...
+// RETURN TO THE REFERER...
 
-For each ($oItem;$oItems)
-	
-	$oItem.Order_ID:=$oOrder.Order_ID
-	
-	$oItem.Order_Date:=$oOrder.Order_Date
-	
-	$oItem.Month:=$oOrder.Month
-	
-	$oItem.save()
-	
-End for each 
-
-// UPDATE CONNECTION DATA...
-
-oConnection.data.Order.Order_ID:=$oOrder.Order_ID
-
-oConnection.data.Order.Order_Number:=$oOrder.Order_Number
-
-oConnection.data.orderSubtotal:=String:C10($oOrder.Subtotal;oConnection.session.userCurrency)
-
-oConnection.data.orderTax:=String:C10($oOrder.Tax;oConnection.session.userCurrency)
-
-oConnection.data.orderTotal:=String:C10($oOrder.Total;oConnection.session.userCurrency)
+Case of 
+		
+	: (oConnection.referer="order")
+		
+		oConnection.form:="orderlist.html"
+		oConnection.action:="index"
+		
+		//: (oConnection.referer="contacts")
+		
+		//oConnection.form:="contacts-list.html"
+		//oConnection.action:="index"
+		
+		//: (oConnection.referer="orders")
+		
+		//oConnection.form:="orders-list.html"
+		//oConnection.action:="index"
+End case 

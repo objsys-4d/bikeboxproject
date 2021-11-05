@@ -5,7 +5,7 @@ Case of
 		
 	: (oConnection.referer="order?@")  // VIA URL
 		
-		oConnection.form:="bborder-list.html"
+		oConnection.form:="orderlist.html"
 		oConnection.action:="tab"
 		
 	: (oConnection.referer="order")
@@ -14,7 +14,7 @@ Case of
 		
 		oUser.orderList.pageNumber:=Abs:C99(Int:C8(-(oUser.orderDetail.pageNumber/(oUser.orderList.pageSize))))
 		
-		oConnection.form:="order-list.html"
+		oConnection.form:="orderlist.html"
 		oConnection.action:="index"
 		
 		//: (oConnection.referer="contacts")

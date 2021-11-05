@@ -1,5 +1,5 @@
     <!--FORM METHOD-->
-    {{BBCompany_Detail}}
+    {{Company_Detail}}
     
     <!--HIDDEN VALUES-->
     <input type="hidden" name="Company.UUID" value="{{Company.UUID}}" />
@@ -15,7 +15,7 @@
             
     <div class="float-right">
         <!--CANCEL RECORD-->
-        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=BBCompany_Cancel');"><i class="fa fa-times"></i></button>
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=Company_Cancel');"><i class="fa fa-times"></i></button>
         <!--/CANCEL RECORD-->    
     </div>
     <!--/HEADER-->
@@ -30,12 +30,12 @@
                 <div>
                     <!--SAVE RECORD-->
                     <button type="button" class="btn btn-success"
-                        onclick="ltgFormAction('?action=save&record={{Company.UUID}}&method=BBCompany_Save');">{{%save}}</button>
+                        onclick="ltgFormAction('?action=save&record={{Company.UUID}}&method=Company_Save');">{{%save}}</button>
                     <!--/SAVE RECORD-->
 
                     <!--DELETE RECORD-->
                     <button type="button" class="btn btn-secondary"
-                        onclick="ltgFormAction('?action=delete-confirm&method=BBCompany_Delete');">{{%delete}}</button>
+                        onclick="ltgFormAction('?action=delete-confirm&method=Company_Delete');">{{%delete}}</button>
                     <!--/DELETE RECORD-->
                     
                 </div>
@@ -194,7 +194,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal"
-                                onclick="ltgFormAction('?action=delete&record={{Company.UUID}}&method=BBCompany_Delete');">{{%delete}}</button>
+                                onclick="ltgFormAction('?action=delete&record={{Company.UUID}}&method=Company_Delete');">{{%delete}}</button>
                         </div>
                     </div>
                 </div>

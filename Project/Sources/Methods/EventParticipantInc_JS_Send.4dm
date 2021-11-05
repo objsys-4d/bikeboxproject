@@ -1,9 +1,9 @@
-//%attributes = {"shared":true}
+//%attributes = {}
 // ----------------------------------------------------
 // User name (OS): Edu
-// Date and time: 11/04/21, 21:07:50
+// Date and time: 11/05/21, 16:52:08
 // ----------------------------------------------------
-// Method: PersonEvent_Included
+// Method: EventParticipantInc_JS_Send
 // Description
 // 
 //
@@ -15,22 +15,15 @@ C_COLLECTION:C1488($oDataTable)  // DATATABLES.JS - JSON DATA
 C_OBJECT:C1216($oParticipant; $oPerson)  // DONATION CONTACT
 C_OBJECT:C1216($oEvent; $oEventSelection; $oParticipantSelection)  // DONATION SELECTION
 
-//$oParticipantSelection:=ds.Participant.query("personID = :1"; oConnection.data.Person.personID)
-//$oEventSelection:=$oParticipantSelection.Participant_Event
-$oParticipantSelection:=oConnection.data.Event.Event_Participant
+$oParticipantSelection:=ds:C1482.Participant.query("eventID = :1"; oConnection.data.Event.eventID)
 
 // *** DATATABLES ***
 $oDataTable:=New collection:C1472
 
 C_OBJECT:C1216($oPcpPerson; $oPcpEvent)
-C_TEXT:C284($fullName; $eventName; $txtAttended)
+C_TEXT:C284($personName; $eventName; $txtAttended)
 For each ($oParticipant; $oParticipantSelection)
 	$value:="."+$oParticipant.UUID
-	If ($oParticipant.attended)
-		$txtAttended:="checked"
-	Else 
-		$txtAttended:=""
-	End if 
 	If ($oParticipant.participantID=0)
 		$oCompany:=$oParticipant.Participant_Company
 		$fullName:=$oCompany.companyName
@@ -44,8 +37,10 @@ For each ($oParticipant; $oParticipantSelection)
 	
 End for each 
 
+// CLEAR THE DATATABLE
+Ltg_JS_Send("ltgObj('participant').dataTable().fnClearTable()")
 
-
-// UPDATE CONNECTION DATA...
-oConnection.data.Participant:=$oParticipantSelection
-oConnection.data.participantDataTable:=JSON Stringify:C1217($oDataTable)
+// UPDATE THE ORDER ITEMS DATATABLE
+If ($oDataTable.length>0)
+	Ltg_JS_Send("ltgObj('participant').dataTable().fnAddData(JSON.parse('"+JSON Stringify:C1217($oDataTable)+"'))")
+End if 

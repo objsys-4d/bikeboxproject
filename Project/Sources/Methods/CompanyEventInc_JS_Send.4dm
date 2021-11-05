@@ -1,9 +1,10 @@
-//%attributes = {"shared":true}
+//%attributes = {}
+
 // ----------------------------------------------------
 // User name (OS): Edu
-// Date and time: 11/04/21, 22:34:35
+// Date and time: 11/05/21, 16:39:43
 // ----------------------------------------------------
-// Method: CompanyEvent_Included
+// Method: CompanyEventInc_JS_Send
 // Description
 // 
 //
@@ -39,6 +40,10 @@ For each ($oEvent; $oEventSelection)
 	
 End for each 
 
-// UPDATE CONNECTION DATA...
-oConnection.data.Event:=$oEventSelection
-oConnection.data.participantDataTable:=JSON Stringify:C1217($oDataTable)
+// CLEAR THE DATATABLE
+Ltg_JS_Send("ltgObj('participant').dataTable().fnClearTable()")
+
+// UPDATE THE EVENT LIST DATATABLE
+If ($oDataTable.length>0)
+	Ltg_JS_Send("ltgObj('participant').dataTable().fnAddData(JSON.parse('"+JSON Stringify:C1217($oDataTable)+"'))")
+End if 

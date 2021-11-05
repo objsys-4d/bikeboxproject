@@ -3,39 +3,37 @@ C_OBJECT:C1216($oItem)  // ITEM RECORD
 
 // GET THE (PHYSICAL) ORDER ITEM RECORD FROM THE DATASTORE
 
-$oItem:=ds:C1482.OrderItem.get(oConnection.data.Item.UUID)
+$oItem:=ds:C1482.Order_Items.get(oConnection.data.Item.Item_ID)
 
 // NEW RECORD TO BE SAVED FROM DATA?
 
 If ($oItem=Null:C1517)
 	
-	$oItem:=ds:C1482.OrderItem.new()
+	$oItem:=ds:C1482.Order_Items.new()
 End if 
 
-$oItem.orderID:=oConnection.data.Order.orderID
+$oItem.Order_ID:=oConnection.data.Order.Order_ID
 
-$oItem.orderItemName:=oConnection.data.Item.orderItemName
-$oItem.merchID:=oConnection.data.Item.merchID
+$oItem.Product:=oConnection.data.Item.Product
 
-$oItem.qty:=Num:C11(oConnection.data.itemQuantity)
+$oItem.Quantity:=Num:C11(oConnection.data.itemQuantity)
 
-$oItem.price:=Num:C11(oConnection.data.price)
+$oItem.Rate:=Num:C11(oConnection.data.itemRate)
 
-$oItem.amount:=$oItem.qty*$oItem.price
+$oItem.Amount:=$oItem.Quantity*$oItem.Rate
 
 $oItem.save()
-
 
 Case of 
 	: (oConnection.referer="orders")
 		
-		oConnection.form:="orderdetail.html"
+		oConnection.form:="orders-detail.html"
 End case 
 
 // SAVE THE ORDER
 
 Order_Save
-//Order_Save
+
 // DISPLAY ITEMS
 
 OrderItem_DataTable

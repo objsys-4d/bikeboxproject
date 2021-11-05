@@ -1,7 +1,7 @@
 //%attributes = {"shared":true}
-  // UPDATE CONNECTION...
+// UPDATE CONNECTION...
 
-oConnection.form:="orders-detail.html"
+oConnection.form:="orderdetail.html"
 oConnection.action:="edit"
 
 oConnection.responseType:="javascript"

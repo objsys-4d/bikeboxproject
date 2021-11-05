@@ -1,8 +1,8 @@
 <!--FORM METHOD-->
-{{BBOrderItem_Detail}}
+{{OrderItem_Detail}}
 
 <!--MODAL FORM-->
-<div class="modal" id="order-item.html" tabindex="-1" role="dialog" aria-labelledby="order-item.html" aria-hidden="true">
+<div class="modal" id="orderitem.html" tabindex="-1" role="dialog" aria-labelledby="orderitem.html" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-gradient-primary">
@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label for=".itemQuantity" class="col-form-label">{{%quantity}}</label>
                     <div>
-                        <input type="number" class="form-control text-right" type="text" style="width:80px" id=".itemQuantity" name=".itemQuantity" onchange="ltgExecuteMethod('BBOrderItem_Calculate');" value="{{.itemQuantity}}" />
+                        <input type="number" class="form-control text-right" type="text" style="width:80px" id=".itemQuantity" name=".itemQuantity" onchange="ltgExecuteMethod('OrderItem_Calculate');" value="{{.itemQuantity}}" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -44,10 +44,10 @@
             </div>
             <div class="modal-footer bg-gray-100">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                onclick="ltgFormAction('?action=cancel&method=BBOrderItem_Cancel');">{{%cancel}}</button>
+                onclick="ltgFormAction('?action=cancel&method=OrderItem_Cancel');">{{%cancel}}</button>
                 
                 <button type="button" class="btn btn-primary" data-dismiss="modal"
-                    onclick="ltgFormAction('?action=save&record={{Item.Item_ID}}&method=BBOrderItem_Save');">{{%save}}</button>
+                    onclick="ltgFormAction('?action=save&record={{Item.Item_ID}}&method=OrderItem_Save');">{{%save}}</button>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
 
    /* DESTROY MODAL AFTER DISMISSING */
    
-   ltgObj('order-item.html').on('hidden.bs.modal', function (e) {
-     ltgDialogClose('order-item.html');
+   ltgObj('orderitem.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('orderitem.html');
     })
 </script>

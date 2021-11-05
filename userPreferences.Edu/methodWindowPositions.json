@@ -77,12 +77,6 @@
 		"width": 1772,
 		"height": 857
 	},
-	"Sources/Methods/BBCompany_List.4dm": {
-		"left": 65,
-		"top": 174,
-		"width": 1772,
-		"height": 857
-	},
 	"Sources/Methods/EMail_LoadEmails.4dm": {
 		"left": 417,
 		"top": 190,
@@ -575,23 +569,11 @@
 		"width": 1553,
 		"height": 857
 	},
-	"Sources/Methods/BBOrder_Save.4dm": {
-		"left": 9,
-		"top": 109,
-		"width": 1553,
-		"height": 857
-	},
 	"Sources/Methods/ParticipantInclude_DataTable.4dm": {
 		"left": 32,
 		"top": 114,
 		"width": 1391,
 		"height": 842
-	},
-	"Sources/Methods/BBOrderItem_Save.4dm": {
-		"left": 98,
-		"top": 131,
-		"width": 1553,
-		"height": 857
 	},
 	"Sources/Methods/EventParticipant_Attended.4dm": {
 		"left": 516,
@@ -617,34 +599,10 @@
 		"width": 1553,
 		"height": 857
 	},
-	"Sources/Methods/BBOrderItem_Delete.4dm": {
-		"left": 21,
-		"top": 198,
-		"width": 1553,
-		"height": 857
-	},
 	"Sources/Methods/Event_Recurring.4dm": {
 		"left": 9,
 		"top": 109,
 		"width": 1553,
-		"height": 857
-	},
-	"Sources/Methods/OrderItem_DataTable.4dm": {
-		"left": 478,
-		"top": 118,
-		"width": 1364,
-		"height": 857
-	},
-	"Sources/Methods/BBOrderItem_DataTable.4dm": {
-		"left": 266,
-		"top": 109,
-		"width": 1571,
-		"height": 857
-	},
-	"Sources/Methods/BBOrder_Detail.4dm": {
-		"left": 266,
-		"top": 109,
-		"width": 1571,
 		"height": 857
 	},
 	"Sources/Methods/ParticipantSelect_Modal.4dm": {
@@ -658,18 +616,6 @@
 		"top": 131,
 		"width": 1391,
 		"height": 842
-	},
-	"Sources/Methods/Order_Detail.4dm": {
-		"left": 439,
-		"top": 221,
-		"width": 1391,
-		"height": 842
-	},
-	"Sources/Methods/BBOrder_Delete.4dm": {
-		"left": 638,
-		"top": 109,
-		"width": 1258,
-		"height": 857
 	},
 	"Sources/Methods/ParticipantEvent_Select.4dm": {
 		"left": 301,
@@ -696,12 +642,6 @@
 		"height": 867
 	},
 	"Sources/Methods/Person_Delete.4dm": {
-		"left": 35,
-		"top": 204,
-		"width": 1779,
-		"height": 867
-	},
-	"Sources/Methods/OrderItem_Save.4dm": {
 		"left": 35,
 		"top": 204,
 		"width": 1779,
@@ -737,21 +677,9 @@
 		"width": 1553,
 		"height": 857
 	},
-	"Sources/Methods/BBCompany_Cancel.4dm": {
-		"left": 348,
-		"top": 121,
-		"width": 1553,
-		"height": 857
-	},
 	"Sources/Methods/Donation_Cancel.4dm": {
 		"left": 38,
 		"top": 231,
-		"width": 1779,
-		"height": 867
-	},
-	"Sources/Methods/BBCompany_Detail.4dm": {
-		"left": 166,
-		"top": 159,
 		"width": 1779,
 		"height": 867
 	},
@@ -766,12 +694,6 @@
 		"top": 109,
 		"width": 1665,
 		"height": 857
-	},
-	"Sources/Methods/BBCompany_Save.4dm": {
-		"left": 443,
-		"top": 116,
-		"width": 1779,
-		"height": 867
 	},
 	"Sources/Methods/Event_Cancel.4dm": {
 		"left": 443,
@@ -816,10 +738,10 @@
 		"height": 857
 	},
 	"Sources/Methods/PersonEventInc_JS_Send.4dm": {
-		"left": 451,
-		"top": 201,
-		"width": 1779,
-		"height": 867
+		"left": 156,
+		"top": 124,
+		"width": 1296,
+		"height": 831
 	},
 	"Sources/Methods/DonationPerson_Modal.4dm": {
 		"left": 534,
@@ -831,6 +753,162 @@
 		"left": 534,
 		"top": 109,
 		"width": 1362,
+		"height": 857
+	},
+	"Sources/Methods/CompanyEventInc_JS_Send.4dm": {
+		"left": 443,
+		"top": 116,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/EventParticipantInc_JS_Send.4dm": {
+		"left": 17,
+		"top": 109,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/xOrder_Detail.4dm": {
+		"left": 439,
+		"top": 221,
+		"width": 1391,
+		"height": 842
+	},
+	"Sources/Methods/xOrderItem_DataTable.4dm": {
+		"left": 478,
+		"top": 118,
+		"width": 1364,
+		"height": 857
+	},
+	"Sources/Methods/xOrderItem_Save.4dm": {
+		"left": 35,
+		"top": 204,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/OrderPerson_Cancel.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Company_Detail.4dm": {
+		"left": 166,
+		"top": 159,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Company_List.4dm": {
+		"left": 65,
+		"top": 174,
+		"width": 1772,
+		"height": 857
+	},
+	"Sources/Methods/Company_Cancel.4dm": {
+		"left": 348,
+		"top": 121,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Company_Save.4dm": {
+		"left": 443,
+		"top": 116,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Order_Delete.4dm": {
+		"left": 638,
+		"top": 109,
+		"width": 1258,
+		"height": 857
+	},
+	"Sources/Methods/Order_Detail.4dm": {
+		"left": 266,
+		"top": 109,
+		"width": 1571,
+		"height": 857
+	},
+	"Sources/Methods/Order_Save.4dm": {
+		"left": 9,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Order_SaveAndClose.4dm": {
+		"left": 202,
+		"top": 142,
+		"width": 1779,
+		"height": 867
+	},
+	"Sources/Methods/Order_Cancel.4dm": {
+		"left": 9,
+		"top": 109,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/OrderItem_Delete.4dm": {
+		"left": 21,
+		"top": 198,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/OrderItem_Calculate.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/OrderItem_Cancel.4dm": {
+		"left": 348,
+		"top": 121,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/OrderItem_Save.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/OrderItem_AddDetail.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/OrderItem_DataTable.4dm": {
+		"left": 266,
+		"top": 109,
+		"width": 1571,
+		"height": 857
+	},
+	"Sources/Methods/xOrder_Company.4dm": {
+		"left": 21,
+		"top": 198,
+		"width": 1553,
+		"height": 857
+	},
+	"Sources/Methods/Compiler_Methods.4dm": {
+		"left": 439,
+		"top": 221,
+		"width": 1391,
+		"height": 842
+	},
+	"Sources/Methods/xCompanies_Export.4dm": {
+		"left": 439,
+		"top": 221,
+		"width": 1391,
+		"height": 842
+	},
+	"Sources/Methods/xOrderItem_Delete.4dm": {
+		"left": 439,
+		"top": 221,
+		"width": 1391,
+		"height": 842
+	},
+	"Sources/Methods/Order_List.4dm": {
+		"left": 98,
+		"top": 131,
+		"width": 1553,
 		"height": 857
 	}
 }

@@ -85,7 +85,7 @@ Case of
 		Ltg_JS_Send("ltgSelectAddOption('Order.person','"+String:C10($oPerson.personID)+"','"+$personName+"')")
 		Ltg_JS_Send("ltgSelectSetValue('Order.person','"+String:C10($oPerson.personID)+"')")
 		
-		oConnection.form:="order-detail.html"
+		oConnection.form:="orderdetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"

@@ -1,5 +1,5 @@
 <!--FORM METHOD-->
-{{BBOrder_Detail}}
+{{Order_Detail}}
 
 <!--HIDDEN VALUES-->
 <input type="hidden" id="Order.orderID" name="Order.orderID" value="{{Order.orderID}}" />
@@ -31,12 +31,12 @@
             <div>
                 <!--SAVE RECORD-->
                 <button type="button" class="btn btn-success"
-                     onclick="ltgFormAction('?action=save&record={{Order.orderID}}&method=BBOrder_SaveAndClose');">{{%save}}</button>
+                     onclick="ltgFormAction('?action=save&record={{Order.orderID}}&method=Order_SaveAndClose');">{{%save}}</button>
                 <!--/SAVE RECORD-->
                  
                 <!--DELETE RECORD-->
                 <button type="button" class="btn btn-secondary"
-                    onclick="ltgFormAction('?action=delete-confirm&method=BBOrder_Delete');">{{%delete}}</button>
+                    onclick="ltgFormAction('?action=delete-confirm&method=Order_Delete');">{{%delete}}</button>
                 <!--/DELETE RECORD-->
             </div>
         </div>
@@ -142,7 +142,7 @@
 
             <!--NEW RECORD-->
             <button type="button" class="btn btn-primary" 
-                onclick="ltgFormAction('order-item-add.html?action=new&modal=true');">Add Item</button>
+                onclick="ltgFormAction('orderitemadd.html?action=new&modal=true');">Add Item</button>
             <!--/NEW RECORD-->
        		</div>
 
@@ -210,7 +210,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal"
-                        onclick="ltgFormAction('?action=delete&method=BBOrder_Delete');">{{%delete}}</button>
+                        onclick="ltgFormAction('?action=delete&method=Order_Delete');">{{%delete}}</button>
                 </div>
             </div>
         </div>
@@ -243,7 +243,7 @@
                     render: function ( data, type, row, meta ) {
                      if(type === 'display'){ 
                      
-                      data = '<a class="text-secondary" href="#" onclick="ltgFormAction(\'order-item.html?action=edit&modal=true&record='+row[1]+'\');"><i class="fas fa-edit"></i></a>';
+                      data = '<a class="text-secondary" href="#" onclick="ltgFormAction(\'orderitem.html?action=edit&modal=true&record='+row[1]+'\');"><i class="fas fa-edit"></i></a>';
                      }
                      return data;
                     }                    
@@ -269,7 +269,7 @@
                     orderable: false,
                     render: function ( data, type, row, meta ) {
                     if(type === 'display'){ 
-                        data='<a class="text-secondary" href="#" onclick="ltgExecuteMethod(\'BBOrderItem_Delete\',\''+row[1]+'\');"><i class="fas fa-trash"></i></a>';
+                        data='<a class="text-secondary" href="#" onclick="ltgExecuteMethod(\'OrderItem_Delete\',\''+row[1]+'\');"><i class="fas fa-trash"></i></a>';
                     }
                     return data;
                     }

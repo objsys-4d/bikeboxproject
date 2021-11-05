@@ -106,13 +106,6 @@
 		}
 	},
 	{
-		"line": 20,
-		"method": {
-			"type": 1,
-			"methodName": "ParticipantInclude_DataTable"
-		}
-	},
-	{
 		"line": 40,
 		"method": {
 			"type": 1,

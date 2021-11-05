@@ -235,10 +235,10 @@ Case of
 		Navbar_SetActive("nav-merch")
 		
 		
-	: ((oConnection.url="/order") | (oConnection.form="order-list.html"))  // DETAIL
+	: ((oConnection.url="/order") | (oConnection.form="orderlist.html"))  // DETAIL
 		
 		If (oConnection.form="")
-			oConnection.form:="order-list.html"
+			oConnection.form:="orderlist.html"
 			oConnection.action:="tab"
 		End if 
 		

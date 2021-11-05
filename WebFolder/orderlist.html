@@ -1,5 +1,5 @@
 <!--FORM METHOD-->
-{{BBOrder_List}}
+{{Order_List}}
 <!--/FORM METHOD-->
 
     <!--HEADER-->
@@ -18,8 +18,7 @@
             </button>
             <div class="dropdown-menu">
 				<a class="dropdown-item" onclick="ltgFormAction('orderdetail.html?action=new');" href="#">{{%new}} {{%order}}</a>
-                <a class="dropdown-item" onclick="ltgFormAction('?action=delete-confirm&method=BBOrder_Delete');" href="#">{{%delete}} {{%orders}}</a>
-                <a class="dropdown-item" onclick="ltgFormAction('?action=file&method=BBOrder_Export');" href="#">{{%export}} {{%orders}}</a>
+                <a class="dropdown-item" onclick="ltgFormAction('?action=delete-confirm&method=Order_Delete');" href="#">{{%delete}} {{%orders}}</a>
             </div>
         </div>
         <!--/ACTIONS-->
@@ -65,7 +64,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal"
-                            onclick="ltgFormAction('?action=delete&method=BBOrder_Delete');">{{%delete}}</button>
+                            onclick="ltgFormAction('?action=delete&method=Order_Delete');">{{%delete}}</button>
                     </div>
                 </div>
             </div>

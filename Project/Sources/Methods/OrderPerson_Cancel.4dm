@@ -16,7 +16,7 @@
 oConnection.data.Order.person:="0"
 oConnection.data.Order.personID:=0
 
-oConnection.form:="order-detail.html"
+oConnection.form:="orderdetail.html"
 oConnection.action:="index"
 
 oConnection.responseType:="javascript"

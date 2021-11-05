@@ -1,23 +1,27 @@
 //%attributes = {"shared":true}
-C_OBJECT:C1216($oCompany)  // COMPANY
+C_OBJECT:C1216($oOrder)  // ORDER RECORD
 
-C_OBJECT:C1216($oSelected)  // SELECTED RECORDS
+C_OBJECT:C1216($oItems)  // ORDER ITEMS
+C_OBJECT:C1216($oItem)  // ORDER ITEM RECORD
+
+C_OBJECT:C1216($oSelected)  // SELECTED RECORD
 
 C_TEXT:C284($txtDialog_Content)  // DIALOG CONTENT
 
 Case of 
 		// *** LIST FORM...
 		
-	: (oConnection.form="companylist.html")
+	: (oConnection.form="orders-list.html")
 		
 		Case of 
+				
 			: (oConnection.selected.length=0)
 				
 				$txtDialog_Content:=Ltg_Str_Localise("%please_select_one_or_more_records_and_try_again")
 				
 				// OPEN CONFIRMATION DIALOG
 				
-				Ltg_JS_Send("ltgDialogOpen('company-delete')")
+				Ltg_JS_Send("ltgDialogOpen('order-delete')")
 				
 				// DISABLE "DELETE" BUTTON
 				
@@ -33,11 +37,11 @@ Case of
 				
 			: (oConnection.action="delete-confirm")
 				
-				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+String:C10(oConnection.selected.length)+" "+Ltg_Str_Localise("%company")+" records?"
+				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+String:C10(oConnection.selected.length)+" "+Ltg_Str_Localise("%orders")+"?"
 				
 				// OPEN CONFIRMATION DIALOG
 				
-				Ltg_JS_Send("ltgDialogOpen('company-delete')")
+				Ltg_JS_Send("ltgDialogOpen('order-delete')")
 				
 				// ENABLE "DELETE" BUTTON
 				
@@ -51,13 +55,21 @@ Case of
 				
 			: (oConnection.action="delete")
 				
-				For each ($oSelected; oConnection.selected)
+				For each ($oSelected;oConnection.selected)
 					
-					$oCompany:=ds:C1482.Company.get($oSelected.record)
+					$oOrder:=ds:C1482.Orders.get($oSelected.record)
 					
-					If ($oCompany#Null:C1517)
+					If ($oOrder#Null:C1517)
 						
-						$oCompany.drop()
+						$oItems:=ds:C1482.Order_Items.query("Order_ID = :1";$oOrder.Order_ID)
+						
+						For each ($oItem;$oItems)
+							
+							$oItem.drop()
+							
+						End for each 
+						
+						$oOrder.drop()
 					End if 
 				End for each 
 				
@@ -67,23 +79,23 @@ Case of
 				
 				// CLOSE CONFIRMATION DIALOG
 				
-				Ltg_JS_Send("ltgDialogClose('company-delete')")
+				Ltg_JS_Send("ltgDialogClose('order-delete')")
 				
 		End case 
 		
 		// *** DETAIL FORM...
 		
-	: (oConnection.form="companydetail.html")
+	: (oConnection.form="orders-detail.html")
 		
 		Case of 
 				
 			: (oConnection.action="delete-confirm")
 				
-				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+Ltg_Str_Localise("%company")+" record?"
+				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+Ltg_Str_Localise("%order")+"?"
 				
 				// OPEN CONFIRMATION DIALOG
 				
-				Ltg_JS_Send("ltgDialogOpen('company-delete')")
+				Ltg_JS_Send("ltgDialogOpen('order-delete')")
 				
 				// UPDATE DIALOG CONTENT
 				
@@ -95,16 +107,24 @@ Case of
 				
 			: (oConnection.action="delete")
 				
-				$oCompany:=ds:C1482.Company.get(oConnection.record)
+				$oOrder:=ds:C1482.Orders.get(oConnection.data.Order.Order_ID)
 				
-				If ($oCompany#Null:C1517)
+				If ($oOrder#Null:C1517)
 					
-					$oCompany.drop()
+					$oItems:=ds:C1482.Order_Items.query("Order_ID = :1";$oOrder.Order_ID)
+					
+					For each ($oItem;$oItems)
+						
+						$oItem.drop()
+						
+					End for each 
+					
+					$oOrder.drop()
 				End if 
 				
-				// PUBLISH THE COMPANY LIST FORM...
+				// PUBLISH THE ORDERS LIST FORM...
 				
-				oConnection.form:="companylist.html"
+				oConnection.form:="orders-list.html"
 				oConnection.action:="index"
 				
 		End case 

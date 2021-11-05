@@ -87,7 +87,7 @@ For each ($oBBOrd; $oBBOrder)
 	If ($oBBOrd.state#"")
 		$addr:=$addr+", "+$oBBOrd.state
 	End if 
-	$ordPerson:=$oBBOrd.order_Person
+	$ordPerson:=$oBBOrd.Order_Person
 	If ($ordPerson=Null:C1517)
 		$name:=""
 	Else 
