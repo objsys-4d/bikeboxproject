@@ -33,11 +33,15 @@ End if
 $status:=$oParticipant.save()
 
 If ($status.success) & ($update)
-	$oEvent:=ds:C1482.Event.get(oConnection.data.Event.UUID)
-	$oParticipantSelection:=ds:C1482.Participant.query("eventID = :1"; oConnection.data.Participant.eventID)
+	$oEventC:=ds:C1482.Event.query("eventID = :1"; $oParticipant.eventID)
+	$oEvent:=ds:C1482.Event.get($oEventC[0].UUID)
+	$oParticipantSelection:=ds:C1482.Participant.query("eventID = :1"; $oParticipant.eventID)
 	$oEvent.totalDonation:=$oParticipantSelection.sum("amountDonated")
 	$oEvent.save()
-	oConnection.data.Event.totalDonation:=$oEvent.totalDonation
+	
+	If (oConnection.referer="event")
+		oConnection.data.Event.totalDonation:=$oEvent.totalDonation
+	End if 
 End if 
 
 

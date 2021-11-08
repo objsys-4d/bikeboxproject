@@ -35,6 +35,7 @@ $oOrder.email:=oConnection.data.Order.email
 $oOrder.totalItems:=$nbItems
 $oOrder.totalAmount:=oConnection.data.Order.totalAmount
 $oOrder.save()
+oConnection.data.Order.UUID:=$oOrder.UUID
 
 // RETURN TO THE REFERER...
 
