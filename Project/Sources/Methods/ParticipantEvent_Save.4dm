@@ -11,8 +11,8 @@
 // ----------------------------------------------------
 
 C_OBJECT:C1216($oParticipant)
-C_OBJECT:C1216($success)
-
+C_OBJECT:C1216($status)
+C_BOOLEAN:C305($update)
 $oParticipant:=ds:C1482.Participant.get(oConnection.data.Participant.UUID)
 
 If ($oParticipant=Null:C1517)
@@ -26,13 +26,29 @@ If ($oParticipant=Null:C1517)
 End if 
 
 $oParticipant.eventID:=Num:C11(oConnection.data.Participant.eventID)
-$oParticipant.amountDonated:=Num:C11(oConnection.data.Participant.amount)
-$success:=$oParticipant.save()
+If ($oParticipant.amountDonated#Num:C11(oConnection.data.Participant.amount))
+	$update:=True:C214
+	$oParticipant.amountDonated:=Num:C11(oConnection.data.Participant.amount)
+End if 
+$status:=$oParticipant.save()
+
+If ($status.success) & ($update)
+	$oEventC:=ds:C1482.Event.query("eventID = :1"; $oParticipant.eventID)
+	$oEvent:=ds:C1482.Event.get($oEventC[0].UUID)
+	$oParticipantSelection:=ds:C1482.Participant.query("eventID = :1"; $oParticipant.eventID)
+	$oEvent.totalDonation:=$oParticipantSelection.sum("amountDonated")
+	$oEvent.save()
+	
+	If (oConnection.referer="event")
+		oConnection.data.Event.totalDonation:=$oEvent.totalDonation
+	End if 
+End if 
+
 
 
 Case of 
 	: (oConnection.referer="person")
-		oConnection.form:="person-detail.html"
+		oConnection.form:="persondetail.html"
 		oConnection.action:="index"
 		
 		ParticipantInclude_DataTable
@@ -40,14 +56,14 @@ Case of
 		
 		
 	: (oConnection.referer="company")
-		oConnection.form:="bbcompany-detail.html"
+		oConnection.form:="companydetail.html"
 		oConnection.action:="index"
 		
 		ParticipantInclude_DataTable
 		oConnection.responseType:="javascript"
 		
 	: (oConnection.referer="event")
-		oConnection.form:="events-detail.html"
+		oConnection.form:="eventdetail.html"
 		oConnection.action:="index"
 		
 		ParticipantInclude_DataTable

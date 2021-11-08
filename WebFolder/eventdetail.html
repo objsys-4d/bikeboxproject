@@ -1,0 +1,169 @@
+    <!--FORM METHOD-->
+    {{Event_Detail}}
+    
+    <!--HIDDEN VALUES-->
+    <input type="hidden" name="Event.UUID" value="{{Event.UUID}}" />
+    <input type="hidden" name="Event.eventID" value="{{Event.eventID}}" />
+    <!--/HIDDEN VALUES-->
+
+    <!--HEADER-->
+    <div class="float-left">
+        <!--TITLE-->
+        <h1 class="h3 mb-4 text-gray-800">{{%events}}</h1>
+        <!--/TITLE-->
+    </div>
+            
+    <div class="float-right">
+        <!--CANCEL RECORD-->
+        <button type="button" class="btn btn-outline-secondary" onclick="ltgFormAction('?action=cancel&method=Event_Cancel');"><i class="fa fa-times"></i></button>
+        <!--/CANCEL RECORD-->    
+    </div>
+    <!--/HEADER-->
+        
+    <!--BODY-->
+    <div class="mt-3 clearboth">
+
+            <hr/>
+            
+            <!--FORM TOOLBAR-->
+            <div class="btn-toolbar justify-content-center" role="toolbar">
+                <div>
+                    <!--SAVE RECORD-->
+                    <button type="button" class="btn btn-success"
+                        onclick="ltgFormAction('?action=save&record={{Event.UUID}}&method=Event_Save');">{{%save}}</button>
+                    <!--/SAVE RECORD-->
+
+                    <!--DELETE RECORD-->
+                    <button type="button" class="btn btn-secondary"
+                        onclick="ltgFormAction('?action=delete-confirm&method=Event_Delete');">{{%delete}}</button>
+                    <!--/DELETE RECORD-->
+                    
+                </div>
+            </div>
+            <!--/FORM TOOLBAR-->
+            
+            <hr/>
+			
+        <div class="row">
+            <div class="col">
+                		 <label for="Event.dateEvent" class="col-form-label">{{%dateEvent}}</label>
+                		 		<div class="input-group date" id="eventDatePicker" data-target-input="nearest">
+                    				 <input type="text" class="form-control datetimepicker-input"  id="Event.dateEvent"
+                       				 		name="Event.dateEvent" data-target="#eventDatePicker" value="{{Event.dateEvent}}"/>
+                    				<div class="input-group-append" data-target="#eventDatePicker" data-toggle="datetimepicker">
+                        				 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    				</div>
+                				</div>
+       		</div>
+            <div class="col">
+                        <label for="Event.recurring" class="col-form-label">Recurring Event?</label>
+                        <div>
+                        <input type="checkbox" id="Event.recurring" name="Event.recurring" onclick="ltgExecuteMethod('Event_Recurring',this.checked+this.id)" /> Yes
+                        </div>
+            </div>
+          </div>      
+        <div class="row">
+            <div class="col">
+                        <label for="Event.eventName" class="col-form-label">{{%eventName}}</label>
+                        <div>
+                            <input type="text" class="form-control" id="Event.eventName" style="width:400px"
+                                name="Event.eventName" value="{{Event.eventName}}" />
+                        </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    
+            <!--TABS-->
+            <ul class="nav nav-tabs mb-3 mt-3" id="tabs-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tabs-participant-tab" data-toggle="tab" href="#tabs-participant" onclick="ltgTabSetActive('tabs-participant-tab');" role="tab"
+                        aria-controls="tabs-participant" aria-selected="true">{{%participants}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!--Participants TAB-->
+                <div class="tab-pane fade show active" id="tabs-participants" role="tabpanel"
+                    aria-labelledby="tabs-participants-tab">
+                    {{include eventparticipantinc.html}}
+                </div>
+                <!--/Participants TAB-->
+				
+        <div class="row">
+            <div class="col">
+			
+            <div class="row mb-1 mr-1 float-left">
+                <label for="Event.totalDonation" class="col-form-label mr-2"><strong>{{%totalDonation}}</strong></label>
+                <div>
+                    <input class="form-control text-right" readonly="readonly" id="Event.totalDonation" name="Event.totalDonation" style="width:140px;" value="{{Event.totalDonation}}"/>
+                </div>
+            </div>
+			</div>
+       </div>
+
+            <!--/TABS-->
+			
+		
+            <!--PAGINATION-->
+            <nav id="event-pagination">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=previous');">{{%previous}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=first');">1</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">{{.eventPageNumber}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=last');">{{.eventPageCount}}</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#"
+                        onclick="ltgFormAction('?action=next');">{{%next}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/PAGINATION-->
+            
+            <!--DELETE RECORD DIALOG-->
+            <div class="modal" id="event-delete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{%delete}}</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="dialog-content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{%cancel}}</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                onclick="ltgFormAction('?action=delete&record={{Event.UUID}}&method=Event_Delete');">{{%delete}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/DELETE RECORD DIALOG-->
+        </div>
+        <!--/BODY-->
+		
+<script>
+        // REMOVES A ROW WHEN THE DELETE ICON IS CLICKED...
+        
+        ltgObj('items tbody').on( 'click', 'i.fa-trash', function () {
+            
+            table.row($(this).parents('tr')).remove().draw();
+        } );
+
+        $(function () {
+            $('#eventDatePicker').datetimepicker({
+                format: 'L', /* Date Only */
+                locale: '{{.userLanguage}}'
+            });
+        });
+		
+		
+</script>

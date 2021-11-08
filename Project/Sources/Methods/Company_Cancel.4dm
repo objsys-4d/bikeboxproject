@@ -1,29 +1,29 @@
 //%attributes = {"shared":true}
-  // RETURN TO THE REFERER...
+// RETURN TO THE REFERER...
 
 Case of 
 		
-	: (oConnection.referer="companies?@")  // VIA URL
+	: (oConnection.referer="company?@")  // VIA URL
 		
-		oConnection.form:="companies-list.html"
+		oConnection.form:="companylist.html"
 		oConnection.action:="tab"
 		
-	: (oConnection.referer="companies")
+	: (oConnection.referer="company")
 		
-		  // RETURN TO THE COMPANIES LIST FORM (AT THE CORRECT PAGE SHOULD THE PAGINATION HAVE CHANGED IN THE DETAIL FORM)
+		// RETURN TO THE COMPANY LIST FORM (AT THE CORRECT PAGE SHOULD THE PAGINATION HAVE CHANGED IN THE DETAIL FORM)
 		
-		oUser.companiesList.pageNumber:=Abs:C99(Int:C8(-(oUser.companiesDetail.pageNumber/(oUser.companiesList.pageSize))))
+		oUser.companyList.pageNumber:=Abs:C99(Int:C8(-(oUser.companyDetail.pageNumber/(oUser.companyList.pageSize))))
 		
-		oConnection.form:="companies-list.html"
+		oConnection.form:="companylist.html"
 		oConnection.action:="index"
 		
-	: (oConnection.referer="contacts")
+		//: (oConnection.referer="contacts")
 		
-		oConnection.form:="contacts-list.html"
-		oConnection.action:="index"
+		//oConnection.form:="contacts-list.html"
+		//oConnection.action:="index"
 		
-	: (oConnection.referer="orders")
+		//: (oConnection.referer="orders")
 		
-		oConnection.form:="orders-list.html"
-		oConnection.action:="index"
+		//oConnection.form:="orders-list.html"
+		//oConnection.action:="index"
 End case 

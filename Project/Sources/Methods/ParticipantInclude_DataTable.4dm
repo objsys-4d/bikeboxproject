@@ -14,57 +14,65 @@ C_COLLECTION:C1488($oDataTable)
 C_OBJECT:C1216($oParticipant)  // CURRENT ORDER ITEM
 C_OBJECT:C1216($oParticipantSelection)  // ORDER ITEM SELECTION
 
-//C_OBJECT($oProduct)  // PRODUCT RECORD
 C_TEXT:C284($txtActive; $eventName)
 
 Case of 
 	: (oConnection.referer="person")
-		$oParticipantSelection:=ds:C1482.Participant.query("personID = :1"; oConnection.data.Person.personID)
+		PersonEventInc_JS_Send
+		//$oParticipantSelection:=ds.Participant.query("personID = :1"; oConnection.data.Person.personID)
 		
 	: (oConnection.referer="company")
-		$oParticipantSelection:=ds:C1482.Participant.query("companyID = :1"; oConnection.data.Company.companyID)
+		CompanyEventInc_JS_Send
+		//$oParticipantSelection:=ds.Participant.query("companyID = :1"; oConnection.data.Company.companyID)
 		
 	: (oConnection.referer="event")
-		$oParticipantSelection:=ds:C1482.Participant.query("eventID = :1"; oConnection.data.Event.eventID)
+		EventParticipantInc_JS_Send
+		//$oParticipantSelection:=ds.Participant.query("eventID = :1"; oConnection.data.Event.eventID)
 		
 End case 
 
-$oDataTable:=New collection:C1472
-C_OBJECT:C1216($oPcpPerson; $oPcpEvent)
-For each ($oParticipant; $oParticipantSelection)
-	
-	
-	$oPcpEvent:=$oParticipant.Participant_Event
-	If ($oPcpEvent=Null:C1517)
-		$eventName:=""
-		$eventDate:=!00-00-00!
-	Else 
-		If (oConnection.referer="event")
-			$oPcpPerson:=$oParticipant.Participant_Person
-			If ($oPcpPerson=Null:C1517)
-				$eventName:=""
-			Else 
-				$eventName:=$oPcpPerson.lastName+", "+$oPcpPerson.firstName
-			End if 
+If (False:C215)
+	$oDataTable:=New collection:C1472
+	$dq:=Char:C90(Double quote:K15:41)
+	C_OBJECT:C1216($oPcpPerson; $oPcpEvent)
+	For each ($oParticipant; $oParticipantSelection)
+		$value:="."+$oParticipant.UUID
+		
+		If ($oParticipant.attended)
+			$txtAttended:="checked"
 		Else 
-			$eventName:=$oPcpEvent.eventName
+			$txtAttended:=""
 		End if 
-		$eventDate:=$oPcpEvent.dateEvent
+		
+		$oPcpEvent:=$oParticipant.Participant_Event
+		If ($oPcpEvent=Null:C1517)
+			$eventName:=""
+			$eventDate:=!00-00-00!
+		Else 
+			If (oConnection.referer="event")
+				$oPcpPerson:=$oParticipant.Participant_Person
+				If ($oPcpPerson=Null:C1517)
+					$eventName:=""
+				Else 
+					$eventName:=$oPcpPerson.lastName+", "+$oPcpPerson.firstName
+				End if 
+			Else 
+				$eventName:=$oPcpEvent.eventName
+			End if 
+			$eventDate:=$oPcpEvent.dateEvent
+		End if 
+		
+		
+		$oDataTable.push(New collection:C1472($oParticipant.UUID; ""; $txtAttended; $eventDate; $eventName; $txtAttended; String:C10($oParticipant.amountDonated; "$###,###,##0.00"); ""))
+		
+	End for each 
+	
+	// CLEAR THE DATATABLE
+	Ltg_JS_Send("ltgObj('participant').dataTable().fnClearTable()")
+	
+	// UPDATE THE ORDER ITEMS DATATABLE
+	If ($oDataTable.length>0)
+		Ltg_JS_Send("ltgObj('participant').dataTable().fnAddData(JSON.parse('"+JSON Stringify:C1217($oDataTable)+"'))")
 	End if 
 	
-	
-	$oDataTable.push(New collection:C1472(""; $oParticipant.UUID; $eventDate; $eventName; String:C10($oParticipant.amountDonated; "$###,###,##0.00")))
-	
-End for each 
-
-// CLEAR THE ORDER ITEMS DATATABLE
-
-Ltg_JS_Send("ltgObj('participant').dataTable().fnClearTable()")
-
-// UPDATE THE ORDER ITEMS DATATABLE
-
-If ($oDataTable.length>0)
-	
-	Ltg_JS_Send("ltgObj('participant').dataTable().fnAddData(JSON.parse('"+JSON Stringify:C1217($oDataTable)+"'))")
-	
-End if 
+End if   //false

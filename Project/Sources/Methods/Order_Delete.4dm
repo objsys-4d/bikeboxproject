@@ -1,20 +1,16 @@
 //%attributes = {"shared":true}
-C_OBJECT:C1216($oOrder)  // ORDER RECORD
+C_OBJECT:C1216($oOrder)  // ORDER
 
-C_OBJECT:C1216($oItems)  // ORDER ITEMS
-C_OBJECT:C1216($oItem)  // ORDER ITEM RECORD
-
-C_OBJECT:C1216($oSelected)  // SELECTED RECORD
+C_OBJECT:C1216($oSelected)  // SELECTED RECORDS
 
 C_TEXT:C284($txtDialog_Content)  // DIALOG CONTENT
 
 Case of 
 		// *** LIST FORM...
 		
-	: (oConnection.form="orders-list.html")
+	: (oConnection.form="orderlist.html")
 		
 		Case of 
-				
 			: (oConnection.selected.length=0)
 				
 				$txtDialog_Content:=Ltg_Str_Localise("%please_select_one_or_more_records_and_try_again")
@@ -37,7 +33,7 @@ Case of
 				
 			: (oConnection.action="delete-confirm")
 				
-				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+String:C10(oConnection.selected.length)+" "+Ltg_Str_Localise("%orders")+"?"
+				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+String:C10(oConnection.selected.length)+" "+Ltg_Str_Localise("%order")+" records?"
 				
 				// OPEN CONFIRMATION DIALOG
 				
@@ -55,19 +51,11 @@ Case of
 				
 			: (oConnection.action="delete")
 				
-				For each ($oSelected;oConnection.selected)
+				For each ($oSelected; oConnection.selected)
 					
-					$oOrder:=ds:C1482.Orders.get($oSelected.record)
+					$oOrder:=ds:C1482.Order.get($oSelected.record)
 					
 					If ($oOrder#Null:C1517)
-						
-						$oItems:=ds:C1482.Order_Items.query("Order_ID = :1";$oOrder.Order_ID)
-						
-						For each ($oItem;$oItems)
-							
-							$oItem.drop()
-							
-						End for each 
 						
 						$oOrder.drop()
 					End if 
@@ -85,13 +73,13 @@ Case of
 		
 		// *** DETAIL FORM...
 		
-	: (oConnection.form="orders-detail.html")
+	: (oConnection.form="orderdetail.html")
 		
 		Case of 
 				
 			: (oConnection.action="delete-confirm")
 				
-				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+Ltg_Str_Localise("%order")+"?"
+				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+Ltg_Str_Localise("%order")+" record?"
 				
 				// OPEN CONFIRMATION DIALOG
 				
@@ -107,24 +95,16 @@ Case of
 				
 			: (oConnection.action="delete")
 				
-				$oOrder:=ds:C1482.Orders.get(oConnection.data.Order.Order_ID)
+				$oOrder:=ds:C1482.Order.get(oConnection.record)
 				
 				If ($oOrder#Null:C1517)
-					
-					$oItems:=ds:C1482.Order_Items.query("Order_ID = :1";$oOrder.Order_ID)
-					
-					For each ($oItem;$oItems)
-						
-						$oItem.drop()
-						
-					End for each 
 					
 					$oOrder.drop()
 				End if 
 				
-				// PUBLISH THE ORDERS LIST FORM...
+				// PUBLISH THE ORDER LIST FORM...
 				
-				oConnection.form:="orders-list.html"
+				oConnection.form:="orderlist.html"
 				oConnection.action:="index"
 				
 		End case 

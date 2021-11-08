@@ -25,7 +25,7 @@ Case of
 		
 	: (oConnection.referer="merch")
 		
-		oConnection.form:="merch-list.html"
+		oConnection.form:="merchlist.html"
 		oConnection.action:="index"
 		
 		//: (oConnection.referer="contacts")

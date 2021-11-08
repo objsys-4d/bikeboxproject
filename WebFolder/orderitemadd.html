@@ -1,0 +1,62 @@
+<!--FORM METHOD-->
+{{OrderItem_AddDetail}}
+
+<!--MODAL FORM-->
+<div class="modal" id="orderitemadd.html" tabindex="-1" role="dialog" aria-labelledby="orderitemadd.html" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary">
+                <h5 class="modal-title text-white">{{%order}}</h5>
+            </div>
+            <div class="modal-body bg-gray-100">
+                    
+                <!--HIDDEN VALUES-->
+                <input type="hidden" name="Item.UUID" value="{{Item.UUID}}" />
+                <input type="hidden" name="Order.UUID" value="{{Order.UUID}}" />
+                <input type="hidden" name="Item.merchID" value="{{Item.merchID}}" />
+                <input type="hidden" id="Item.orderItemName" name="Item.orderItemName" value="{{Item.orderItemName}}" />
+                <!--/HIDDEN VALUES-->
+
+                <div class="form-group">
+                    <label for="Product.Type" class="col-form-label">{{%merch}}</label>
+                    <select class="custom-select" id="Product.Type" name="Product.Type" onchange="ltgExecuteMethod('OrderItem_Calculate');"></select>								
+                </div>
+                <div class="form-group">
+                    <label for=".itemQuantity" class="col-form-label">{{%quantity}}</label>
+                    <div>
+                        <input class="form-control text-right" type="text" id=".itemQuantity" name=".itemQuantity" onchange="ltgExecuteMethod('OrderItem_Calculate');" value="{{.itemQuantity}}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for=".price" class="col-form-label">{{%price}}</label>
+                    <div>
+                        <input readonly="readonly" class="form-control text-right" type="text" id=".price" name=".price" value="{{.price}}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for=".itemAmount" class="col-form-label">{{%amount}}</label>
+                    <div>
+                        <input readonly="readonly" class="form-control text-right" type="text" id=".itemAmount" name=".itemAmount" value="{{.itemAmount}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-gray-100">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                onclick="ltgFormAction('?action=cancel&method=OrderItem_Cancel');">{{%cancel}}</button>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    onclick="ltgFormAction('?action=save&record={{Item.Item_ID}}&method=OrderItem_Save');">{{%save}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/MODAL FORM-->
+
+<script>
+
+   /* DESTROY MODAL AFTER DISMISSING */
+   
+   ltgObj('orderitemadd.html').on('hidden.bs.modal', function (e) {
+     ltgDialogClose('orderitemadd.html');
+    })
+</script>

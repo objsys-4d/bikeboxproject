@@ -18,13 +18,6 @@
 		}
 	},
 	{
-		"line": 56,
-		"method": {
-			"type": 1,
-			"methodName": "_EDR_Test01"
-		}
-	},
-	{
 		"line": 3,
 		"method": {
 			"type": 2,
@@ -43,10 +36,87 @@
 		}
 	},
 	{
-		"line": 20,
+		"line": 52,
 		"method": {
 			"type": 1,
-			"methodName": "_EDR_Test01"
+			"methodName": "Donation_Delete"
+		}
+	},
+	{
+		"line": 173,
+		"method": {
+			"type": 1,
+			"methodName": "Web_Router"
+		}
+	},
+	{
+		"line": 313,
+		"method": {
+			"type": 1,
+			"methodName": "Web_Router"
+		}
+	},
+	{
+		"line": 1,
+		"method": {
+			"type": 1,
+			"methodName": "Person_Save"
+		}
+	},
+	{
+		"line": 57,
+		"method": {
+			"type": 1,
+			"methodName": "Person_Detail"
+		}
+	},
+	{
+		"line": 9,
+		"method": {
+			"type": 1,
+			"methodName": "Person_Save"
+		}
+	},
+	{
+		"line": 12,
+		"method": {
+			"type": 1,
+			"methodName": "PersonObject_checkbox"
+		}
+	},
+	{
+		"line": 40,
+		"method": {
+			"type": 1,
+			"methodName": "PersonEventInc_JS_Send"
+		}
+	},
+	{
+		"line": 14,
+		"method": {
+			"type": 1,
+			"methodName": "DonationPerson_Modal"
+		}
+	},
+	{
+		"line": 11,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantEvent_Save"
+		}
+	},
+	{
+		"line": 26,
+		"method": {
+			"type": 1,
+			"methodName": "ParticipantEvent_Save"
+		}
+	},
+	{
+		"line": 14,
+		"method": {
+			"type": 1,
+			"methodName": "DonationPerson_Cancel"
 		}
 	}
 ]

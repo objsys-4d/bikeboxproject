@@ -1,0 +1,106 @@
+<!--FORM METHOD-->
+{{PersonEvent_Included}}
+<!--/FORM METHOD-->
+
+    <!--BODY-->
+	
+     <div class="form-group">
+            <!--NEW RECORD-->
+        <div class="row">
+            <div class="col">
+            <button type="button" class="btn btn-primary" 
+                onclick="ltgFormAction('participanteventmod-detail.html?action=new&modal=true');">Add to Event</button>
+            </div>
+        </div>
+				
+            <!--/NEW RECORD-->
+     </div>
+
+    <div class="mt-3">
+    
+        <!--THIS DATATABLE HAS INLINE STYLE ADDITIONS = DISPLAYED IN A BOOTSTRAP TAB-->
+        <table class="table table-hover mt-2" style="border-top:0px;width:100% !important" id="participant">
+            <thead>
+                <tr>
+                    <th><!--HIDDEN UUID--></th>
+                    <th><!--Edit Button--></th>
+					<th><!--ATTENDED--></th>
+                    <th>{{%dateEvent}}</th>
+                    <th>{{%eventName}}</th>
+                    <th>{{%attended}}</th>
+					<th> </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <!--/BODY-->
+        
+    <script>
+    
+        // DATATABLES...
+        
+        var data = {{.participantDataTable}};
+        
+        ltgObj('participant').DataTable(
+            {
+                data: data,
+                columnDefs: [
+                {
+                    targets: [ 0 ],
+                    visible: false, // UUID (HIDDEN)
+                },
+                {
+                    targets: [ 1 ], // Edit Button
+                     render: function ( data, type, row, meta ) {
+                        if(type === 'display'){
+                        
+                            //data = '<a href="#" onclick="ltgFormAction(\'contacts-detail.html?action=edit&modal=true&record='+row[0]+'\');">'+data+'</a>';
+							data = '<a class="text-secondary" href="#" onclick="ltgFormAction(\'participanteventmod-detail.html?action=edit&modal=true&record='+row[0]+'\');"><i class="fas fa-edit"></i></a>';
+                        }
+    
+                        return data;
+                    }
+                },
+                {
+                    targets: [ 2 ],
+                    visible: false // ATTENDED - HIDDEN
+                },
+                {
+                    targets: [ 5 ],
+                     render: function ( data, type, row, meta ) {
+                     if(type === 'display'){ 
+                     
+                      data = '<input type="checkbox" '+row[2]+' disabled onclick="ltgExecuteMethod(\'EventParticipant_Attended\',this.checked+\'.'+row[0]+'\');"/>';
+                     }
+                     return data;
+                    }                    
+                },				
+				{
+                    targets: [ 6 ],
+                    orderable: false,
+                    render: function ( data, type, row, meta ) {
+                    if(type === 'display'){ 
+                        data='<a class="text-secondary" href="#" onclick="ltgExecuteMethod(\'EventParticipant_Delete\',\''+row[0]+'\');"><i class="fas fa-trash"></i></a>';
+                    }
+                    return data;
+                    }
+                },                    
+            ],
+            language: {'lengthMenu': '{{%page_Size}} _MENU_','emptyTable': '{{%records_none}}'},
+            order: [[ 1, 'asc' ]],
+            info: false,
+            paging: false,
+            responsive: true,
+            searching: false
+            }
+        );
+
+        // REMOVES A ROW WHEN THE DELETE ICON IS CLICKED...
+        
+        ltgObj('items tbody').on( 'click', 'i.fa-trash', function () {
+            
+            table.row($(this).parents('tr')).remove().draw();
+        } );
+		
+		
+    </script>

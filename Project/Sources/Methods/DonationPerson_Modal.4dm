@@ -14,12 +14,12 @@ C_LONGINT:C283($personID)
 
 
 Case of 
-	: (oConnection.data.Donation.person="0")
+	: (oConnection.data.Donation.personID="0")
 		//should just close the modal or not call the modal
 		$oPersonRec:=ds:C1482.Person.all()
 		
 		
-	: (oConnection.data.Donation.person="-1")
+	: (oConnection.data.Donation.personID="-1")
 		//new record
 		$oPersonRec:=New object:C1471
 		//$oCompanyRec:=ds.Company.all()
@@ -27,7 +27,7 @@ Case of
 		//oConnection.data.Company:=$oCompanyRec
 		
 	Else 
-		$personID:=Num:C11(oConnection.data.Donation.person)
+		$personID:=Num:C11(oConnection.data.Donation.personID)
 		$oPersonRec:=ds:C1482.Person.query("personID = :1"; $personID)
 		//oConnection.data.Company:=$oCompanyRec  //[0]  <--- we ommit [0] for the dialog to not display.
 		

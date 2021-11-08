@@ -2,23 +2,27 @@
 
 C_OBJECT:C1216($oProduct)
 
-  // MATCH THE PRODUCT
+// MATCH THE PRODUCT
+$merchID:=Num:C11(oConnection.data.Product.Type)
+$oProduct:=ds:C1482.Merchandise.query("merchID = :1"; $merchID).first()
 
-$oProduct:=ds:C1482.Products.query("Type = :1 and Colour = :2 and Size = :3";oConnection.data.Product.Type;oConnection.data.Product.Colour;oConnection.data.Product.Size).first()
-
-  // SINGLE PRODUCT MATCH?
+// SINGLE PRODUCT MATCH?
 
 If ($oProduct#Null:C1517)
 	
-	  // UPDATE ITEM PRODUCT
+	// UPDATE ITEM PRODUCT
+	If (oConnection.form="orderitemadd.html") & (oConnection.data.itemQuantity="0")
+		oConnection.data.itemQuantity:="1"
+		oConnection.data.price:=String:C10($oProduct.price; oConnection.session.userCurrency)
+	End if 
+	oConnection.data.Item.orderItemName:=$oProduct.merchName
 	
-	oConnection.data.Item.Product:=$oProduct.Product
+	// FORMAT AMOUNTS...
 	
-	  // FORMAT AMOUNTS...
+	oConnection.data.itemAmount:=String:C10(Num:C11(oConnection.data.itemQuantity)*$oProduct.price; oConnection.session.userCurrency)  // FORMATTED AMOUNT PROPERTY
 	
-	oConnection.data.itemAmount:=String:C10(Num:C11(oConnection.data.itemQuantity)*$oProduct.Rate;oConnection.session.userCurrency)  // FORMATTED AMOUNT PROPERTY
+	oConnection.data.itemQuantity:=String:C10(Num:C11(oConnection.data.itemQuantity); "###,###,##0")  // FORMATTED QUANTITY PROPERTY
 	
-	oConnection.data.itemQuantity:=String:C10(Num:C11(oConnection.data.itemQuantity);"###,###,##0")  // FORMATTED QUANTITY PROPERTY
+	oConnection.data.itemRate:=String:C10($oProduct.price; oConnection.session.userCurrency)  // FORMATTED RATE PROPERTY
 	
-	oConnection.data.itemRate:=String:C10($oProduct.Rate;oConnection.session.userCurrency)  // FORMATTED RATE PROPERTY
 End if 

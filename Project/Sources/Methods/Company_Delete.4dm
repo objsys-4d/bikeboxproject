@@ -6,54 +6,54 @@ C_OBJECT:C1216($oSelected)  // SELECTED RECORDS
 C_TEXT:C284($txtDialog_Content)  // DIALOG CONTENT
 
 Case of 
-		  // *** LIST FORM...
+		// *** LIST FORM...
 		
-	: (oConnection.form="companies-list.html")
+	: (oConnection.form="companylist.html")
 		
 		Case of 
 			: (oConnection.selected.length=0)
 				
-				$txtDialog_Content:=Ltg_Str_Localise ("%please_select_one_or_more_records_and_try_again")
+				$txtDialog_Content:=Ltg_Str_Localise("%please_select_one_or_more_records_and_try_again")
 				
-				  // OPEN CONFIRMATION DIALOG
+				// OPEN CONFIRMATION DIALOG
 				
-				Ltg_JS_Send ("ltgDialogOpen('company-delete')")
+				Ltg_JS_Send("ltgDialogOpen('company-delete')")
 				
-				  // DISABLE "DELETE" BUTTON
+				// DISABLE "DELETE" BUTTON
 				
-				Ltg_JS_Send ("ltgObj('button-delete').attr('disabled',true)")
+				Ltg_JS_Send("ltgObj('button-delete').attr('disabled',true)")
 				
-				  // UPDATE DIALOG CONTENT
+				// UPDATE DIALOG CONTENT
 				
-				Ltg_JS_Send ("ltgObj('dialog-content').html('"+$txtDialog_Content+"')")
+				Ltg_JS_Send("ltgObj('dialog-content').html('"+$txtDialog_Content+"')")
 				
-				  // SEND BACK THE JAVASCRIPT ONLY
+				// SEND BACK THE JAVASCRIPT ONLY
 				
 				oConnection.responseType:="javascript"
 				
 			: (oConnection.action="delete-confirm")
 				
-				$txtDialog_Content:=Ltg_Str_Localise ("%delete")+" "+String:C10(oConnection.selected.length)+" "+Ltg_Str_Localise ("%companies")+"?"
+				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+String:C10(oConnection.selected.length)+" "+Ltg_Str_Localise("%company")+" records?"
 				
-				  // OPEN CONFIRMATION DIALOG
+				// OPEN CONFIRMATION DIALOG
 				
-				Ltg_JS_Send ("ltgDialogOpen('company-delete')")
+				Ltg_JS_Send("ltgDialogOpen('company-delete')")
 				
-				  // ENABLE "DELETE" BUTTON
+				// ENABLE "DELETE" BUTTON
 				
-				Ltg_JS_Send ("ltgObj('button-delete').attr('disabled',false)")
+				Ltg_JS_Send("ltgObj('button-delete').attr('disabled',false)")
 				
-				Ltg_JS_Send ("ltgObj('dialog-content').html('"+$txtDialog_Content+"')")
+				Ltg_JS_Send("ltgObj('dialog-content').html('"+$txtDialog_Content+"')")
 				
-				  // SEND BACK THE JAVASCRIPT ONLY
+				// SEND BACK THE JAVASCRIPT ONLY
 				
 				oConnection.responseType:="javascript"
 				
 			: (oConnection.action="delete")
 				
-				For each ($oSelected;oConnection.selected)
+				For each ($oSelected; oConnection.selected)
 					
-					$oCompany:=ds:C1482.Companies.get($oSelected.record)
+					$oCompany:=ds:C1482.Company.get($oSelected.record)
 					
 					If ($oCompany#Null:C1517)
 						
@@ -61,50 +61,50 @@ Case of
 					End if 
 				End for each 
 				
-				  // CLEAR SELECTION
+				// CLEAR SELECTION
 				
 				oConnection.selected:=New collection:C1472
 				
-				  // CLOSE CONFIRMATION DIALOG
+				// CLOSE CONFIRMATION DIALOG
 				
-				Ltg_JS_Send ("ltgDialogClose('company-delete')")
+				Ltg_JS_Send("ltgDialogClose('company-delete')")
 				
 		End case 
 		
-		  // *** DETAIL FORM...
+		// *** DETAIL FORM...
 		
-	: (oConnection.form="companies-detail.html")
+	: (oConnection.form="companydetail.html")
 		
 		Case of 
 				
 			: (oConnection.action="delete-confirm")
 				
-				$txtDialog_Content:=Ltg_Str_Localise ("%delete")+" "+Ltg_Str_Localise ("%company")+"?"
+				$txtDialog_Content:=Ltg_Str_Localise("%delete")+" "+Ltg_Str_Localise("%company")+" record?"
 				
-				  // OPEN CONFIRMATION DIALOG
+				// OPEN CONFIRMATION DIALOG
 				
-				Ltg_JS_Send ("ltgDialogOpen('company-delete')")
+				Ltg_JS_Send("ltgDialogOpen('company-delete')")
 				
-				  // UPDATE DIALOG CONTENT
+				// UPDATE DIALOG CONTENT
 				
-				Ltg_JS_Send ("ltgObj('dialog-content').html('"+$txtDialog_Content+"')")
+				Ltg_JS_Send("ltgObj('dialog-content').html('"+$txtDialog_Content+"')")
 				
-				  // SEND BACK THE JAVASCRIPT ONLY
+				// SEND BACK THE JAVASCRIPT ONLY
 				
 				oConnection.responseType:="javascript"
 				
 			: (oConnection.action="delete")
 				
-				$oCompany:=ds:C1482.Companies.get(oConnection.record)
+				$oCompany:=ds:C1482.Company.get(oConnection.record)
 				
 				If ($oCompany#Null:C1517)
 					
 					$oCompany.drop()
 				End if 
 				
-				  // PUBLISH THE COMPANIES LIST FORM...
+				// PUBLISH THE COMPANY LIST FORM...
 				
-				oConnection.form:="companies-list.html"
+				oConnection.form:="companylist.html"
 				oConnection.action:="index"
 				
 		End case 

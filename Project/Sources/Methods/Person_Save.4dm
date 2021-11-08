@@ -11,11 +11,17 @@ $oPerson:=ds:C1482.Person.get(oConnection.data.Person.UUID)
 If ($oPerson=Null:C1517)
 	
 	$oPerson:=ds:C1482.Person.new()
+	$oPerson.personObject:=New object:C1471
+	$oPerson.personObject.status:="Review"
+	$oPerson.personObject.active:="No"
+	$oPerson.personObject.valid:="No"
+	$oPerson.personObject.duplicateName:="No"
 	
 End if 
 
 $oPerson.lastName:=oConnection.data.Person.lastName
 $oPerson.firstName:=oConnection.data.Person.firstName
+$oPerson.fullName:=oConnection.data.Person.firstName+" "+oConnection.data.Person.lastName
 $oPerson.companyID:=oConnection.data.Person.company
 $oPerson.dateBirth:=Date:C102(oConnection.data.Person.dateBirth)
 $oPerson.address1:=oConnection.data.Person.address1
@@ -46,7 +52,7 @@ Else
 	$oPerson.personObject.duplicateName:="No"
 End if 
 
-//$oPerson.personObject.status
+$oPerson.personObject.status:=oConnection.data.Person.personObject.status
 
 $oPerson.save()
 
@@ -56,7 +62,7 @@ Case of
 		
 	: (oConnection.referer="person")
 		
-		oConnection.form:="person-list.html"
+		oConnection.form:="personlist.html"
 		oConnection.action:="index"
 		
 		
@@ -67,7 +73,7 @@ Case of
 		Ltg_JS_Send("ltgSelectAddOption('Donation.person','"+String:C10($oPerson.personID)+"','"+$personName+"')")
 		Ltg_JS_Send("ltgSelectSetValue('Donation.person','"+String:C10($oPerson.personID)+"')")
 		
-		oConnection.form:="donations-detail.html"
+		oConnection.form:="donationdetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"
@@ -79,7 +85,7 @@ Case of
 		Ltg_JS_Send("ltgSelectAddOption('Order.person','"+String:C10($oPerson.personID)+"','"+$personName+"')")
 		Ltg_JS_Send("ltgSelectSetValue('Order.person','"+String:C10($oPerson.personID)+"')")
 		
-		oConnection.form:="order-detail.html"
+		oConnection.form:="orderdetail.html"
 		oConnection.action:="index"
 		
 		oConnection.responseType:="javascript"
